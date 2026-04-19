@@ -9,5 +9,8 @@ build/
 scripts/*
 !scripts/build-testcases.sh
 tests/
-.github/
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/release-testcases.yml
 CATALOG_SPLIT_NOTES.md

@@ -1,0 +1,60 @@
+name: Publish Testcase Bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release tag to create or update, e.g. testcases-v0.1.0
+        required: true
+        type: string
+      min_app_version:
+        description: Minimum compatible grindx app version
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release-testcases:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build testcase bundle
+        run: |
+          chmod +x scripts/build-testcases.sh
+          scripts/build-testcases.sh \
+            --output-dir dist/testcases-release \
+            --release-tag "${{ inputs.release_tag }}" \
+            --min-app-version "${{ inputs.min_app_version }}"
+
+      - name: Publish testcase release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ inputs.release_tag }}" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "${{ inputs.release_tag }}" \
+              dist/testcases-release/manifest.json \
+              dist/testcases-release/testcases.tar.gz \
+              --clobber \
+              --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "${{ inputs.release_tag }}" \
+              dist/testcases-release/manifest.json \
+              dist/testcases-release/testcases.tar.gz \
+              --title "${{ inputs.release_tag }}" \
+              --notes "Testcase bundle for grindx.
+
+- bundle_kind: testcases-only
+- min_app_version: ${{ inputs.min_app_version }}" \
+              --target "$GITHUB_SHA" \
+              --repo "$GITHUB_REPOSITORY"
+          fi
