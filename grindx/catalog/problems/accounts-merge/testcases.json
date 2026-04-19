@@ -1,0 +1,664 @@
+{
+  "problem_id": "accounts-merge",
+  "function": "accountsMerge",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          [
+            "John",
+            "johnsmith@mail.com",
+            "john_newyork@mail.com"
+          ],
+          [
+            "John",
+            "johnsmith@mail.com",
+            "john00@mail.com"
+          ],
+          [
+            "Mary",
+            "mary@mail.com"
+          ],
+          [
+            "John",
+            "johnnybravo@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "john00@mail.com",
+          "john_newyork@mail.com",
+          "johnsmith@mail.com"
+        ],
+        [
+          "John",
+          "johnnybravo@mail.com"
+        ],
+        [
+          "Mary",
+          "mary@mail.com"
+        ]
+      ],
+      "category": "basic",
+      "note": "classic overlapping accounts example"
+    },
+    {
+      "input": [
+        [
+          [
+            "Alex",
+            "alex1@mail.com"
+          ],
+          [
+            "Alex",
+            "alex2@mail.com"
+          ],
+          [
+            "Alex",
+            "alex3@mail.com",
+            "alex4@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "Alex",
+          "alex1@mail.com"
+        ],
+        [
+          "Alex",
+          "alex2@mail.com"
+        ],
+        [
+          "Alex",
+          "alex3@mail.com",
+          "alex4@mail.com"
+        ]
+      ],
+      "category": "edge",
+      "note": "same name does not imply merge without shared email"
+    },
+    {
+      "input": [
+        [
+          [
+            "Eve",
+            "eve@mail.com",
+            "eve@mail.com"
+          ],
+          [
+            "Eve",
+            "eve@mail.com",
+            "eve2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "Eve",
+          "eve2@mail.com",
+          "eve@mail.com"
+        ]
+      ],
+      "category": "edge",
+      "note": "duplicate email entries should not duplicate output emails"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "single-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ],
+          [
+            "Mary",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ],
+        [
+          "Mary",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com",
+          "j3@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "single-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ],
+          [
+            "Mary",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ],
+        [
+          "Mary",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com",
+            "j3@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "single-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j2@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ],
+          [
+            "Mary",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j2@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ],
+        [
+          "Mary",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "single-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    },
+    {
+      "input": [
+        [
+          [
+            "John",
+            "j1@mail.com",
+            "j3@mail.com"
+          ],
+          [
+            "John",
+            "j2@mail.com"
+          ],
+          [
+            "Mary",
+            "m1@mail.com"
+          ],
+          [
+            "Mary",
+            "m2@mail.com"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "John",
+          "j1@mail.com",
+          "j3@mail.com"
+        ],
+        [
+          "John",
+          "j2@mail.com"
+        ],
+        [
+          "Mary",
+          "m1@mail.com"
+        ],
+        [
+          "Mary",
+          "m2@mail.com"
+        ]
+      ],
+      "category": "generated",
+      "note": "multi-person partition variants"
+    }
+  ]
+}

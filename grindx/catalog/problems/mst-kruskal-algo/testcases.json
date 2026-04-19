@@ -1,0 +1,1253 @@
+{
+  "problem_id": "mst-kruskal-algo",
+  "function": "kruskalMST",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "Kruskal should match Prim on same graph"
+    },
+    {
+      "input": [
+        1,
+        []
+      ],
+      "expected": 0,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        2,
+        [
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 1,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        3,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "expected": 4,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        3,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 2,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        3,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 4,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        3,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 2,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ]
+      ],
+      "expected": 9,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 9,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 11,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 9,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 9,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 7,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 5,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    },
+    {
+      "input": [
+        4,
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": 3,
+      "category": "generated",
+      "note": "all connected weighted undirected graphs up to 4 nodes"
+    }
+  ]
+}

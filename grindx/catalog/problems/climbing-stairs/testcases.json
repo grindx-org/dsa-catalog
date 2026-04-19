@@ -1,0 +1,209 @@
+{
+  "problem_id": "climbing-stairs",
+  "function": "climbStairs",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 1.0,
+  "cases": [
+    {
+      "input": [
+        1
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        2
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        4
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        6
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": 34,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        9
+      ],
+      "expected": 55,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": 89,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        11
+      ],
+      "expected": 144,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        12
+      ],
+      "expected": 233,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        13
+      ],
+      "expected": 377,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        14
+      ],
+      "expected": 610,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": 987,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        16
+      ],
+      "expected": 1597,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        17
+      ],
+      "expected": 2584,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        18
+      ],
+      "expected": 4181,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        19
+      ],
+      "expected": 6765,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        20
+      ],
+      "expected": 10946,
+      "category": "exhaustive",
+      "note": "all staircase counts from 1 to 20"
+    },
+    {
+      "input": [
+        41
+      ],
+      "expected": 267914296,
+      "category": "stress",
+      "note": "high-n Fibonacci cases should separate linear DP from exponential recursion"
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": 433494437,
+      "category": "stress",
+      "note": "high-n Fibonacci cases should separate linear DP from exponential recursion"
+    },
+    {
+      "input": [
+        43
+      ],
+      "expected": 701408733,
+      "category": "stress",
+      "note": "high-n Fibonacci cases should separate linear DP from exponential recursion"
+    },
+    {
+      "input": [
+        44
+      ],
+      "expected": 1134903170,
+      "category": "edge",
+      "note": "upper-bound Fibonacci near int32 limit"
+    },
+    {
+      "input": [
+        45
+      ],
+      "expected": 1836311903,
+      "category": "edge",
+      "note": "maximum constraint"
+    }
+  ]
+}

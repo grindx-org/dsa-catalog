@@ -1,0 +1,491 @@
+{
+  "problem_id": "flatten-a-multilevel-doubly-linked-list",
+  "function": "flatten",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2
+          },
+          {
+            "val": 3,
+            "child": [
+              {
+                "val": 7
+              },
+              {
+                "val": 8,
+                "child": [
+                  {
+                    "val": 11
+                  },
+                  {
+                    "val": 12
+                  }
+                ]
+              },
+              {
+                "val": 9
+              },
+              {
+                "val": 10
+              }
+            ]
+          },
+          {
+            "val": 4
+          },
+          {
+            "val": 5
+          },
+          {
+            "val": 6
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        11,
+        12,
+        9,
+        10,
+        4,
+        5,
+        6
+      ],
+      "category": "basic",
+      "note": "standard multilevel sample"
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": [],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          }
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2,
+            "child": [
+              {
+                "val": 3
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2,
+                "child": [
+                  {
+                    "val": 3
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2
+          },
+          {
+            "val": 3,
+            "child": [
+              {
+                "val": 4
+              },
+              {
+                "val": 5
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2
+              },
+              {
+                "val": 3
+              }
+            ]
+          },
+          {
+            "val": 4
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "category": "edge",
+      "note": "nested child-list coverage"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2,
+                "child": [
+                  {
+                    "val": 3,
+                    "child": [
+                      {
+                        "val": 4
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "category": "edge",
+      "note": "4-level deep nesting \u2014 tests deep recursion"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2,
+            "child": [
+              {
+                "val": 5
+              },
+              {
+                "val": 6
+              }
+            ]
+          },
+          {
+            "val": 3
+          },
+          {
+            "val": 4,
+            "child": [
+              {
+                "val": 7
+              },
+              {
+                "val": 8
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        6,
+        3,
+        4,
+        7,
+        8
+      ],
+      "category": "edge",
+      "note": "children at multiple nodes \u2014 tests correct resume after flattening"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2
+          },
+          {
+            "val": 3,
+            "child": [
+              {
+                "val": 4
+              },
+              {
+                "val": 5
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "category": "edge",
+      "note": "child at last node \u2014 no next pointer after child"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2,
+                "child": [
+                  {
+                    "val": 3
+                  }
+                ]
+              },
+              {
+                "val": 4
+              }
+            ]
+          },
+          {
+            "val": 5
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "category": "edge",
+      "note": "deep child with siblings \u2014 tests correct tail reconnection"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1
+          },
+          {
+            "val": 2
+          },
+          {
+            "val": 3
+          },
+          {
+            "val": 4
+          },
+          {
+            "val": 5
+          },
+          {
+            "val": 6
+          },
+          {
+            "val": 7
+          },
+          {
+            "val": 8
+          },
+          {
+            "val": 9
+          },
+          {
+            "val": 10
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "category": "edge",
+      "note": "10-node flat list with no children"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 10
+              },
+              {
+                "val": 20
+              },
+              {
+                "val": 30
+              }
+            ]
+          },
+          {
+            "val": 2
+          },
+          {
+            "val": 3
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        10,
+        20,
+        30,
+        2,
+        3
+      ],
+      "category": "edge",
+      "note": "child at head node \u2014 flattened child inserted before rest of main list"
+    },
+    {
+      "input": [
+        [
+          {
+            "val": 1,
+            "child": [
+              {
+                "val": 2,
+                "child": [
+                  {
+                    "val": 3,
+                    "child": [
+                      {
+                        "val": 4,
+                        "child": [
+                          {
+                            "val": 5
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "category": "edge",
+      "note": "5-level deep nesting \u2014 deepest recursion test"
+    }
+  ]
+}

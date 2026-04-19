@@ -1,0 +1,13 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+dist/
+build/
+*.egg-info/
+.claude/
+scripts/*
+!scripts/build-testcases.sh
+tests/
+.github/
+CATALOG_SPLIT_NOTES.md

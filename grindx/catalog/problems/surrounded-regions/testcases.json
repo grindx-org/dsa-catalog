@@ -1,0 +1,10715 @@
+{
+  "problem_id": "surrounded-regions",
+  "function": "solve",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 0.5,
+  "cases": [
+    {
+      "input": [
+        [
+          "XXXX",
+          "XOOX",
+          "XXOX",
+          "XOXX"
+        ]
+      ],
+      "expected": [
+        "XXXX",
+        "XXXX",
+        "XXXX",
+        "XOXX"
+      ],
+      "category": "basic",
+      "note": "captured interior region"
+    },
+    {
+      "input": [
+        [
+          "X"
+        ]
+      ],
+      "expected": [
+        "X"
+      ],
+      "category": "edge",
+      "note": "single X cell unchanged"
+    },
+    {
+      "input": [
+        [
+          "O"
+        ]
+      ],
+      "expected": [
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "X"
+        ]
+      ],
+      "expected": [
+        "X",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "O"
+        ]
+      ],
+      "expected": [
+        "X",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "X"
+        ]
+      ],
+      "expected": [
+        "O",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "O"
+        ]
+      ],
+      "expected": [
+        "O",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "X",
+          "X"
+        ]
+      ],
+      "expected": [
+        "X",
+        "X",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "X",
+          "O"
+        ]
+      ],
+      "expected": [
+        "X",
+        "X",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "O",
+          "X"
+        ]
+      ],
+      "expected": [
+        "X",
+        "O",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "X",
+          "O",
+          "O"
+        ]
+      ],
+      "expected": [
+        "X",
+        "O",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "X",
+          "X"
+        ]
+      ],
+      "expected": [
+        "O",
+        "X",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "X",
+          "O"
+        ]
+      ],
+      "expected": [
+        "O",
+        "X",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "O",
+          "X"
+        ]
+      ],
+      "expected": [
+        "O",
+        "O",
+        "X"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "O",
+          "O",
+          "O"
+        ]
+      ],
+      "expected": [
+        "O",
+        "O",
+        "O"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "XO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "XO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XX",
+          "OO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XX",
+        "OO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "XO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "XO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XO",
+          "OO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "XO",
+        "OO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "XO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "XO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OX",
+          "OO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OX",
+        "OO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "XO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "XO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OX",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OX",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OX",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OX",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OX",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OX",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OX",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OX",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OO",
+          "XX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OO",
+        "XX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OO",
+          "XO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OO",
+        "XO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OO",
+          "OX"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OO",
+        "OX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OO",
+          "OO",
+          "OO"
+        ]
+      ],
+      "expected": [
+        "OO",
+        "OO",
+        "OO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXX",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXX",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XXO",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XXO",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOX",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOX",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "XOO",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "XOO",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXX",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXX",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OXO",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OXO",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOX",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOX",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "XOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "XOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OXO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OXO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOX",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOX",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "XXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "XXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "XXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "XXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "XOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "XOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "XOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "XOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "OXX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "OXX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "OXO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "OXO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "OOX"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "OOX"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    },
+    {
+      "input": [
+        [
+          "OOO",
+          "OOO",
+          "OOO"
+        ]
+      ],
+      "expected": [
+        "OOO",
+        "OOO",
+        "OOO"
+      ],
+      "category": "exhaustive",
+      "note": "all X/O boards up to 3x3"
+    }
+  ]
+}

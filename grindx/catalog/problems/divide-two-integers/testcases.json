@@ -1,0 +1,9495 @@
+{
+  "problem_id": "divide-two-integers",
+  "function": "divide",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        10,
+        3
+      ],
+      "expected": 3,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        7,
+        -3
+      ],
+      "expected": -2,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        -1,
+        1
+      ],
+      "expected": -1,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        1,
+        1
+      ],
+      "expected": 1,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        0,
+        1
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        100,
+        10
+      ],
+      "expected": 10,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        -100,
+        10
+      ],
+      "expected": -10,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        -2147483648,
+        -1
+      ],
+      "expected": 2147483647,
+      "category": "edge",
+      "note": "overflow case: INT_MIN / -1"
+    },
+    {
+      "input": [
+        -2147483648,
+        1
+      ],
+      "expected": -2147483648,
+      "category": "edge",
+      "note": "INT_MIN / 1"
+    },
+    {
+      "input": [
+        2147483647,
+        1
+      ],
+      "expected": 2147483647,
+      "category": "edge",
+      "note": "INT_MAX / 1"
+    },
+    {
+      "input": [
+        2147483647,
+        -1
+      ],
+      "expected": -2147483647,
+      "category": "edge",
+      "note": "INT_MAX / -1"
+    },
+    {
+      "input": [
+        -2147483648,
+        2
+      ],
+      "expected": -1073741824,
+      "category": "edge",
+      "note": "INT_MIN / 2"
+    },
+    {
+      "input": [
+        -2147483648,
+        -2147483648
+      ],
+      "expected": 1,
+      "category": "edge",
+      "note": "INT_MIN / INT_MIN"
+    },
+    {
+      "input": [
+        2147483647,
+        2147483647
+      ],
+      "expected": 1,
+      "category": "edge",
+      "note": "INT_MAX / INT_MAX"
+    },
+    {
+      "input": [
+        2147483647,
+        -2147483648
+      ],
+      "expected": 0,
+      "category": "edge",
+      "note": "INT_MAX / INT_MIN"
+    },
+    {
+      "input": [
+        -50,
+        -50
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        -10
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        -3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        -2
+      ],
+      "expected": 25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        -1
+      ],
+      "expected": 50,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        1
+      ],
+      "expected": -50,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        2
+      ],
+      "expected": -25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        10
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -50,
+        50
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        -3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        -2
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        -1
+      ],
+      "expected": 49,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        1
+      ],
+      "expected": -49,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        2
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -49,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        -3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        -2
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        -1
+      ],
+      "expected": 48,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        1
+      ],
+      "expected": -48,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        2
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -48,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        -3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        -2
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        -1
+      ],
+      "expected": 47,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        1
+      ],
+      "expected": -47,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        2
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -47,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        -3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        -2
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        -1
+      ],
+      "expected": 46,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        1
+      ],
+      "expected": -46,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        2
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -46,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        -3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        -2
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        -1
+      ],
+      "expected": 45,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        1
+      ],
+      "expected": -45,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        2
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -45,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        -3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        -2
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        -1
+      ],
+      "expected": 44,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        1
+      ],
+      "expected": -44,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        2
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -44,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        -3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        -2
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        -1
+      ],
+      "expected": 43,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        1
+      ],
+      "expected": -43,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        2
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -43,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        -3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        -2
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        -1
+      ],
+      "expected": 42,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        1
+      ],
+      "expected": -42,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        2
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -42,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        -3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        -2
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        -1
+      ],
+      "expected": 41,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        1
+      ],
+      "expected": -41,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        2
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -41,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        -10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        -3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        -2
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        -1
+      ],
+      "expected": 40,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        1
+      ],
+      "expected": -40,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        2
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -40,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        -3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        -2
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        -1
+      ],
+      "expected": 39,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        1
+      ],
+      "expected": -39,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        2
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -39,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        -3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        -2
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        -1
+      ],
+      "expected": 38,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        1
+      ],
+      "expected": -38,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        2
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -38,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        -3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        -2
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        -1
+      ],
+      "expected": 37,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        1
+      ],
+      "expected": -37,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        2
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -37,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        -3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        -2
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        -1
+      ],
+      "expected": 36,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        1
+      ],
+      "expected": -36,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        2
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -36,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        -3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        -2
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        -1
+      ],
+      "expected": 35,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        1
+      ],
+      "expected": -35,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        2
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -35,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        -3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        -2
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        -1
+      ],
+      "expected": 34,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        1
+      ],
+      "expected": -34,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        2
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -34,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        -3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        -2
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        -1
+      ],
+      "expected": 33,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        1
+      ],
+      "expected": -33,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        2
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -33,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        -3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        -2
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        -1
+      ],
+      "expected": 32,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        1
+      ],
+      "expected": -32,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        2
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -32,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        -3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        -2
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        -1
+      ],
+      "expected": 31,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        1
+      ],
+      "expected": -31,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        2
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -31,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        -10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        -3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        -2
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        -1
+      ],
+      "expected": 30,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        1
+      ],
+      "expected": -30,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        2
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -30,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        -3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        -2
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        -1
+      ],
+      "expected": 29,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        1
+      ],
+      "expected": -29,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        2
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -29,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        -3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        -2
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        -1
+      ],
+      "expected": 28,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        1
+      ],
+      "expected": -28,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        2
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -28,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        -3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        -2
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        -1
+      ],
+      "expected": 27,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        1
+      ],
+      "expected": -27,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        2
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -27,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        -3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        -2
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        -1
+      ],
+      "expected": 26,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        1
+      ],
+      "expected": -26,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        2
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -26,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        -3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        -2
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        -1
+      ],
+      "expected": 25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        1
+      ],
+      "expected": -25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        2
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -25,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        -3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        -2
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        -1
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        1
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        2
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -24,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        -3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        -2
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        -1
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        1
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        2
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -23,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        -3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        -2
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        -1
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        1
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        2
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -22,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        -3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        -2
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        -1
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        1
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        2
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -21,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        -10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        -3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        -2
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        -1
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        1
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        2
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -20,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        -3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        -2
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        -1
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        1
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        2
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -19,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        -3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        -2
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        -1
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        1
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        2
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -18,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        -3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        -2
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        -1
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        1
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        2
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -17,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        -3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        -2
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        -1
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        1
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        2
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -16,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        -3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        -2
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        -1
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        1
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        2
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -15,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        -3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        -2
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        -1
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        1
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        2
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -14,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        -3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        -2
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        -1
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        1
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        2
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -13,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        -3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        -2
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        -1
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        1
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        2
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -12,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        -3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        -2
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        -1
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        1
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        2
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -11,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        -10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        -3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        -2
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        -1
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        1
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        2
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -10,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        -3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        -2
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        -1
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        1
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        2
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -9,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        -3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        -2
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        -1
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        1
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        2
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        3
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -8,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        -3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        -2
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        -1
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        1
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        2
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        3
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -7,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        -3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        -2
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        -1
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        1
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        2
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        3
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -6,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        -3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        -2
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        -1
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        1
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        2
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -5,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        -3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        -2
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        -1
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        1
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        2
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -4,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        -3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        -2
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        -1
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        1
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        2
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -3,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        -3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        -2
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        -1
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        1
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        2
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -2,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        -3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        -2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        -1
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        -1,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        -3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        -2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        -1
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        0,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        -3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        -2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        -1
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        2
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        1,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        -3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        -2
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        -1
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        1
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        2
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        3
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        2,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        -3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        -2
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        -1
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        1
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        2
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        3,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        -3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        -2
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        -1
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        1
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        2
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        4,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        -3
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        -2
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        -1
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        1
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        2
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        5,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        -3
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        -2
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        -1
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        1
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        2
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        6,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        -2
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        -1
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        1
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        2
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        7,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        -3
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        -2
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        -1
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        1
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        2
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        3
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        8,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        -10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        -3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        -2
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        -1
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        1
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        2
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        10
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        9,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        -3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        -2
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        -1
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        1
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        2
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        10,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        -3
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        -2
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        -1
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        1
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        2
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        3
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        11,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        -3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        -2
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        -1
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        1
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        2
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        12,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        -3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        -2
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        -1
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        1
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        2
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        13,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        -3
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        -2
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        -1
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        1
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        2
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        3
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        14,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        -3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        -2
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        -1
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        1
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        2
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        15,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        -3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        -2
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        -1
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        1
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        2
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        16,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        -3
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        -2
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        -1
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        1
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        2
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        3
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        17,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        -3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        -2
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        -1
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        1
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        2
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        18,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        -10
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        -3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        -2
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        -1
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        1
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        2
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        10
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        19,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        -3
+      ],
+      "expected": -6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        -2
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        -1
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        1
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        2
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        3
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        20,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        -3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        -2
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        -1
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        1
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        2
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        21,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        -3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        -2
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        -1
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        1
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        2
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        22,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        -3
+      ],
+      "expected": -7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        -2
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        -1
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        1
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        2
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        3
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        23,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        -3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        -2
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        -1
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        1
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        2
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        24,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        -3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        -2
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        -1
+      ],
+      "expected": -25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        1
+      ],
+      "expected": 25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        2
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        25,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        -3
+      ],
+      "expected": -8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        -2
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        -1
+      ],
+      "expected": -26,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        1
+      ],
+      "expected": 26,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        2
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        3
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        26,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        -3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        -2
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        -1
+      ],
+      "expected": -27,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        1
+      ],
+      "expected": 27,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        2
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        27,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        -3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        -2
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        -1
+      ],
+      "expected": -28,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        1
+      ],
+      "expected": 28,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        2
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        28,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        -10
+      ],
+      "expected": -2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        -3
+      ],
+      "expected": -9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        -2
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        -1
+      ],
+      "expected": -29,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        1
+      ],
+      "expected": 29,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        2
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        3
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        10
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        29,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        -3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        -2
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        -1
+      ],
+      "expected": -30,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        1
+      ],
+      "expected": 30,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        2
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        30,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        -3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        -2
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        -1
+      ],
+      "expected": -31,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        1
+      ],
+      "expected": 31,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        2
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        31,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        -3
+      ],
+      "expected": -10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        -2
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        -1
+      ],
+      "expected": -32,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        1
+      ],
+      "expected": 32,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        2
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        3
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        32,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        -3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        -2
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        -1
+      ],
+      "expected": -33,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        1
+      ],
+      "expected": 33,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        2
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        33,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        -3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        -2
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        -1
+      ],
+      "expected": -34,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        1
+      ],
+      "expected": 34,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        2
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        34,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        -3
+      ],
+      "expected": -11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        -2
+      ],
+      "expected": -17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        -1
+      ],
+      "expected": -35,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        1
+      ],
+      "expected": 35,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        2
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        3
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        35,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        -3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        -2
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        -1
+      ],
+      "expected": -36,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        1
+      ],
+      "expected": 36,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        2
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        36,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        -3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        -2
+      ],
+      "expected": -18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        -1
+      ],
+      "expected": -37,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        1
+      ],
+      "expected": 37,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        2
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        37,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        -3
+      ],
+      "expected": -12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        -2
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        -1
+      ],
+      "expected": -38,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        1
+      ],
+      "expected": 38,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        2
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        3
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        38,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        -10
+      ],
+      "expected": -3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        -3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        -2
+      ],
+      "expected": -19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        -1
+      ],
+      "expected": -39,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        1
+      ],
+      "expected": 39,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        2
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        39,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        -3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        -2
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        -1
+      ],
+      "expected": -40,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        1
+      ],
+      "expected": 40,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        2
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        40,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        -3
+      ],
+      "expected": -13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        -2
+      ],
+      "expected": -20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        -1
+      ],
+      "expected": -41,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        1
+      ],
+      "expected": 41,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        2
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        3
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        41,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        -3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        -2
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        -1
+      ],
+      "expected": -42,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        1
+      ],
+      "expected": 42,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        2
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        42,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        -3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        -2
+      ],
+      "expected": -21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        -1
+      ],
+      "expected": -43,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        1
+      ],
+      "expected": 43,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        2
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        43,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        -3
+      ],
+      "expected": -14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        -2
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        -1
+      ],
+      "expected": -44,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        1
+      ],
+      "expected": 44,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        2
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        3
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        44,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        -3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        -2
+      ],
+      "expected": -22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        -1
+      ],
+      "expected": -45,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        1
+      ],
+      "expected": 45,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        2
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        45,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        -3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        -2
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        -1
+      ],
+      "expected": -46,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        1
+      ],
+      "expected": 46,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        2
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        46,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        -3
+      ],
+      "expected": -15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        -2
+      ],
+      "expected": -23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        -1
+      ],
+      "expected": -47,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        1
+      ],
+      "expected": 47,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        2
+      ],
+      "expected": 23,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        3
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        47,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        -3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        -2
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        -1
+      ],
+      "expected": -48,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        1
+      ],
+      "expected": 48,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        2
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        48,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        -50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        -10
+      ],
+      "expected": -4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        -3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        -2
+      ],
+      "expected": -24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        -1
+      ],
+      "expected": -49,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        1
+      ],
+      "expected": 49,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        2
+      ],
+      "expected": 24,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        10
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        49,
+        50
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        -50
+      ],
+      "expected": -1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        -10
+      ],
+      "expected": -5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        -3
+      ],
+      "expected": -16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        -2
+      ],
+      "expected": -25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        -1
+      ],
+      "expected": -50,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        1
+      ],
+      "expected": 50,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        2
+      ],
+      "expected": 25,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        3
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        10
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        50,
+        50
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "small value pairs"
+    },
+    {
+      "input": [
+        64,
+        2
+      ],
+      "expected": 32,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        128,
+        2
+      ],
+      "expected": 64,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        256,
+        2
+      ],
+      "expected": 128,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        512,
+        2
+      ],
+      "expected": 256,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        1024,
+        2
+      ],
+      "expected": 512,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        2048,
+        2
+      ],
+      "expected": 1024,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        4096,
+        2
+      ],
+      "expected": 2048,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        8192,
+        2
+      ],
+      "expected": 4096,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        16384,
+        2
+      ],
+      "expected": 8192,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        32768,
+        2
+      ],
+      "expected": 16384,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        65536,
+        2
+      ],
+      "expected": 32768,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        131072,
+        2
+      ],
+      "expected": 65536,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        262144,
+        2
+      ],
+      "expected": 131072,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        524288,
+        2
+      ],
+      "expected": 262144,
+      "category": "edge",
+      "note": "powers of two division"
+    },
+    {
+      "input": [
+        -1981904747,
+        1495130349
+      ],
+      "expected": -1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        1973135257,
+        794305169
+      ],
+      "expected": 2,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        1258216143,
+        973216457
+      ],
+      "expected": 1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        468101354,
+        -1103975257
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -283175183,
+        -378361078
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -1612537758,
+        -329569837
+      ],
+      "expected": 4,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -17277605,
+        -1658503756
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -1366488141,
+        -136433136
+      ],
+      "expected": 10,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -1884585787,
+        -2022722614
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -1435695376,
+        591157966
+      ],
+      "expected": -2,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        769880109,
+        202075437
+      ],
+      "expected": 3,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        959477845,
+        709061196
+      ],
+      "expected": 1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        863954772,
+        -358239601
+      ],
+      "expected": -2,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -775060867,
+        1882025485
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        448739768,
+        2081286264
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        698603043,
+        -637815784
+      ],
+      "expected": -1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        1955192971,
+        -1535833297
+      ],
+      "expected": -1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        1175339950,
+        -769059303
+      ],
+      "expected": -1,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        1320569854,
+        233948513
+      ],
+      "expected": 5,
+      "category": "stress",
+      "note": "random large values"
+    },
+    {
+      "input": [
+        -323221188,
+        -1260876365
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "random large values"
+    }
+  ]
+}

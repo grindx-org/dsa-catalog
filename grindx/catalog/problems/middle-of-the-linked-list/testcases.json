@@ -1,0 +1,2290 @@
+{
+  "problem_id": "middle-of-the-linked-list",
+  "function": "middleNode",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        3,
+        4,
+        5
+      ],
+      "category": "basic",
+      "note": "odd length returns the true middle suffix"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": [
+        4,
+        5,
+        6
+      ],
+      "category": "basic",
+      "note": "even length returns the second middle"
+    },
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2
+        ]
+      ],
+      "expected": [
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    },
+    {
+      "input": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all value patterns up to length 6 over [1,2]"
+    }
+  ]
+}

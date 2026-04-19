@@ -1,0 +1,2358 @@
+{
+  "problem_id": "add-binary",
+  "function": "addBinary",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        "11",
+        "1"
+      ],
+      "expected": "100",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "1010",
+        "1011"
+      ],
+      "expected": "10101",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "0",
+        "0"
+      ],
+      "expected": "0",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "1",
+        "1"
+      ],
+      "expected": "10",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "1",
+        "0"
+      ],
+      "expected": "1",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "111",
+        "1"
+      ],
+      "expected": "1000",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "1111",
+        "1"
+      ],
+      "expected": "10000",
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        "0",
+        "1"
+      ],
+      "expected": "1",
+      "category": "edge",
+      "note": "single-bit combinations"
+    },
+    {
+      "input": [
+        "0",
+        "10"
+      ],
+      "expected": "10",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "11"
+      ],
+      "expected": "11",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "10"
+      ],
+      "expected": "11",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "11"
+      ],
+      "expected": "100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "100"
+      ],
+      "expected": "100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "101"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "110"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "111"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "100"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "101"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "110"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "111"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1000"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1001"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1010"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1011"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1100"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1101"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1110"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "0",
+        "1111"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1000"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1001"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1010"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1011"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1100"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1101"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1110"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1",
+        "1111"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "0"
+      ],
+      "expected": "10",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1"
+      ],
+      "expected": "11",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "0"
+      ],
+      "expected": "11",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "10"
+      ],
+      "expected": "100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "11"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "10"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "11"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "100"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "101"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "110"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "111"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "100"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "101"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "110"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "111"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1000"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1001"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1010"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1011"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1100"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1101"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1110"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "10",
+        "1111"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1000"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1001"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1010"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1011"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1100"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1101"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1110"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11",
+        "1111"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "0"
+      ],
+      "expected": "100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "0"
+      ],
+      "expected": "101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "0"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "0"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "10"
+      ],
+      "expected": "110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "11"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "10"
+      ],
+      "expected": "111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "11"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "10"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "11"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "10"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "11"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "100"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "101"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "110"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "111"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "100"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "101"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "110"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "111"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "100"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "101"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "110"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "111"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "100"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "101"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "110"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "111"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1000"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1001"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1010"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1011"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1100"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1101"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1110"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "100",
+        "1111"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1000"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1001"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1010"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1011"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1100"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1101"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1110"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "101",
+        "1111"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1000"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1001"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1010"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1011"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1100"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1101"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1110"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "110",
+        "1111"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1000"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1001"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1010"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1011"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1100"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1101"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1110"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "111",
+        "1111"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "0"
+      ],
+      "expected": "1000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "0"
+      ],
+      "expected": "1001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "0"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "0"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "0"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "0"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "0"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "0"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "10"
+      ],
+      "expected": "1010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "11"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "10"
+      ],
+      "expected": "1011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "11"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "10"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "11"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "10"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "11"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "10"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "11"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "10"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "11"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "10"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "11"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "10"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "11"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "100"
+      ],
+      "expected": "1100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "101"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "110"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "111"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "100"
+      ],
+      "expected": "1101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "101"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "110"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "111"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "100"
+      ],
+      "expected": "1110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "101"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "110"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "111"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "100"
+      ],
+      "expected": "1111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "101"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "110"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "111"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "100"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "101"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "110"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "111"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "100"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "101"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "110"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "111"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "100"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "101"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "110"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "111"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "100"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "101"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "110"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "111"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1000"
+      ],
+      "expected": "10000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1001"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1010"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1011"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1100"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1101"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1110"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1000",
+        "1111"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1000"
+      ],
+      "expected": "10001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1001"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1010"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1011"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1100"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1101"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1110"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1001",
+        "1111"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1000"
+      ],
+      "expected": "10010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1001"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1010"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1100"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1101"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1110"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1010",
+        "1111"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1000"
+      ],
+      "expected": "10011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1001"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1010"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1011"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1100"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1101"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1110"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1011",
+        "1111"
+      ],
+      "expected": "11010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1000"
+      ],
+      "expected": "10100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1001"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1010"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1011"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1100"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1101"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1110"
+      ],
+      "expected": "11010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1100",
+        "1111"
+      ],
+      "expected": "11011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1000"
+      ],
+      "expected": "10101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1001"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1010"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1011"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1100"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1101"
+      ],
+      "expected": "11010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1110"
+      ],
+      "expected": "11011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1101",
+        "1111"
+      ],
+      "expected": "11100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1000"
+      ],
+      "expected": "10110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1001"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1010"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1011"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1100"
+      ],
+      "expected": "11010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1101"
+      ],
+      "expected": "11011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1110"
+      ],
+      "expected": "11100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1110",
+        "1111"
+      ],
+      "expected": "11101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1000"
+      ],
+      "expected": "10111",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1001"
+      ],
+      "expected": "11000",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1010"
+      ],
+      "expected": "11001",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1011"
+      ],
+      "expected": "11010",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1100"
+      ],
+      "expected": "11011",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1101"
+      ],
+      "expected": "11100",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1110"
+      ],
+      "expected": "11101",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "1111",
+        "1111"
+      ],
+      "expected": "11110",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 4"
+    },
+    {
+      "input": [
+        "11111111",
+        "1"
+      ],
+      "expected": "100000000",
+      "category": "stress",
+      "note": "carry propagation through all bits"
+    },
+    {
+      "input": [
+        "111111111111",
+        "1"
+      ],
+      "expected": "1000000000000",
+      "category": "stress",
+      "note": "carry propagation through all bits"
+    },
+    {
+      "input": [
+        "1111111111111111",
+        "1"
+      ],
+      "expected": "10000000000000000",
+      "category": "stress",
+      "note": "carry propagation through all bits"
+    },
+    {
+      "input": [
+        "1000000000000000000000000000000000000000000000000001",
+        "111111111111111111111111111111111111111111111111111"
+      ],
+      "expected": "10000000000000000000000000000000000000000000000000000",
+      "category": "stress",
+      "note": "longer binary strings"
+    },
+    {
+      "input": [
+        "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+        "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+      ],
+      "expected": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110",
+      "category": "stress",
+      "note": "100-bit all-ones addition"
+    }
+  ]
+}

@@ -1,0 +1,8785 @@
+{
+  "problem_id": "min-insertions-to-make-string-palindrome",
+  "function": "minInsertions",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 1.0,
+  "cases": [
+    {
+      "input": [
+        "zzazz"
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "already a palindrome"
+    },
+    {
+      "input": [
+        "mbadm"
+      ],
+      "expected": 2,
+      "category": "basic",
+      "note": "needs insertions on both sides"
+    },
+    {
+      "input": [
+        "a"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "b"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "c"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaabcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaccb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaaccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aababa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aababb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aababc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabacb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabbcc"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aabccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacabc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacacb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccaa"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccbb"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aaccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacccb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "aacccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ababcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abaccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abbccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcabc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccba"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "abcccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaaca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acabcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acacca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaccb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acaccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbacb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbcca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acbccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "acccca"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "accccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baabcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baaccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babaac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bababa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bababb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bababc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "babccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccab"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "baccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bacccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaabb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaacc"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbabcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacbc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbaccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbcca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbbccc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcabc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcbcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccaa"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccbb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbccca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bbcccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaacb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcabcc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcaccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbacc"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbcb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcac"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbcca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcbccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bcccca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccccb"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "bccccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caabcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacaa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caaccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cababa"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cababb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cababc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabbcc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcba"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cabccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacaca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccac"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "caccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cacccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaabb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaabc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbabcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacab"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbacca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbaccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbabb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbacc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcbb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbcca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbccb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbbccc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcacb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbcb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccbc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbccca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cbcccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaabb"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaacc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabcb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccabcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccacca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccaccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbabc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbaca"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbacb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbaa"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbbcc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbcca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccbccc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccabb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccabc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccaca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccacb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccacc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbaa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbac"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbbc"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbca"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbcb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccbcc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccaa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccac"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccbb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccbc"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "ccccca"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccccb"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "cccccc"
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "all strings of length 1..6 over {a,b,c}"
+    },
+    {
+      "input": [
+        "qazwsxedcrfvtgbyhnujmikolpqazwsx"
+      ],
+      "expected": 29,
+      "category": "stress",
+      "note": "long palindrome-conversion strings should separate quadratic DP from exponential end-recursion"
+    },
+    {
+      "input": [
+        "mnbvcxzlkjhgfdsapoiuytrewqasdfgh"
+      ],
+      "expected": 19,
+      "category": "stress",
+      "note": "long palindrome-conversion strings should separate quadratic DP from exponential end-recursion"
+    },
+    {
+      "input": [
+        "plmoknijbuhvygctfxrdzeswaqplmnob"
+      ],
+      "expected": 27,
+      "category": "stress",
+      "note": "long palindrome-conversion strings should separate quadratic DP from exponential end-recursion"
+    }
+  ]
+}

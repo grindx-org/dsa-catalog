@@ -1,0 +1,7748 @@
+{
+  "problem_id": "combination-sum-iii",
+  "function": "combinationSum3",
+  "pattern": "function",
+  "comparison": "custom",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        3,
+        7
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        3,
+        9
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        4,
+        1
+      ],
+      "expected": [],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        2,
+        5
+      ],
+      "expected": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        4,
+        24
+      ],
+      "expected": [
+        [
+          1,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          8,
+          9
+        ],
+        [
+          2,
+          6,
+          7,
+          9
+        ],
+        [
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          3,
+          5,
+          7,
+          9
+        ],
+        [
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          4,
+          5,
+          7,
+          8
+        ]
+      ],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        2,
+        18
+      ],
+      "expected": [],
+      "category": "basic",
+      "note": "curated combination-sum-iii sample"
+    },
+    {
+      "input": [
+        4,
+        30
+      ],
+      "expected": [
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "stress",
+      "note": "stress k=4, n=30 exercises deeper recursion"
+    },
+    {
+      "input": [
+        3,
+        24
+      ],
+      "expected": [
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "stress",
+      "note": "stress k=3, n=24 exercises deeper recursion"
+    },
+    {
+      "input": [
+        5,
+        35
+      ],
+      "expected": [
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "stress",
+      "note": "stress k=5, n=35 exercises deeper recursion"
+    },
+    {
+      "input": [
+        2,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=1"
+    },
+    {
+      "input": [
+        2,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=2"
+    },
+    {
+      "input": [
+        2,
+        3
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=3"
+    },
+    {
+      "input": [
+        2,
+        4
+      ],
+      "expected": [
+        [
+          1,
+          3
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=4"
+    },
+    {
+      "input": [
+        2,
+        6
+      ],
+      "expected": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=6"
+    },
+    {
+      "input": [
+        2,
+        7
+      ],
+      "expected": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=7"
+    },
+    {
+      "input": [
+        2,
+        8
+      ],
+      "expected": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=8"
+    },
+    {
+      "input": [
+        2,
+        9
+      ],
+      "expected": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=9"
+    },
+    {
+      "input": [
+        2,
+        10
+      ],
+      "expected": [
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=10"
+    },
+    {
+      "input": [
+        2,
+        11
+      ],
+      "expected": [
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=11"
+    },
+    {
+      "input": [
+        2,
+        12
+      ],
+      "expected": [
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=12"
+    },
+    {
+      "input": [
+        2,
+        13
+      ],
+      "expected": [
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=13"
+    },
+    {
+      "input": [
+        2,
+        14
+      ],
+      "expected": [
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=14"
+    },
+    {
+      "input": [
+        2,
+        15
+      ],
+      "expected": [
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=15"
+    },
+    {
+      "input": [
+        2,
+        16
+      ],
+      "expected": [
+        [
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=16"
+    },
+    {
+      "input": [
+        2,
+        17
+      ],
+      "expected": [
+        [
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=2, n=17"
+    },
+    {
+      "input": [
+        2,
+        19
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=19"
+    },
+    {
+      "input": [
+        2,
+        20
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=20"
+    },
+    {
+      "input": [
+        2,
+        21
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=21"
+    },
+    {
+      "input": [
+        2,
+        22
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=22"
+    },
+    {
+      "input": [
+        2,
+        23
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=23"
+    },
+    {
+      "input": [
+        2,
+        24
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=24"
+    },
+    {
+      "input": [
+        2,
+        25
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=25"
+    },
+    {
+      "input": [
+        2,
+        26
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=26"
+    },
+    {
+      "input": [
+        2,
+        27
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=27"
+    },
+    {
+      "input": [
+        2,
+        28
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=28"
+    },
+    {
+      "input": [
+        2,
+        29
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=29"
+    },
+    {
+      "input": [
+        2,
+        30
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=30"
+    },
+    {
+      "input": [
+        2,
+        31
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=31"
+    },
+    {
+      "input": [
+        2,
+        32
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=32"
+    },
+    {
+      "input": [
+        2,
+        33
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=33"
+    },
+    {
+      "input": [
+        2,
+        34
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=34"
+    },
+    {
+      "input": [
+        2,
+        35
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=35"
+    },
+    {
+      "input": [
+        2,
+        36
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=36"
+    },
+    {
+      "input": [
+        2,
+        37
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=37"
+    },
+    {
+      "input": [
+        2,
+        38
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=38"
+    },
+    {
+      "input": [
+        2,
+        39
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=39"
+    },
+    {
+      "input": [
+        2,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=40"
+    },
+    {
+      "input": [
+        2,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=41"
+    },
+    {
+      "input": [
+        2,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=42"
+    },
+    {
+      "input": [
+        2,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=43"
+    },
+    {
+      "input": [
+        2,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=44"
+    },
+    {
+      "input": [
+        2,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=45"
+    },
+    {
+      "input": [
+        2,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=46"
+    },
+    {
+      "input": [
+        2,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=47"
+    },
+    {
+      "input": [
+        2,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=48"
+    },
+    {
+      "input": [
+        2,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=49"
+    },
+    {
+      "input": [
+        2,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=50"
+    },
+    {
+      "input": [
+        2,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=51"
+    },
+    {
+      "input": [
+        2,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=52"
+    },
+    {
+      "input": [
+        2,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=53"
+    },
+    {
+      "input": [
+        2,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=54"
+    },
+    {
+      "input": [
+        2,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=55"
+    },
+    {
+      "input": [
+        2,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=56"
+    },
+    {
+      "input": [
+        2,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=57"
+    },
+    {
+      "input": [
+        2,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=58"
+    },
+    {
+      "input": [
+        2,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=59"
+    },
+    {
+      "input": [
+        2,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=2, n=60"
+    },
+    {
+      "input": [
+        3,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=1"
+    },
+    {
+      "input": [
+        3,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=2"
+    },
+    {
+      "input": [
+        3,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=3"
+    },
+    {
+      "input": [
+        3,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=4"
+    },
+    {
+      "input": [
+        3,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=5"
+    },
+    {
+      "input": [
+        3,
+        6
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=6"
+    },
+    {
+      "input": [
+        3,
+        8
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=8"
+    },
+    {
+      "input": [
+        3,
+        10
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=10"
+    },
+    {
+      "input": [
+        3,
+        11
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          1,
+          3,
+          7
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=11"
+    },
+    {
+      "input": [
+        3,
+        12
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=12"
+    },
+    {
+      "input": [
+        3,
+        13
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          9
+        ],
+        [
+          1,
+          4,
+          8
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          2,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=13"
+    },
+    {
+      "input": [
+        3,
+        14
+      ],
+      "expected": [
+        [
+          1,
+          4,
+          9
+        ],
+        [
+          1,
+          5,
+          8
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          9
+        ],
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=14"
+    },
+    {
+      "input": [
+        3,
+        15
+      ],
+      "expected": [
+        [
+          1,
+          5,
+          9
+        ],
+        [
+          1,
+          6,
+          8
+        ],
+        [
+          2,
+          4,
+          9
+        ],
+        [
+          2,
+          5,
+          8
+        ],
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          8
+        ],
+        [
+          3,
+          5,
+          7
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=15"
+    },
+    {
+      "input": [
+        3,
+        16
+      ],
+      "expected": [
+        [
+          1,
+          6,
+          9
+        ],
+        [
+          1,
+          7,
+          8
+        ],
+        [
+          2,
+          5,
+          9
+        ],
+        [
+          2,
+          6,
+          8
+        ],
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          3,
+          5,
+          8
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          4,
+          5,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=16"
+    },
+    {
+      "input": [
+        3,
+        17
+      ],
+      "expected": [
+        [
+          1,
+          7,
+          9
+        ],
+        [
+          2,
+          6,
+          9
+        ],
+        [
+          2,
+          7,
+          8
+        ],
+        [
+          3,
+          5,
+          9
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          4,
+          5,
+          8
+        ],
+        [
+          4,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=17"
+    },
+    {
+      "input": [
+        3,
+        18
+      ],
+      "expected": [
+        [
+          1,
+          8,
+          9
+        ],
+        [
+          2,
+          7,
+          9
+        ],
+        [
+          3,
+          6,
+          9
+        ],
+        [
+          3,
+          7,
+          8
+        ],
+        [
+          4,
+          5,
+          9
+        ],
+        [
+          4,
+          6,
+          8
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=18"
+    },
+    {
+      "input": [
+        3,
+        19
+      ],
+      "expected": [
+        [
+          2,
+          8,
+          9
+        ],
+        [
+          3,
+          7,
+          9
+        ],
+        [
+          4,
+          6,
+          9
+        ],
+        [
+          4,
+          7,
+          8
+        ],
+        [
+          5,
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=19"
+    },
+    {
+      "input": [
+        3,
+        20
+      ],
+      "expected": [
+        [
+          3,
+          8,
+          9
+        ],
+        [
+          4,
+          7,
+          9
+        ],
+        [
+          5,
+          6,
+          9
+        ],
+        [
+          5,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=20"
+    },
+    {
+      "input": [
+        3,
+        21
+      ],
+      "expected": [
+        [
+          4,
+          8,
+          9
+        ],
+        [
+          5,
+          7,
+          9
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=21"
+    },
+    {
+      "input": [
+        3,
+        22
+      ],
+      "expected": [
+        [
+          5,
+          8,
+          9
+        ],
+        [
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=22"
+    },
+    {
+      "input": [
+        3,
+        23
+      ],
+      "expected": [
+        [
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=3, n=23"
+    },
+    {
+      "input": [
+        3,
+        25
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=25"
+    },
+    {
+      "input": [
+        3,
+        26
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=26"
+    },
+    {
+      "input": [
+        3,
+        27
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=27"
+    },
+    {
+      "input": [
+        3,
+        28
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=28"
+    },
+    {
+      "input": [
+        3,
+        29
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=29"
+    },
+    {
+      "input": [
+        3,
+        30
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=30"
+    },
+    {
+      "input": [
+        3,
+        31
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=31"
+    },
+    {
+      "input": [
+        3,
+        32
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=32"
+    },
+    {
+      "input": [
+        3,
+        33
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=33"
+    },
+    {
+      "input": [
+        3,
+        34
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=34"
+    },
+    {
+      "input": [
+        3,
+        35
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=35"
+    },
+    {
+      "input": [
+        3,
+        36
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=36"
+    },
+    {
+      "input": [
+        3,
+        37
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=37"
+    },
+    {
+      "input": [
+        3,
+        38
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=38"
+    },
+    {
+      "input": [
+        3,
+        39
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=39"
+    },
+    {
+      "input": [
+        3,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=40"
+    },
+    {
+      "input": [
+        3,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=41"
+    },
+    {
+      "input": [
+        3,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=42"
+    },
+    {
+      "input": [
+        3,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=43"
+    },
+    {
+      "input": [
+        3,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=44"
+    },
+    {
+      "input": [
+        3,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=45"
+    },
+    {
+      "input": [
+        3,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=46"
+    },
+    {
+      "input": [
+        3,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=47"
+    },
+    {
+      "input": [
+        3,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=48"
+    },
+    {
+      "input": [
+        3,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=49"
+    },
+    {
+      "input": [
+        3,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=50"
+    },
+    {
+      "input": [
+        3,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=51"
+    },
+    {
+      "input": [
+        3,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=52"
+    },
+    {
+      "input": [
+        3,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=53"
+    },
+    {
+      "input": [
+        3,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=54"
+    },
+    {
+      "input": [
+        3,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=55"
+    },
+    {
+      "input": [
+        3,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=56"
+    },
+    {
+      "input": [
+        3,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=57"
+    },
+    {
+      "input": [
+        3,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=58"
+    },
+    {
+      "input": [
+        3,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=59"
+    },
+    {
+      "input": [
+        3,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=3, n=60"
+    },
+    {
+      "input": [
+        4,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=2"
+    },
+    {
+      "input": [
+        4,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=3"
+    },
+    {
+      "input": [
+        4,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=4"
+    },
+    {
+      "input": [
+        4,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=5"
+    },
+    {
+      "input": [
+        4,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=6"
+    },
+    {
+      "input": [
+        4,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=7"
+    },
+    {
+      "input": [
+        4,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=8"
+    },
+    {
+      "input": [
+        4,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=9"
+    },
+    {
+      "input": [
+        4,
+        10
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=10"
+    },
+    {
+      "input": [
+        4,
+        11
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=11"
+    },
+    {
+      "input": [
+        4,
+        12
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          6
+        ],
+        [
+          1,
+          2,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=12"
+    },
+    {
+      "input": [
+        4,
+        13
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          7
+        ],
+        [
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=13"
+    },
+    {
+      "input": [
+        4,
+        14
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          7
+        ],
+        [
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=14"
+    },
+    {
+      "input": [
+        4,
+        15
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          8
+        ],
+        [
+          1,
+          2,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          4,
+          7
+        ],
+        [
+          1,
+          3,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=15"
+    },
+    {
+      "input": [
+        4,
+        16
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          8
+        ],
+        [
+          1,
+          2,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          4,
+          8
+        ],
+        [
+          1,
+          3,
+          5,
+          7
+        ],
+        [
+          1,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          2,
+          3,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=16"
+    },
+    {
+      "input": [
+        4,
+        17
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5,
+          9
+        ],
+        [
+          1,
+          2,
+          6,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          8
+        ],
+        [
+          1,
+          3,
+          6,
+          7
+        ],
+        [
+          1,
+          4,
+          5,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          7
+        ],
+        [
+          2,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=17"
+    },
+    {
+      "input": [
+        4,
+        18
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          5,
+          9
+        ],
+        [
+          1,
+          3,
+          6,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          8
+        ],
+        [
+          1,
+          4,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          6,
+          7
+        ],
+        [
+          2,
+          4,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=18"
+    },
+    {
+      "input": [
+        4,
+        19
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          6,
+          9
+        ],
+        [
+          1,
+          3,
+          7,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          9
+        ],
+        [
+          1,
+          4,
+          6,
+          8
+        ],
+        [
+          1,
+          5,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          5,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          8
+        ],
+        [
+          2,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          4,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          5,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=19"
+    },
+    {
+      "input": [
+        4,
+        20
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          7,
+          9
+        ],
+        [
+          1,
+          4,
+          6,
+          9
+        ],
+        [
+          1,
+          4,
+          7,
+          8
+        ],
+        [
+          1,
+          5,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          6,
+          9
+        ],
+        [
+          2,
+          3,
+          7,
+          8
+        ],
+        [
+          2,
+          4,
+          5,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          8
+        ],
+        [
+          2,
+          5,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          3,
+          4,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=20"
+    },
+    {
+      "input": [
+        4,
+        21
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          7,
+          9
+        ],
+        [
+          1,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          5,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          7,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          9
+        ],
+        [
+          2,
+          4,
+          7,
+          8
+        ],
+        [
+          2,
+          5,
+          6,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          8
+        ],
+        [
+          3,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=21"
+    },
+    {
+      "input": [
+        4,
+        22
+      ],
+      "expected": [
+        [
+          1,
+          4,
+          8,
+          9
+        ],
+        [
+          1,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          2,
+          5,
+          6,
+          9
+        ],
+        [
+          2,
+          5,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          6,
+          9
+        ],
+        [
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=22"
+    },
+    {
+      "input": [
+        4,
+        23
+      ],
+      "expected": [
+        [
+          1,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          4,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          7,
+          9
+        ],
+        [
+          2,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          7,
+          9
+        ],
+        [
+          3,
+          5,
+          6,
+          9
+        ],
+        [
+          3,
+          5,
+          7,
+          8
+        ],
+        [
+          4,
+          5,
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=23"
+    },
+    {
+      "input": [
+        4,
+        25
+      ],
+      "expected": [
+        [
+          1,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          6,
+          8,
+          9
+        ],
+        [
+          3,
+          5,
+          8,
+          9
+        ],
+        [
+          3,
+          6,
+          7,
+          9
+        ],
+        [
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=25"
+    },
+    {
+      "input": [
+        4,
+        26
+      ],
+      "expected": [
+        [
+          2,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          6,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=26"
+    },
+    {
+      "input": [
+        4,
+        27
+      ],
+      "expected": [
+        [
+          3,
+          7,
+          8,
+          9
+        ],
+        [
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=27"
+    },
+    {
+      "input": [
+        4,
+        28
+      ],
+      "expected": [
+        [
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=28"
+    },
+    {
+      "input": [
+        4,
+        29
+      ],
+      "expected": [
+        [
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=4, n=29"
+    },
+    {
+      "input": [
+        4,
+        31
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=31"
+    },
+    {
+      "input": [
+        4,
+        32
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=32"
+    },
+    {
+      "input": [
+        4,
+        33
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=33"
+    },
+    {
+      "input": [
+        4,
+        34
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=34"
+    },
+    {
+      "input": [
+        4,
+        35
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=35"
+    },
+    {
+      "input": [
+        4,
+        36
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=36"
+    },
+    {
+      "input": [
+        4,
+        37
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=37"
+    },
+    {
+      "input": [
+        4,
+        38
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=38"
+    },
+    {
+      "input": [
+        4,
+        39
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=39"
+    },
+    {
+      "input": [
+        4,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=40"
+    },
+    {
+      "input": [
+        4,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=41"
+    },
+    {
+      "input": [
+        4,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=42"
+    },
+    {
+      "input": [
+        4,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=43"
+    },
+    {
+      "input": [
+        4,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=44"
+    },
+    {
+      "input": [
+        4,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=45"
+    },
+    {
+      "input": [
+        4,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=46"
+    },
+    {
+      "input": [
+        4,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=47"
+    },
+    {
+      "input": [
+        4,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=48"
+    },
+    {
+      "input": [
+        4,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=49"
+    },
+    {
+      "input": [
+        4,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=50"
+    },
+    {
+      "input": [
+        4,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=51"
+    },
+    {
+      "input": [
+        4,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=52"
+    },
+    {
+      "input": [
+        4,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=53"
+    },
+    {
+      "input": [
+        4,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=54"
+    },
+    {
+      "input": [
+        4,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=55"
+    },
+    {
+      "input": [
+        4,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=56"
+    },
+    {
+      "input": [
+        4,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=57"
+    },
+    {
+      "input": [
+        4,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=58"
+    },
+    {
+      "input": [
+        4,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=59"
+    },
+    {
+      "input": [
+        4,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=4, n=60"
+    },
+    {
+      "input": [
+        5,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=1"
+    },
+    {
+      "input": [
+        5,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=2"
+    },
+    {
+      "input": [
+        5,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=3"
+    },
+    {
+      "input": [
+        5,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=4"
+    },
+    {
+      "input": [
+        5,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=5"
+    },
+    {
+      "input": [
+        5,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=6"
+    },
+    {
+      "input": [
+        5,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=7"
+    },
+    {
+      "input": [
+        5,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=8"
+    },
+    {
+      "input": [
+        5,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=9"
+    },
+    {
+      "input": [
+        5,
+        10
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=10"
+    },
+    {
+      "input": [
+        5,
+        11
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=11"
+    },
+    {
+      "input": [
+        5,
+        12
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=12"
+    },
+    {
+      "input": [
+        5,
+        13
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=13"
+    },
+    {
+      "input": [
+        5,
+        14
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=14"
+    },
+    {
+      "input": [
+        5,
+        15
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=15"
+    },
+    {
+      "input": [
+        5,
+        16
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=16"
+    },
+    {
+      "input": [
+        5,
+        17
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=17"
+    },
+    {
+      "input": [
+        5,
+        18
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          7
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=18"
+    },
+    {
+      "input": [
+        5,
+        19
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=19"
+    },
+    {
+      "input": [
+        5,
+        20
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          5,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=20"
+    },
+    {
+      "input": [
+        5,
+        21
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=21"
+    },
+    {
+      "input": [
+        5,
+        22
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          8
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=22"
+    },
+    {
+      "input": [
+        5,
+        23
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=23"
+    },
+    {
+      "input": [
+        5,
+        24
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=24"
+    },
+    {
+      "input": [
+        5,
+        25
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=25"
+    },
+    {
+      "input": [
+        5,
+        26
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=26"
+    },
+    {
+      "input": [
+        5,
+        27
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=27"
+    },
+    {
+      "input": [
+        5,
+        28
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=28"
+    },
+    {
+      "input": [
+        5,
+        29
+      ],
+      "expected": [
+        [
+          1,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          3,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=29"
+    },
+    {
+      "input": [
+        5,
+        30
+      ],
+      "expected": [
+        [
+          1,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=30"
+    },
+    {
+      "input": [
+        5,
+        31
+      ],
+      "expected": [
+        [
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=31"
+    },
+    {
+      "input": [
+        5,
+        32
+      ],
+      "expected": [
+        [
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=32"
+    },
+    {
+      "input": [
+        5,
+        33
+      ],
+      "expected": [
+        [
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=33"
+    },
+    {
+      "input": [
+        5,
+        34
+      ],
+      "expected": [
+        [
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=5, n=34"
+    },
+    {
+      "input": [
+        5,
+        36
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=36"
+    },
+    {
+      "input": [
+        5,
+        37
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=37"
+    },
+    {
+      "input": [
+        5,
+        38
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=38"
+    },
+    {
+      "input": [
+        5,
+        39
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=39"
+    },
+    {
+      "input": [
+        5,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=40"
+    },
+    {
+      "input": [
+        5,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=41"
+    },
+    {
+      "input": [
+        5,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=42"
+    },
+    {
+      "input": [
+        5,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=43"
+    },
+    {
+      "input": [
+        5,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=44"
+    },
+    {
+      "input": [
+        5,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=45"
+    },
+    {
+      "input": [
+        5,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=46"
+    },
+    {
+      "input": [
+        5,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=47"
+    },
+    {
+      "input": [
+        5,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=48"
+    },
+    {
+      "input": [
+        5,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=49"
+    },
+    {
+      "input": [
+        5,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=50"
+    },
+    {
+      "input": [
+        5,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=51"
+    },
+    {
+      "input": [
+        5,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=52"
+    },
+    {
+      "input": [
+        5,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=53"
+    },
+    {
+      "input": [
+        5,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=54"
+    },
+    {
+      "input": [
+        5,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=55"
+    },
+    {
+      "input": [
+        5,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=56"
+    },
+    {
+      "input": [
+        5,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=57"
+    },
+    {
+      "input": [
+        5,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=58"
+    },
+    {
+      "input": [
+        5,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=59"
+    },
+    {
+      "input": [
+        5,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=5, n=60"
+    },
+    {
+      "input": [
+        6,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=1"
+    },
+    {
+      "input": [
+        6,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=2"
+    },
+    {
+      "input": [
+        6,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=3"
+    },
+    {
+      "input": [
+        6,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=4"
+    },
+    {
+      "input": [
+        6,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=5"
+    },
+    {
+      "input": [
+        6,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=6"
+    },
+    {
+      "input": [
+        6,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=7"
+    },
+    {
+      "input": [
+        6,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=8"
+    },
+    {
+      "input": [
+        6,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=9"
+    },
+    {
+      "input": [
+        6,
+        10
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=10"
+    },
+    {
+      "input": [
+        6,
+        11
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=11"
+    },
+    {
+      "input": [
+        6,
+        12
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=12"
+    },
+    {
+      "input": [
+        6,
+        13
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=13"
+    },
+    {
+      "input": [
+        6,
+        14
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=14"
+    },
+    {
+      "input": [
+        6,
+        15
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=15"
+    },
+    {
+      "input": [
+        6,
+        16
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=16"
+    },
+    {
+      "input": [
+        6,
+        17
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=17"
+    },
+    {
+      "input": [
+        6,
+        18
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=18"
+    },
+    {
+      "input": [
+        6,
+        19
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=19"
+    },
+    {
+      "input": [
+        6,
+        20
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=20"
+    },
+    {
+      "input": [
+        6,
+        21
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=21"
+    },
+    {
+      "input": [
+        6,
+        22
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=22"
+    },
+    {
+      "input": [
+        6,
+        23
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=23"
+    },
+    {
+      "input": [
+        6,
+        24
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=24"
+    },
+    {
+      "input": [
+        6,
+        25
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=25"
+    },
+    {
+      "input": [
+        6,
+        26
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=26"
+    },
+    {
+      "input": [
+        6,
+        27
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=27"
+    },
+    {
+      "input": [
+        6,
+        28
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=28"
+    },
+    {
+      "input": [
+        6,
+        29
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=29"
+    },
+    {
+      "input": [
+        6,
+        30
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=30"
+    },
+    {
+      "input": [
+        6,
+        31
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=31"
+    },
+    {
+      "input": [
+        6,
+        32
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=32"
+    },
+    {
+      "input": [
+        6,
+        33
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=33"
+    },
+    {
+      "input": [
+        6,
+        34
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=34"
+    },
+    {
+      "input": [
+        6,
+        35
+      ],
+      "expected": [
+        [
+          1,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=35"
+    },
+    {
+      "input": [
+        6,
+        36
+      ],
+      "expected": [
+        [
+          1,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=36"
+    },
+    {
+      "input": [
+        6,
+        37
+      ],
+      "expected": [
+        [
+          2,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=37"
+    },
+    {
+      "input": [
+        6,
+        38
+      ],
+      "expected": [
+        [
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=38"
+    },
+    {
+      "input": [
+        6,
+        39
+      ],
+      "expected": [
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=6, n=39"
+    },
+    {
+      "input": [
+        6,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=40"
+    },
+    {
+      "input": [
+        6,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=41"
+    },
+    {
+      "input": [
+        6,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=42"
+    },
+    {
+      "input": [
+        6,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=43"
+    },
+    {
+      "input": [
+        6,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=44"
+    },
+    {
+      "input": [
+        6,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=45"
+    },
+    {
+      "input": [
+        6,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=46"
+    },
+    {
+      "input": [
+        6,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=47"
+    },
+    {
+      "input": [
+        6,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=48"
+    },
+    {
+      "input": [
+        6,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=49"
+    },
+    {
+      "input": [
+        6,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=50"
+    },
+    {
+      "input": [
+        6,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=51"
+    },
+    {
+      "input": [
+        6,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=52"
+    },
+    {
+      "input": [
+        6,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=53"
+    },
+    {
+      "input": [
+        6,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=54"
+    },
+    {
+      "input": [
+        6,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=55"
+    },
+    {
+      "input": [
+        6,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=56"
+    },
+    {
+      "input": [
+        6,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=57"
+    },
+    {
+      "input": [
+        6,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=58"
+    },
+    {
+      "input": [
+        6,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=59"
+    },
+    {
+      "input": [
+        6,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=6, n=60"
+    },
+    {
+      "input": [
+        7,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=1"
+    },
+    {
+      "input": [
+        7,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=2"
+    },
+    {
+      "input": [
+        7,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=3"
+    },
+    {
+      "input": [
+        7,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=4"
+    },
+    {
+      "input": [
+        7,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=5"
+    },
+    {
+      "input": [
+        7,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=6"
+    },
+    {
+      "input": [
+        7,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=7"
+    },
+    {
+      "input": [
+        7,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=8"
+    },
+    {
+      "input": [
+        7,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=9"
+    },
+    {
+      "input": [
+        7,
+        10
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=10"
+    },
+    {
+      "input": [
+        7,
+        11
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=11"
+    },
+    {
+      "input": [
+        7,
+        12
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=12"
+    },
+    {
+      "input": [
+        7,
+        13
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=13"
+    },
+    {
+      "input": [
+        7,
+        14
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=14"
+    },
+    {
+      "input": [
+        7,
+        15
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=15"
+    },
+    {
+      "input": [
+        7,
+        16
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=16"
+    },
+    {
+      "input": [
+        7,
+        17
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=17"
+    },
+    {
+      "input": [
+        7,
+        18
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=18"
+    },
+    {
+      "input": [
+        7,
+        19
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=19"
+    },
+    {
+      "input": [
+        7,
+        20
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=20"
+    },
+    {
+      "input": [
+        7,
+        21
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=21"
+    },
+    {
+      "input": [
+        7,
+        22
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=22"
+    },
+    {
+      "input": [
+        7,
+        23
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=23"
+    },
+    {
+      "input": [
+        7,
+        24
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=24"
+    },
+    {
+      "input": [
+        7,
+        25
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=25"
+    },
+    {
+      "input": [
+        7,
+        26
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=26"
+    },
+    {
+      "input": [
+        7,
+        27
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=27"
+    },
+    {
+      "input": [
+        7,
+        28
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=28"
+    },
+    {
+      "input": [
+        7,
+        29
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=29"
+    },
+    {
+      "input": [
+        7,
+        30
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=30"
+    },
+    {
+      "input": [
+        7,
+        31
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=31"
+    },
+    {
+      "input": [
+        7,
+        32
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=32"
+    },
+    {
+      "input": [
+        7,
+        33
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=33"
+    },
+    {
+      "input": [
+        7,
+        34
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=34"
+    },
+    {
+      "input": [
+        7,
+        35
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=35"
+    },
+    {
+      "input": [
+        7,
+        36
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=36"
+    },
+    {
+      "input": [
+        7,
+        37
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=37"
+    },
+    {
+      "input": [
+        7,
+        38
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=38"
+    },
+    {
+      "input": [
+        7,
+        39
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=39"
+    },
+    {
+      "input": [
+        7,
+        40
+      ],
+      "expected": [
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=40"
+    },
+    {
+      "input": [
+        7,
+        41
+      ],
+      "expected": [
+        [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=41"
+    },
+    {
+      "input": [
+        7,
+        42
+      ],
+      "expected": [
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=7, n=42"
+    },
+    {
+      "input": [
+        7,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=43"
+    },
+    {
+      "input": [
+        7,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=44"
+    },
+    {
+      "input": [
+        7,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=45"
+    },
+    {
+      "input": [
+        7,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=46"
+    },
+    {
+      "input": [
+        7,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=47"
+    },
+    {
+      "input": [
+        7,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=48"
+    },
+    {
+      "input": [
+        7,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=49"
+    },
+    {
+      "input": [
+        7,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=50"
+    },
+    {
+      "input": [
+        7,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=51"
+    },
+    {
+      "input": [
+        7,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=52"
+    },
+    {
+      "input": [
+        7,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=53"
+    },
+    {
+      "input": [
+        7,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=54"
+    },
+    {
+      "input": [
+        7,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=55"
+    },
+    {
+      "input": [
+        7,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=56"
+    },
+    {
+      "input": [
+        7,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=57"
+    },
+    {
+      "input": [
+        7,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=58"
+    },
+    {
+      "input": [
+        7,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=59"
+    },
+    {
+      "input": [
+        7,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=7, n=60"
+    },
+    {
+      "input": [
+        8,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=1"
+    },
+    {
+      "input": [
+        8,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=2"
+    },
+    {
+      "input": [
+        8,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=3"
+    },
+    {
+      "input": [
+        8,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=4"
+    },
+    {
+      "input": [
+        8,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=5"
+    },
+    {
+      "input": [
+        8,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=6"
+    },
+    {
+      "input": [
+        8,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=7"
+    },
+    {
+      "input": [
+        8,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=8"
+    },
+    {
+      "input": [
+        8,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=9"
+    },
+    {
+      "input": [
+        8,
+        10
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=10"
+    },
+    {
+      "input": [
+        8,
+        11
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=11"
+    },
+    {
+      "input": [
+        8,
+        12
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=12"
+    },
+    {
+      "input": [
+        8,
+        13
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=13"
+    },
+    {
+      "input": [
+        8,
+        14
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=14"
+    },
+    {
+      "input": [
+        8,
+        15
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=15"
+    },
+    {
+      "input": [
+        8,
+        16
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=16"
+    },
+    {
+      "input": [
+        8,
+        17
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=17"
+    },
+    {
+      "input": [
+        8,
+        18
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=18"
+    },
+    {
+      "input": [
+        8,
+        19
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=19"
+    },
+    {
+      "input": [
+        8,
+        20
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=20"
+    },
+    {
+      "input": [
+        8,
+        21
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=21"
+    },
+    {
+      "input": [
+        8,
+        22
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=22"
+    },
+    {
+      "input": [
+        8,
+        23
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=23"
+    },
+    {
+      "input": [
+        8,
+        24
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=24"
+    },
+    {
+      "input": [
+        8,
+        25
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=25"
+    },
+    {
+      "input": [
+        8,
+        26
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=26"
+    },
+    {
+      "input": [
+        8,
+        27
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=27"
+    },
+    {
+      "input": [
+        8,
+        28
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=28"
+    },
+    {
+      "input": [
+        8,
+        29
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=29"
+    },
+    {
+      "input": [
+        8,
+        30
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=30"
+    },
+    {
+      "input": [
+        8,
+        31
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=31"
+    },
+    {
+      "input": [
+        8,
+        32
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=32"
+    },
+    {
+      "input": [
+        8,
+        33
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=33"
+    },
+    {
+      "input": [
+        8,
+        34
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=34"
+    },
+    {
+      "input": [
+        8,
+        35
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=35"
+    },
+    {
+      "input": [
+        8,
+        36
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=36"
+    },
+    {
+      "input": [
+        8,
+        37
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=37"
+    },
+    {
+      "input": [
+        8,
+        38
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=38"
+    },
+    {
+      "input": [
+        8,
+        39
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=39"
+    },
+    {
+      "input": [
+        8,
+        40
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=40"
+    },
+    {
+      "input": [
+        8,
+        41
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=41"
+    },
+    {
+      "input": [
+        8,
+        42
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=42"
+    },
+    {
+      "input": [
+        8,
+        43
+      ],
+      "expected": [
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=43"
+    },
+    {
+      "input": [
+        8,
+        44
+      ],
+      "expected": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=8, n=44"
+    },
+    {
+      "input": [
+        8,
+        45
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=45"
+    },
+    {
+      "input": [
+        8,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=46"
+    },
+    {
+      "input": [
+        8,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=47"
+    },
+    {
+      "input": [
+        8,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=48"
+    },
+    {
+      "input": [
+        8,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=49"
+    },
+    {
+      "input": [
+        8,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=50"
+    },
+    {
+      "input": [
+        8,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=51"
+    },
+    {
+      "input": [
+        8,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=52"
+    },
+    {
+      "input": [
+        8,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=53"
+    },
+    {
+      "input": [
+        8,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=54"
+    },
+    {
+      "input": [
+        8,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=55"
+    },
+    {
+      "input": [
+        8,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=56"
+    },
+    {
+      "input": [
+        8,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=57"
+    },
+    {
+      "input": [
+        8,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=58"
+    },
+    {
+      "input": [
+        8,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=59"
+    },
+    {
+      "input": [
+        8,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=8, n=60"
+    },
+    {
+      "input": [
+        9,
+        1
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=1"
+    },
+    {
+      "input": [
+        9,
+        2
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=2"
+    },
+    {
+      "input": [
+        9,
+        3
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=3"
+    },
+    {
+      "input": [
+        9,
+        4
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=4"
+    },
+    {
+      "input": [
+        9,
+        5
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=5"
+    },
+    {
+      "input": [
+        9,
+        6
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=6"
+    },
+    {
+      "input": [
+        9,
+        7
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=7"
+    },
+    {
+      "input": [
+        9,
+        8
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=8"
+    },
+    {
+      "input": [
+        9,
+        9
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=9"
+    },
+    {
+      "input": [
+        9,
+        10
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=10"
+    },
+    {
+      "input": [
+        9,
+        11
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=11"
+    },
+    {
+      "input": [
+        9,
+        12
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=12"
+    },
+    {
+      "input": [
+        9,
+        13
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=13"
+    },
+    {
+      "input": [
+        9,
+        14
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=14"
+    },
+    {
+      "input": [
+        9,
+        15
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=15"
+    },
+    {
+      "input": [
+        9,
+        16
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=16"
+    },
+    {
+      "input": [
+        9,
+        17
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=17"
+    },
+    {
+      "input": [
+        9,
+        18
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=18"
+    },
+    {
+      "input": [
+        9,
+        19
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=19"
+    },
+    {
+      "input": [
+        9,
+        20
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=20"
+    },
+    {
+      "input": [
+        9,
+        21
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=21"
+    },
+    {
+      "input": [
+        9,
+        22
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=22"
+    },
+    {
+      "input": [
+        9,
+        23
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=23"
+    },
+    {
+      "input": [
+        9,
+        24
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=24"
+    },
+    {
+      "input": [
+        9,
+        25
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=25"
+    },
+    {
+      "input": [
+        9,
+        26
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=26"
+    },
+    {
+      "input": [
+        9,
+        27
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=27"
+    },
+    {
+      "input": [
+        9,
+        28
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=28"
+    },
+    {
+      "input": [
+        9,
+        29
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=29"
+    },
+    {
+      "input": [
+        9,
+        30
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=30"
+    },
+    {
+      "input": [
+        9,
+        31
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=31"
+    },
+    {
+      "input": [
+        9,
+        32
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=32"
+    },
+    {
+      "input": [
+        9,
+        33
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=33"
+    },
+    {
+      "input": [
+        9,
+        34
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=34"
+    },
+    {
+      "input": [
+        9,
+        35
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=35"
+    },
+    {
+      "input": [
+        9,
+        36
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=36"
+    },
+    {
+      "input": [
+        9,
+        37
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=37"
+    },
+    {
+      "input": [
+        9,
+        38
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=38"
+    },
+    {
+      "input": [
+        9,
+        39
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=39"
+    },
+    {
+      "input": [
+        9,
+        40
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=40"
+    },
+    {
+      "input": [
+        9,
+        41
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=41"
+    },
+    {
+      "input": [
+        9,
+        42
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=42"
+    },
+    {
+      "input": [
+        9,
+        43
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=43"
+    },
+    {
+      "input": [
+        9,
+        44
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=44"
+    },
+    {
+      "input": [
+        9,
+        45
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "category": "exhaustive",
+      "note": "k=9, n=45"
+    },
+    {
+      "input": [
+        9,
+        46
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=46"
+    },
+    {
+      "input": [
+        9,
+        47
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=47"
+    },
+    {
+      "input": [
+        9,
+        48
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=48"
+    },
+    {
+      "input": [
+        9,
+        49
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=49"
+    },
+    {
+      "input": [
+        9,
+        50
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=50"
+    },
+    {
+      "input": [
+        9,
+        51
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=51"
+    },
+    {
+      "input": [
+        9,
+        52
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=52"
+    },
+    {
+      "input": [
+        9,
+        53
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=53"
+    },
+    {
+      "input": [
+        9,
+        54
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=54"
+    },
+    {
+      "input": [
+        9,
+        55
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=55"
+    },
+    {
+      "input": [
+        9,
+        56
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=56"
+    },
+    {
+      "input": [
+        9,
+        57
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=57"
+    },
+    {
+      "input": [
+        9,
+        58
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=58"
+    },
+    {
+      "input": [
+        9,
+        59
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=59"
+    },
+    {
+      "input": [
+        9,
+        60
+      ],
+      "expected": [],
+      "category": "exhaustive",
+      "note": "k=9, n=60"
+    }
+  ]
+}

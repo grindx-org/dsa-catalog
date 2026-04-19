@@ -1,0 +1,4467 @@
+{
+  "problem_id": "linked-list-cycle",
+  "function": "hasCycle",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          3,
+          2,
+          0,
+          -4
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "standard LeetCode example, cycle at node 1"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "cycle back to head"
+    },
+    {
+      "input": [
+        [
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "single node, no cycle"
+    },
+    {
+      "input": [
+        [],
+        -1
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "empty list"
+    },
+    {
+      "input": [
+        [
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "single node pointing to itself"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "basic",
+      "note": "5 nodes, no cycle"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "cycle at node 2"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "tail points to last node, self-loop"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "two nodes, no cycle"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "longer acyclic list"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        18
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "long tail with a short cycle near the end"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "large list, cycle back to head"
+    },
+    {
+      "input": [
+        [
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        -1
+      ],
+      "expected": false,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        0
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        1
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": true,
+      "category": "exhaustive"
+    }
+  ]
+}

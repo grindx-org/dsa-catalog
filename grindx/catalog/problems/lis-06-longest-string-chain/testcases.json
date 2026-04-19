@@ -1,0 +1,8938 @@
+{
+  "problem_id": "lis-06-longest-string-chain",
+  "function": "longestStrChain",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 0.5,
+  "cases": [
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "classic string-chain sample"
+    },
+    {
+      "input": [
+        [
+          "xbc",
+          "pcxbcf",
+          "xb",
+          "cxbc",
+          "pcxbc"
+        ]
+      ],
+      "expected": 5,
+      "category": "basic",
+      "note": "sample with reordered words"
+    },
+    {
+      "input": [
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "ab",
+          "ba",
+          "bca",
+          "bda",
+          "bdca",
+          "abc",
+          "abac"
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all subsets of a small reusable vocabulary with chain structure"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "aa",
+          "ab",
+          "ba",
+          "bb",
+          "aaa",
+          "aab",
+          "aba",
+          "abb",
+          "baa",
+          "bab",
+          "bba",
+          "bbb",
+          "aaaa",
+          "aaab",
+          "aaba",
+          "aabb",
+          "abaa",
+          "abab",
+          "abba",
+          "abbb",
+          "baaa",
+          "baab",
+          "baba",
+          "babb",
+          "bbaa",
+          "bbab",
+          "bbba",
+          "bbbb",
+          "aaaaa",
+          "aaaab",
+          "aaaba",
+          "aaabb",
+          "aabaa",
+          "aabab",
+          "aabba",
+          "aabbb",
+          "abaaa",
+          "abaab",
+          "ababa",
+          "ababb",
+          "abbaa",
+          "abbab",
+          "abbba",
+          "abbbb",
+          "baaaa",
+          "baaab",
+          "baaba",
+          "baabb",
+          "babaa",
+          "babab",
+          "babba",
+          "babbb",
+          "bbaaa",
+          "bbaab",
+          "bbaba",
+          "bbabb",
+          "bbbaa",
+          "bbbab",
+          "bbbba",
+          "bbbbb",
+          "aaaaaa",
+          "aaaaab",
+          "aaaaba",
+          "aaaabb",
+          "aaabaa",
+          "aaabab",
+          "aaabba",
+          "aaabbb",
+          "aabaaa",
+          "aabaab",
+          "aababa",
+          "aababb",
+          "aabbaa",
+          "aabbab",
+          "aabbba",
+          "aabbbb",
+          "abaaaa",
+          "abaaab",
+          "abaaba",
+          "abaabb",
+          "ababaa",
+          "ababab",
+          "ababba",
+          "ababbb",
+          "abbaaa",
+          "abbaab",
+          "abbaba",
+          "abbabb",
+          "abbbaa",
+          "abbbab",
+          "abbbba",
+          "abbbbb",
+          "baaaaa",
+          "baaaab",
+          "baaaba",
+          "baaabb",
+          "baabaa",
+          "baabab",
+          "baabba",
+          "baabbb",
+          "babaaa",
+          "babaab",
+          "bababa",
+          "bababb",
+          "babbaa",
+          "babbab",
+          "babbba",
+          "babbbb",
+          "bbaaaa",
+          "bbaaab",
+          "bbaaba",
+          "bbaabb",
+          "bbabaa",
+          "bbabab",
+          "bbabba",
+          "bbabbb",
+          "bbbaaa",
+          "bbbaab",
+          "bbbaba",
+          "bbbabb",
+          "bbbbaa",
+          "bbbbab",
+          "bbbbba",
+          "bbbbbb",
+          "aaaaaaa",
+          "aaaaaab",
+          "aaaaaba",
+          "aaaaabb",
+          "aaaabaa",
+          "aaaabab",
+          "aaaabba",
+          "aaaabbb",
+          "aaabaaa",
+          "aaabaab",
+          "aaababa",
+          "aaababb",
+          "aaabbaa",
+          "aaabbab",
+          "aaabbba",
+          "aaabbbb",
+          "aabaaaa",
+          "aabaaab",
+          "aabaaba",
+          "aabaabb",
+          "aababaa",
+          "aababab",
+          "aababba",
+          "aababbb",
+          "aabbaaa",
+          "aabbaab",
+          "aabbaba",
+          "aabbabb",
+          "aabbbaa",
+          "aabbbab",
+          "aabbbba",
+          "aabbbbb",
+          "abaaaaa",
+          "abaaaab",
+          "abaaaba",
+          "abaaabb",
+          "abaabaa",
+          "abaabab",
+          "abaabba",
+          "abaabbb",
+          "ababaaa",
+          "ababaab",
+          "abababa",
+          "abababb",
+          "ababbaa",
+          "ababbab",
+          "ababbba",
+          "ababbbb",
+          "abbaaaa",
+          "abbaaab",
+          "abbaaba",
+          "abbaabb",
+          "abbabaa",
+          "abbabab",
+          "abbabba",
+          "abbabbb",
+          "abbbaaa",
+          "abbbaab",
+          "abbbaba",
+          "abbbabb",
+          "abbbbaa",
+          "abbbbab",
+          "abbbbba",
+          "abbbbbb",
+          "baaaaaa",
+          "baaaaab",
+          "baaaaba",
+          "baaaabb",
+          "baaabaa",
+          "baaabab",
+          "baaabba",
+          "baaabbb",
+          "baabaaa",
+          "baabaab",
+          "baababa",
+          "baababb",
+          "baabbaa",
+          "baabbab",
+          "baabbba",
+          "baabbbb",
+          "babaaaa",
+          "babaaab",
+          "babaaba",
+          "babaabb",
+          "bababaa",
+          "bababab",
+          "bababba",
+          "bababbb",
+          "babbaaa",
+          "babbaab",
+          "babbaba",
+          "babbabb",
+          "babbbaa",
+          "babbbab",
+          "babbbba",
+          "babbbbb",
+          "bbaaaaa",
+          "bbaaaab",
+          "bbaaaba",
+          "bbaaabb",
+          "bbaabaa",
+          "bbaabab",
+          "bbaabba",
+          "bbaabbb",
+          "bbabaaa",
+          "bbabaab",
+          "bbababa",
+          "bbababb",
+          "bbabbaa",
+          "bbabbab",
+          "bbabbba",
+          "bbabbbb",
+          "bbbaaaa",
+          "bbbaaab",
+          "bbbaaba",
+          "bbbaabb",
+          "bbbabaa",
+          "bbbabab",
+          "bbbabba",
+          "bbbabbb",
+          "bbbbaaa",
+          "bbbbaab",
+          "bbbbaba",
+          "bbbbabb",
+          "bbbbbaa",
+          "bbbbbab",
+          "bbbbbba",
+          "bbbbbbb"
+        ]
+      ],
+      "expected": 7,
+      "category": "stress",
+      "note": "long predecessor chains with distractor words should separate hash-map DP from exponential subset recursion"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "c",
+          "aa",
+          "ab",
+          "ac",
+          "ba",
+          "bb",
+          "bc",
+          "ca",
+          "cb",
+          "aaa",
+          "aab",
+          "aac",
+          "aba",
+          "abb",
+          "abc",
+          "aca",
+          "acb",
+          "baa",
+          "bab",
+          "bac",
+          "bba",
+          "bbb",
+          "bbc",
+          "bca",
+          "bcb",
+          "caa",
+          "cab",
+          "cba",
+          "cbb",
+          "aaaa",
+          "aaab",
+          "aaac",
+          "aaba",
+          "aabb",
+          "aabc",
+          "aaca",
+          "aacb",
+          "abaa",
+          "abab",
+          "abac",
+          "abba",
+          "abbb",
+          "abbc",
+          "abca",
+          "abcb",
+          "acaa",
+          "acab",
+          "acba",
+          "acbb",
+          "baaa",
+          "baab",
+          "baac",
+          "baba",
+          "babb",
+          "babc",
+          "baca",
+          "bacb",
+          "bbaa",
+          "bbab",
+          "bbac",
+          "bbba",
+          "bbbb",
+          "bbbc",
+          "bbca",
+          "bbcb",
+          "bcaa",
+          "bcab",
+          "bcba",
+          "bcbb",
+          "caaa",
+          "caab",
+          "caba",
+          "cabb",
+          "cbaa",
+          "cbab",
+          "cbba",
+          "cbbb",
+          "aaaaa",
+          "aaaab",
+          "aaaac",
+          "aaaba",
+          "aaabb",
+          "aaabc",
+          "aaaca",
+          "aaacb",
+          "aabaa",
+          "aabab",
+          "aabac",
+          "aabba",
+          "aabbb",
+          "aabbc",
+          "aabca",
+          "aabcb",
+          "aacaa",
+          "aacab",
+          "aacba",
+          "aacbb",
+          "abaaa",
+          "abaab",
+          "abaac",
+          "ababa",
+          "ababb",
+          "ababc",
+          "abaca",
+          "abacb",
+          "abbaa",
+          "abbab",
+          "abbac",
+          "abbba",
+          "abbbb",
+          "abbbc",
+          "abbca",
+          "abbcb",
+          "abcaa",
+          "abcab",
+          "abcba",
+          "abcbb",
+          "acaaa",
+          "acaab",
+          "acaba",
+          "acabb",
+          "acbaa",
+          "acbab",
+          "acbba",
+          "acbbb",
+          "baaaa",
+          "baaab",
+          "baaac",
+          "baaba",
+          "baabb",
+          "baabc",
+          "baaca",
+          "baacb",
+          "babaa",
+          "babab",
+          "babac",
+          "babba",
+          "babbb",
+          "babbc",
+          "babca",
+          "babcb",
+          "bacaa",
+          "bacab",
+          "bacba",
+          "bacbb",
+          "bbaaa",
+          "bbaab",
+          "bbaac",
+          "bbaba",
+          "bbabb",
+          "bbabc",
+          "bbaca",
+          "bbacb",
+          "bbbaa",
+          "bbbab",
+          "bbbac",
+          "bbbba",
+          "bbbbb",
+          "bbbbc",
+          "bbbca",
+          "bbbcb",
+          "bbcaa",
+          "bbcab",
+          "bbcba",
+          "bbcbb",
+          "bcaaa",
+          "bcaab",
+          "bcaba",
+          "bcabb",
+          "bcbaa",
+          "bcbab",
+          "bcbba",
+          "bcbbb",
+          "caaaa",
+          "caaab",
+          "caaba",
+          "caabb",
+          "cabaa",
+          "cabab",
+          "cabba",
+          "cabbb",
+          "cbaaa",
+          "cbaab",
+          "cbaba",
+          "cbabb",
+          "cbbaa",
+          "cbbab",
+          "cbbba",
+          "cbbbb",
+          "aaaaaa",
+          "aaaaab",
+          "aaaaac",
+          "aaaaba",
+          "aaaabb",
+          "aaaabc",
+          "aaaaca",
+          "aaaacb",
+          "aaabaa",
+          "aaabab",
+          "aaabac",
+          "aaabba",
+          "aaabbb",
+          "aaabbc",
+          "aaabca",
+          "aaabcb",
+          "aaacaa",
+          "aaacab",
+          "aaacba",
+          "aaacbb",
+          "aabaaa",
+          "aabaab",
+          "aabaac",
+          "aababa",
+          "aababb",
+          "aababc",
+          "aabaca",
+          "aabacb",
+          "aabbaa",
+          "aabbab",
+          "aabbac",
+          "aabbba",
+          "aabbbb",
+          "aabbbc",
+          "aabbca",
+          "aabbcb",
+          "aabcaa",
+          "aabcab",
+          "aabcba",
+          "aabcbb",
+          "aacaaa",
+          "aacaab",
+          "aacaba",
+          "aacabb",
+          "aacbaa",
+          "aacbab",
+          "aacbba",
+          "aacbbb",
+          "abaaaa",
+          "abaaab",
+          "abaaac",
+          "abaaba",
+          "abaabb",
+          "abaabc",
+          "abaaca",
+          "abaacb",
+          "ababaa",
+          "ababab",
+          "ababac",
+          "ababba",
+          "ababbb",
+          "ababbc",
+          "ababca",
+          "ababcb",
+          "abacaa",
+          "abacab",
+          "abacba",
+          "abacbb",
+          "abbaaa",
+          "abbaab",
+          "abbaac",
+          "abbaba",
+          "abbabb",
+          "abbabc",
+          "abbaca",
+          "abbacb",
+          "abbbaa",
+          "abbbab",
+          "abbbac",
+          "abbbba",
+          "abbbbb",
+          "abbbbc",
+          "abbbca",
+          "abbbcb",
+          "abbcaa",
+          "abbcab",
+          "abbcba",
+          "abbcbb",
+          "abcaaa",
+          "abcaab",
+          "abcaba",
+          "abcabb",
+          "abcbaa",
+          "abcbab",
+          "abcbba",
+          "abcbbb",
+          "acaaaa",
+          "acaaab",
+          "acaaba",
+          "acaabb",
+          "acabaa",
+          "acabab",
+          "acabba",
+          "acabbb",
+          "acbaaa",
+          "acbaab",
+          "acbaba",
+          "acbabb",
+          "acbbaa",
+          "acbbab",
+          "acbbba",
+          "acbbbb",
+          "baaaaa",
+          "baaaab",
+          "baaaac",
+          "baaaba",
+          "baaabb",
+          "baaabc",
+          "baaaca",
+          "baaacb",
+          "baabaa",
+          "baabab",
+          "baabac",
+          "baabba",
+          "baabbb",
+          "baabbc",
+          "baabca",
+          "baabcb",
+          "baacaa",
+          "baacab",
+          "baacba",
+          "baacbb",
+          "babaaa",
+          "babaab",
+          "babaac",
+          "bababa",
+          "bababb",
+          "bababc",
+          "babaca",
+          "babacb",
+          "babbaa",
+          "babbab",
+          "babbac",
+          "babbba",
+          "babbbb",
+          "babbbc",
+          "babbca",
+          "babbcb",
+          "babcaa",
+          "babcab",
+          "babcba",
+          "babcbb",
+          "bacaaa",
+          "bacaab",
+          "bacaba",
+          "bacabb",
+          "bacbaa",
+          "bacbab",
+          "bacbba",
+          "bacbbb",
+          "bbaaaa",
+          "bbaaab",
+          "bbaaac",
+          "bbaaba",
+          "bbaabb",
+          "bbaabc",
+          "bbaaca",
+          "bbaacb",
+          "bbabaa",
+          "bbabab",
+          "bbabac",
+          "bbabba",
+          "bbabbb",
+          "bbabbc",
+          "bbabca",
+          "bbabcb",
+          "bbacaa",
+          "bbacab",
+          "bbacba",
+          "bbacbb",
+          "bbbaaa",
+          "bbbaab",
+          "bbbaac",
+          "bbbaba",
+          "bbbabb",
+          "bbbabc",
+          "bbbaca",
+          "bbbacb",
+          "bbbbaa",
+          "bbbbab",
+          "bbbbac",
+          "bbbbba",
+          "bbbbbb",
+          "bbbbbc",
+          "bbbbca",
+          "bbbbcb",
+          "bbbcaa",
+          "bbbcab",
+          "bbbcba",
+          "bbbcbb",
+          "bbcaaa",
+          "bbcaab",
+          "bbcaba",
+          "bbcabb",
+          "bbcbaa",
+          "bbcbab",
+          "bbcbba",
+          "bbcbbb",
+          "bcaaaa",
+          "bcaaab",
+          "bcaaba",
+          "bcaabb",
+          "bcabaa",
+          "bcabab",
+          "bcabba",
+          "bcabbb",
+          "bcbaaa",
+          "bcbaab",
+          "bcbaba",
+          "bcbabb",
+          "bcbbaa",
+          "bcbbab",
+          "bcbbba",
+          "bcbbbb",
+          "caaaaa",
+          "caaaab",
+          "caaaba",
+          "caaabb",
+          "caabaa",
+          "caabab",
+          "caabba",
+          "caabbb",
+          "cabaaa",
+          "cabaab",
+          "cababa",
+          "cababb",
+          "cabbaa",
+          "cabbab",
+          "cabbba",
+          "cabbbb",
+          "cbaaaa",
+          "cbaaab",
+          "cbaaba",
+          "cbaabb",
+          "cbabaa",
+          "cbabab",
+          "cbabba",
+          "cbabbb",
+          "cbbaaa",
+          "cbbaab",
+          "cbbaba",
+          "cbbabb",
+          "cbbbaa",
+          "cbbbab",
+          "cbbbba",
+          "cbbbbb",
+          "aaaaaaa",
+          "aaaaaab",
+          "aaaaaac",
+          "aaaaaba",
+          "aaaaabb",
+          "aaaaabc",
+          "aaaaaca",
+          "aaaaacb",
+          "aaaabaa",
+          "aaaabab",
+          "aaaabac",
+          "aaaabba",
+          "aaaabbb",
+          "aaaabbc",
+          "aaaabca",
+          "aaaabcb",
+          "aaaacaa",
+          "aaaacab",
+          "aaaacba",
+          "aaaacbb",
+          "aaabaaa",
+          "aaabaab",
+          "aaabaac",
+          "aaababa",
+          "aaababb",
+          "aaababc",
+          "aaabaca",
+          "aaabacb",
+          "aaabbaa",
+          "aaabbab",
+          "aaabbac",
+          "aaabbba",
+          "aaabbbb",
+          "aaabbbc",
+          "aaabbca",
+          "aaabbcb",
+          "aaabcaa",
+          "aaabcab",
+          "aaabcba",
+          "aaabcbb",
+          "aaacaaa",
+          "aaacaab",
+          "aaacaba",
+          "aaacabb",
+          "aaacbaa",
+          "aaacbab",
+          "aaacbba",
+          "aaacbbb",
+          "aabaaaa",
+          "aabaaab",
+          "aabaaac",
+          "aabaaba",
+          "aabaabb",
+          "aabaabc",
+          "aabaaca",
+          "aabaacb",
+          "aababaa",
+          "aababab",
+          "aababac",
+          "aababba",
+          "aababbb",
+          "aababbc",
+          "aababca",
+          "aababcb",
+          "aabacaa",
+          "aabacab",
+          "aabacba",
+          "aabacbb",
+          "aabbaaa",
+          "aabbaab",
+          "aabbaac",
+          "aabbaba",
+          "aabbabb",
+          "aabbabc",
+          "aabbaca",
+          "aabbacb",
+          "aabbbaa",
+          "aabbbab",
+          "aabbbac",
+          "aabbbba",
+          "aabbbbb",
+          "aabbbbc",
+          "aabbbca",
+          "aabbbcb",
+          "aabbcaa",
+          "aabbcab",
+          "aabbcba",
+          "aabbcbb",
+          "aabcaaa",
+          "aabcaab",
+          "aabcaba",
+          "aabcabb",
+          "aabcbaa",
+          "aabcbab",
+          "aabcbba",
+          "aabcbbb",
+          "aacaaaa",
+          "aacaaab",
+          "aacaaba",
+          "aacaabb",
+          "aacabaa",
+          "aacabab",
+          "aacabba",
+          "aacabbb",
+          "aacbaaa",
+          "aacbaab",
+          "aacbaba",
+          "aacbabb",
+          "aacbbaa",
+          "aacbbab",
+          "aacbbba",
+          "aacbbbb",
+          "abaaaaa",
+          "abaaaab",
+          "abaaaac",
+          "abaaaba",
+          "abaaabb",
+          "abaaabc",
+          "abaaaca",
+          "abaaacb",
+          "abaabaa",
+          "abaabab",
+          "abaabac",
+          "abaabba",
+          "abaabbb",
+          "abaabbc",
+          "abaabca",
+          "abaabcb",
+          "abaacaa",
+          "abaacab",
+          "abaacba",
+          "abaacbb",
+          "ababaaa",
+          "ababaab",
+          "ababaac",
+          "abababa",
+          "abababb",
+          "abababc",
+          "ababaca",
+          "ababacb",
+          "ababbaa",
+          "ababbab",
+          "ababbac",
+          "ababbba",
+          "ababbbb",
+          "ababbbc",
+          "ababbca",
+          "ababbcb",
+          "ababcaa",
+          "ababcab",
+          "ababcba",
+          "ababcbb",
+          "abacaaa",
+          "abacaab",
+          "abacaba",
+          "abacabb",
+          "abacbaa",
+          "abacbab",
+          "abacbba",
+          "abacbbb",
+          "abbaaaa",
+          "abbaaab",
+          "abbaaac",
+          "abbaaba",
+          "abbaabb",
+          "abbaabc",
+          "abbaaca",
+          "abbaacb",
+          "abbabaa",
+          "abbabab",
+          "abbabac",
+          "abbabba",
+          "abbabbb",
+          "abbabbc",
+          "abbabca",
+          "abbabcb",
+          "abbacaa",
+          "abbacab",
+          "abbacba",
+          "abbacbb",
+          "abbbaaa",
+          "abbbaab",
+          "abbbaac",
+          "abbbaba",
+          "abbbabb",
+          "abbbabc",
+          "abbbaca",
+          "abbbacb",
+          "abbbbaa",
+          "abbbbab",
+          "abbbbac",
+          "abbbbba",
+          "abbbbbb",
+          "abbbbbc",
+          "abbbbca",
+          "abbbbcb",
+          "abbbcaa",
+          "abbbcab",
+          "abbbcba",
+          "abbbcbb",
+          "abbcaaa",
+          "abbcaab",
+          "abbcaba",
+          "abbcabb",
+          "abbcbaa",
+          "abbcbab",
+          "abbcbba",
+          "abbcbbb",
+          "abcaaaa",
+          "abcaaab",
+          "abcaaba",
+          "abcaabb",
+          "abcabaa",
+          "abcabab",
+          "abcabba",
+          "abcabbb",
+          "abcbaaa",
+          "abcbaab",
+          "abcbaba",
+          "abcbabb",
+          "abcbbaa",
+          "abcbbab",
+          "abcbbba",
+          "abcbbbb",
+          "acaaaaa",
+          "acaaaab",
+          "acaaaba",
+          "acaaabb",
+          "acaabaa",
+          "acaabab",
+          "acaabba",
+          "acaabbb",
+          "acabaaa",
+          "acabaab",
+          "acababa",
+          "acababb",
+          "acabbaa",
+          "acabbab",
+          "acabbba",
+          "acabbbb",
+          "acbaaaa",
+          "acbaaab",
+          "acbaaba",
+          "acbaabb",
+          "acbabaa",
+          "acbabab",
+          "acbabba",
+          "acbabbb",
+          "acbbaaa",
+          "acbbaab",
+          "acbbaba",
+          "acbbabb",
+          "acbbbaa",
+          "acbbbab",
+          "acbbbba",
+          "acbbbbb",
+          "baaaaaa",
+          "baaaaab",
+          "baaaaac",
+          "baaaaba",
+          "baaaabb",
+          "baaaabc",
+          "baaaaca",
+          "baaaacb",
+          "baaabaa",
+          "baaabab",
+          "baaabac",
+          "baaabba",
+          "baaabbb",
+          "baaabbc",
+          "baaabca",
+          "baaabcb",
+          "baaacaa",
+          "baaacab",
+          "baaacba",
+          "baaacbb",
+          "baabaaa",
+          "baabaab",
+          "baabaac",
+          "baababa",
+          "baababb",
+          "baababc",
+          "baabaca",
+          "baabacb",
+          "baabbaa",
+          "baabbab",
+          "baabbac",
+          "baabbba",
+          "baabbbb",
+          "baabbbc",
+          "baabbca",
+          "baabbcb",
+          "baabcaa",
+          "baabcab",
+          "baabcba",
+          "baabcbb",
+          "baacaaa",
+          "baacaab",
+          "baacaba",
+          "baacabb",
+          "baacbaa",
+          "baacbab",
+          "baacbba",
+          "baacbbb",
+          "babaaaa",
+          "babaaab",
+          "babaaac",
+          "babaaba",
+          "babaabb",
+          "babaabc",
+          "babaaca",
+          "babaacb",
+          "bababaa",
+          "bababab",
+          "bababac",
+          "bababba",
+          "bababbb",
+          "bababbc",
+          "bababca",
+          "bababcb",
+          "babacaa",
+          "babacab",
+          "babacba",
+          "babacbb",
+          "babbaaa",
+          "babbaab",
+          "babbaac",
+          "babbaba",
+          "babbabb",
+          "babbabc",
+          "babbaca",
+          "babbacb",
+          "babbbaa",
+          "babbbab",
+          "babbbac",
+          "babbbba",
+          "babbbbb",
+          "babbbbc",
+          "babbbca",
+          "babbbcb",
+          "babbcaa",
+          "babbcab",
+          "babbcba",
+          "babbcbb",
+          "babcaaa",
+          "babcaab",
+          "babcaba",
+          "babcabb",
+          "babcbaa",
+          "babcbab",
+          "babcbba",
+          "babcbbb",
+          "bacaaaa",
+          "bacaaab",
+          "bacaaba",
+          "bacaabb",
+          "bacabaa",
+          "bacabab",
+          "bacabba",
+          "bacabbb",
+          "bacbaaa",
+          "bacbaab",
+          "bacbaba",
+          "bacbabb",
+          "bacbbaa",
+          "bacbbab",
+          "bacbbba",
+          "bacbbbb",
+          "bbaaaaa",
+          "bbaaaab",
+          "bbaaaac",
+          "bbaaaba",
+          "bbaaabb",
+          "bbaaabc",
+          "bbaaaca",
+          "bbaaacb",
+          "bbaabaa",
+          "bbaabab",
+          "bbaabac",
+          "bbaabba",
+          "bbaabbb",
+          "bbaabbc",
+          "bbaabca",
+          "bbaabcb",
+          "bbaacaa",
+          "bbaacab",
+          "bbaacba",
+          "bbaacbb",
+          "bbabaaa",
+          "bbabaab",
+          "bbabaac",
+          "bbababa",
+          "bbababb",
+          "bbababc",
+          "bbabaca",
+          "bbabacb",
+          "bbabbaa",
+          "bbabbab",
+          "bbabbac",
+          "bbabbba",
+          "bbabbbb",
+          "bbabbbc",
+          "bbabbca",
+          "bbabbcb",
+          "bbabcaa",
+          "bbabcab",
+          "bbabcba",
+          "bbabcbb",
+          "bbacaaa",
+          "bbacaab",
+          "bbacaba",
+          "bbacabb",
+          "bbacbaa",
+          "bbacbab",
+          "bbacbba",
+          "bbacbbb",
+          "bbbaaaa",
+          "bbbaaab",
+          "bbbaaac",
+          "bbbaaba",
+          "bbbaabb",
+          "bbbaabc",
+          "bbbaaca",
+          "bbbaacb",
+          "bbbabaa",
+          "bbbabab",
+          "bbbabac",
+          "bbbabba",
+          "bbbabbb",
+          "bbbabbc",
+          "bbbabca",
+          "bbbabcb",
+          "bbbacaa",
+          "bbbacab",
+          "bbbacba",
+          "bbbacbb",
+          "bbbbaaa",
+          "bbbbaab",
+          "bbbbaac",
+          "bbbbaba",
+          "bbbbabb",
+          "bbbbabc",
+          "bbbbaca",
+          "bbbbacb",
+          "bbbbbaa",
+          "bbbbbab",
+          "bbbbbac",
+          "bbbbbba",
+          "bbbbbbb",
+          "bbbbbbc",
+          "bbbbbca",
+          "bbbbbcb",
+          "bbbbcaa",
+          "bbbbcab",
+          "bbbbcba",
+          "bbbbcbb",
+          "bbbcaaa",
+          "bbbcaab",
+          "bbbcaba",
+          "bbbcabb",
+          "bbbcbaa",
+          "bbbcbab",
+          "bbbcbba",
+          "bbbcbbb",
+          "bbcaaaa",
+          "bbcaaab",
+          "bbcaaba",
+          "bbcaabb",
+          "bbcabaa",
+          "bbcabab",
+          "bbcabba",
+          "bbcabbb",
+          "bbcbaaa",
+          "bbcbaab",
+          "bbcbaba",
+          "bbcbabb",
+          "bbcbbaa",
+          "bbcbbab",
+          "bbcbbba",
+          "bbcbbbb",
+          "bcaaaaa",
+          "bcaaaab",
+          "bcaaaba",
+          "bcaaabb",
+          "bcaabaa",
+          "bcaabab",
+          "bcaabba",
+          "bcaabbb",
+          "bcabaaa",
+          "bcabaab",
+          "bcababa",
+          "bcababb",
+          "bcabbaa",
+          "bcabbab",
+          "bcabbba",
+          "bcabbbb",
+          "bcbaaaa",
+          "bcbaaab",
+          "bcbaaba",
+          "bcbaabb",
+          "bcbabaa",
+          "bcbabab",
+          "bcbabba",
+          "bcbabbb",
+          "bcbbaaa",
+          "bcbbaab",
+          "bcbbaba",
+          "bcbbabb",
+          "bcbbbaa",
+          "bcbbbab",
+          "bcbbbba",
+          "bcbbbbb",
+          "caaaaaa",
+          "caaaaab",
+          "caaaaba",
+          "caaaabb",
+          "caaabaa",
+          "caaabab",
+          "caaabba",
+          "caaabbb",
+          "caabaaa",
+          "caabaab",
+          "caababa",
+          "caababb",
+          "caabbaa",
+          "caabbab",
+          "caabbba",
+          "caabbbb",
+          "cabaaaa",
+          "cabaaab",
+          "cabaaba",
+          "cabaabb",
+          "cababaa",
+          "cababab",
+          "cababba",
+          "cababbb",
+          "cabbaaa",
+          "cabbaab",
+          "cabbaba",
+          "cabbabb",
+          "cabbbaa",
+          "cabbbab",
+          "cabbbba",
+          "cabbbbb",
+          "cbaaaaa",
+          "cbaaaab",
+          "cbaaaba",
+          "cbaaabb",
+          "cbaabaa",
+          "cbaabab",
+          "cbaabba",
+          "cbaabbb",
+          "cbabaaa",
+          "cbabaab",
+          "cbababa",
+          "cbababb",
+          "cbabbaa",
+          "cbabbab",
+          "cbabbba",
+          "cbabbbb",
+          "cbbaaaa",
+          "cbbaaab",
+          "cbbaaba",
+          "cbbaabb",
+          "cbbabaa",
+          "cbbabab",
+          "cbbabba",
+          "cbbabbb",
+          "cbbbaaa",
+          "cbbbaab",
+          "cbbbaba",
+          "cbbbabb",
+          "cbbbbaa",
+          "cbbbbab",
+          "cbbbbba",
+          "cbbbbbb"
+        ]
+      ],
+      "expected": 7,
+      "category": "stress",
+      "note": "long predecessor chains with distractor words should separate hash-map DP from exponential subset recursion"
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "aa",
+          "ab",
+          "ac",
+          "ad",
+          "ba",
+          "bb",
+          "bc",
+          "bd",
+          "ca",
+          "cb",
+          "cc",
+          "cd",
+          "da",
+          "db",
+          "dc",
+          "dd",
+          "aaa",
+          "aab",
+          "aac",
+          "aad",
+          "aba",
+          "abb",
+          "aca",
+          "acc",
+          "ada",
+          "add",
+          "baa",
+          "bab",
+          "bba",
+          "bbb",
+          "bbc",
+          "bbd",
+          "bcb",
+          "bcc",
+          "bdb",
+          "bdd",
+          "caa",
+          "cac",
+          "cbb",
+          "cbc",
+          "cca",
+          "ccb",
+          "ccc",
+          "ccd",
+          "cdc",
+          "cdd",
+          "daa",
+          "dad",
+          "dbb",
+          "dbd",
+          "dcc",
+          "dcd",
+          "dda",
+          "ddb",
+          "ddc",
+          "ddd",
+          "aaaa",
+          "aaab",
+          "aaac",
+          "aaad",
+          "aaba",
+          "aabb",
+          "aaca",
+          "aacc",
+          "aada",
+          "aadd",
+          "abaa",
+          "abab",
+          "abba",
+          "abbb",
+          "acaa",
+          "acac",
+          "acca",
+          "accc",
+          "adaa",
+          "adad",
+          "adda",
+          "addd",
+          "baaa",
+          "baab",
+          "baba",
+          "babb",
+          "bbaa",
+          "bbab",
+          "bbba",
+          "bbbb",
+          "bbbc",
+          "bbbd",
+          "bbcb",
+          "bbcc",
+          "bbdb",
+          "bbdd",
+          "bcbb",
+          "bcbc",
+          "bccb",
+          "bccc",
+          "bdbb",
+          "bdbd",
+          "bddb",
+          "bddd",
+          "caaa",
+          "caac",
+          "caca",
+          "cacc",
+          "cbbb",
+          "cbbc",
+          "cbcb",
+          "cbcc",
+          "ccaa",
+          "ccac",
+          "ccbb",
+          "ccbc",
+          "ccca",
+          "cccb",
+          "cccc",
+          "cccd",
+          "ccdc",
+          "ccdd",
+          "cdcc",
+          "cdcd",
+          "cddc",
+          "cddd",
+          "daaa",
+          "daad",
+          "dada",
+          "dadd",
+          "dbbb",
+          "dbbd",
+          "dbdb",
+          "dbdd",
+          "dccc",
+          "dccd",
+          "dcdc",
+          "dcdd",
+          "ddaa",
+          "ddad",
+          "ddbb",
+          "ddbd",
+          "ddcc",
+          "ddcd",
+          "ddda",
+          "dddb",
+          "dddc",
+          "dddd",
+          "aaaaa",
+          "aaaab",
+          "aaaac",
+          "aaaad",
+          "aaaba",
+          "aaabb",
+          "aaaca",
+          "aaacc",
+          "aaada",
+          "aaadd",
+          "aabaa",
+          "aabab",
+          "aabba",
+          "aabbb",
+          "aacaa",
+          "aacac",
+          "aacca",
+          "aaccc",
+          "aadaa",
+          "aadad",
+          "aadda",
+          "aaddd",
+          "abaaa",
+          "abaab",
+          "ababa",
+          "ababb",
+          "abbaa",
+          "abbab",
+          "abbba",
+          "abbbb",
+          "acaaa",
+          "acaac",
+          "acaca",
+          "acacc",
+          "accaa",
+          "accac",
+          "accca",
+          "acccc",
+          "adaaa",
+          "adaad",
+          "adada",
+          "adadd",
+          "addaa",
+          "addad",
+          "addda",
+          "adddd",
+          "baaaa",
+          "baaab",
+          "baaba",
+          "baabb",
+          "babaa",
+          "babab",
+          "babba",
+          "babbb",
+          "bbaaa",
+          "bbaab",
+          "bbaba",
+          "bbabb",
+          "bbbaa",
+          "bbbab",
+          "bbbba",
+          "bbbbb",
+          "bbbbc",
+          "bbbbd",
+          "bbbcb",
+          "bbbcc",
+          "bbbdb",
+          "bbbdd",
+          "bbcbb",
+          "bbcbc",
+          "bbccb",
+          "bbccc",
+          "bbdbb",
+          "bbdbd",
+          "bbddb",
+          "bbddd",
+          "bcbbb",
+          "bcbbc",
+          "bcbcb",
+          "bcbcc",
+          "bccbb",
+          "bccbc",
+          "bcccb",
+          "bcccc",
+          "bdbbb",
+          "bdbbd",
+          "bdbdb",
+          "bdbdd",
+          "bddbb",
+          "bddbd",
+          "bdddb",
+          "bdddd",
+          "caaaa",
+          "caaac",
+          "caaca",
+          "caacc",
+          "cacaa",
+          "cacac",
+          "cacca",
+          "caccc",
+          "cbbbb",
+          "cbbbc",
+          "cbbcb",
+          "cbbcc",
+          "cbcbb",
+          "cbcbc",
+          "cbccb",
+          "cbccc",
+          "ccaaa",
+          "ccaac",
+          "ccaca",
+          "ccacc",
+          "ccbbb",
+          "ccbbc",
+          "ccbcb",
+          "ccbcc",
+          "cccaa",
+          "cccac",
+          "cccbb",
+          "cccbc",
+          "cccca",
+          "ccccb",
+          "ccccc",
+          "ccccd",
+          "cccdc",
+          "cccdd",
+          "ccdcc",
+          "ccdcd",
+          "ccddc",
+          "ccddd",
+          "cdccc",
+          "cdccd",
+          "cdcdc",
+          "cdcdd",
+          "cddcc",
+          "cddcd",
+          "cdddc",
+          "cdddd",
+          "daaaa",
+          "daaad",
+          "daada",
+          "daadd",
+          "dadaa",
+          "dadad",
+          "dadda",
+          "daddd",
+          "dbbbb",
+          "dbbbd",
+          "dbbdb",
+          "dbbdd",
+          "dbdbb",
+          "dbdbd",
+          "dbddb",
+          "dbddd",
+          "dcccc",
+          "dcccd",
+          "dccdc",
+          "dccdd",
+          "dcdcc",
+          "dcdcd",
+          "dcddc",
+          "dcddd",
+          "ddaaa",
+          "ddaad",
+          "ddada",
+          "ddadd",
+          "ddbbb",
+          "ddbbd",
+          "ddbdb",
+          "ddbdd",
+          "ddccc",
+          "ddccd",
+          "ddcdc",
+          "ddcdd",
+          "dddaa",
+          "dddad",
+          "dddbb",
+          "dddbd",
+          "dddcc",
+          "dddcd",
+          "dddda",
+          "ddddb",
+          "ddddc",
+          "ddddd",
+          "aaaaaa",
+          "aaaaab",
+          "aaaaac",
+          "aaaaad",
+          "aaaaba",
+          "aaaabb",
+          "aaaaca",
+          "aaaacc",
+          "aaaada",
+          "aaaadd",
+          "aaabaa",
+          "aaabab",
+          "aaabba",
+          "aaabbb",
+          "aaacaa",
+          "aaacac",
+          "aaacca",
+          "aaaccc",
+          "aaadaa",
+          "aaadad",
+          "aaadda",
+          "aaaddd",
+          "aabaaa",
+          "aabaab",
+          "aababa",
+          "aababb",
+          "aabbaa",
+          "aabbab",
+          "aabbba",
+          "aabbbb",
+          "aacaaa",
+          "aacaac",
+          "aacaca",
+          "aacacc",
+          "aaccaa",
+          "aaccac",
+          "aaccca",
+          "aacccc",
+          "aadaaa",
+          "aadaad",
+          "aadada",
+          "aadadd",
+          "aaddaa",
+          "aaddad",
+          "aaddda",
+          "aadddd",
+          "abaaaa",
+          "abaaab",
+          "abaaba",
+          "abaabb",
+          "ababaa",
+          "ababab",
+          "ababba",
+          "ababbb",
+          "abbaaa",
+          "abbaab",
+          "abbaba",
+          "abbabb",
+          "abbbaa",
+          "abbbab",
+          "abbbba",
+          "abbbbb",
+          "acaaaa",
+          "acaaac",
+          "acaaca",
+          "acaacc",
+          "acacaa",
+          "acacac",
+          "acacca",
+          "acaccc",
+          "accaaa",
+          "accaac",
+          "accaca",
+          "accacc",
+          "acccaa",
+          "acccac",
+          "acccca",
+          "accccc",
+          "adaaaa",
+          "adaaad",
+          "adaada",
+          "adaadd",
+          "adadaa",
+          "adadad",
+          "adadda",
+          "adaddd",
+          "addaaa",
+          "addaad",
+          "addada",
+          "addadd",
+          "adddaa",
+          "adddad",
+          "adddda",
+          "addddd",
+          "baaaaa",
+          "baaaab",
+          "baaaba",
+          "baaabb",
+          "baabaa",
+          "baabab",
+          "baabba",
+          "baabbb",
+          "babaaa",
+          "babaab",
+          "bababa",
+          "bababb",
+          "babbaa",
+          "babbab",
+          "babbba",
+          "babbbb",
+          "bbaaaa",
+          "bbaaab",
+          "bbaaba",
+          "bbaabb",
+          "bbabaa",
+          "bbabab",
+          "bbabba",
+          "bbabbb",
+          "bbbaaa",
+          "bbbaab",
+          "bbbaba",
+          "bbbabb",
+          "bbbbaa",
+          "bbbbab",
+          "bbbbba",
+          "bbbbbb",
+          "bbbbbc",
+          "bbbbbd",
+          "bbbbcb",
+          "bbbbcc",
+          "bbbbdb",
+          "bbbbdd",
+          "bbbcbb",
+          "bbbcbc",
+          "bbbccb",
+          "bbbccc",
+          "bbbdbb",
+          "bbbdbd",
+          "bbbddb",
+          "bbbddd",
+          "bbcbbb",
+          "bbcbbc",
+          "bbcbcb",
+          "bbcbcc",
+          "bbccbb",
+          "bbccbc",
+          "bbcccb",
+          "bbcccc",
+          "bbdbbb",
+          "bbdbbd",
+          "bbdbdb",
+          "bbdbdd",
+          "bbddbb",
+          "bbddbd",
+          "bbdddb",
+          "bbdddd",
+          "bcbbbb",
+          "bcbbbc",
+          "bcbbcb",
+          "bcbbcc",
+          "bcbcbb",
+          "bcbcbc",
+          "bcbccb",
+          "bcbccc",
+          "bccbbb",
+          "bccbbc",
+          "bccbcb",
+          "bccbcc",
+          "bcccbb",
+          "bcccbc",
+          "bccccb",
+          "bccccc",
+          "bdbbbb",
+          "bdbbbd",
+          "bdbbdb",
+          "bdbbdd",
+          "bdbdbb",
+          "bdbdbd",
+          "bdbddb",
+          "bdbddd",
+          "bddbbb",
+          "bddbbd",
+          "bddbdb",
+          "bddbdd",
+          "bdddbb",
+          "bdddbd",
+          "bddddb",
+          "bddddd",
+          "caaaaa",
+          "caaaac",
+          "caaaca",
+          "caaacc",
+          "caacaa",
+          "caacac",
+          "caacca",
+          "caaccc",
+          "cacaaa",
+          "cacaac",
+          "cacaca",
+          "cacacc",
+          "caccaa",
+          "caccac",
+          "caccca",
+          "cacccc",
+          "cbbbbb",
+          "cbbbbc",
+          "cbbbcb",
+          "cbbbcc",
+          "cbbcbb",
+          "cbbcbc",
+          "cbbccb",
+          "cbbccc",
+          "cbcbbb",
+          "cbcbbc",
+          "cbcbcb",
+          "cbcbcc",
+          "cbccbb",
+          "cbccbc",
+          "cbcccb",
+          "cbcccc",
+          "ccaaaa",
+          "ccaaac",
+          "ccaaca",
+          "ccaacc",
+          "ccacaa",
+          "ccacac",
+          "ccacca",
+          "ccaccc",
+          "ccbbbb",
+          "ccbbbc",
+          "ccbbcb",
+          "ccbbcc",
+          "ccbcbb",
+          "ccbcbc",
+          "ccbccb",
+          "ccbccc",
+          "cccaaa",
+          "cccaac",
+          "cccaca",
+          "cccacc",
+          "cccbbb",
+          "cccbbc",
+          "cccbcb",
+          "cccbcc",
+          "ccccaa",
+          "ccccac",
+          "ccccbb",
+          "ccccbc",
+          "ccccca",
+          "cccccb",
+          "cccccc",
+          "cccccd",
+          "ccccdc",
+          "ccccdd",
+          "cccdcc",
+          "cccdcd",
+          "cccddc",
+          "cccddd",
+          "ccdccc",
+          "ccdccd",
+          "ccdcdc",
+          "ccdcdd",
+          "ccddcc",
+          "ccddcd",
+          "ccdddc",
+          "ccdddd",
+          "cdcccc",
+          "cdcccd",
+          "cdccdc",
+          "cdccdd",
+          "cdcdcc",
+          "cdcdcd",
+          "cdcddc",
+          "cdcddd",
+          "cddccc",
+          "cddccd",
+          "cddcdc",
+          "cddcdd",
+          "cdddcc",
+          "cdddcd",
+          "cddddc",
+          "cddddd",
+          "daaaaa",
+          "daaaad",
+          "daaada",
+          "daaadd",
+          "daadaa",
+          "daadad",
+          "daadda",
+          "daaddd",
+          "dadaaa",
+          "dadaad",
+          "dadada",
+          "dadadd",
+          "daddaa",
+          "daddad",
+          "daddda",
+          "dadddd",
+          "dbbbbb",
+          "dbbbbd",
+          "dbbbdb",
+          "dbbbdd",
+          "dbbdbb",
+          "dbbdbd",
+          "dbbddb",
+          "dbbddd",
+          "dbdbbb",
+          "dbdbbd",
+          "dbdbdb",
+          "dbdbdd",
+          "dbddbb",
+          "dbddbd",
+          "dbdddb",
+          "dbdddd",
+          "dccccc",
+          "dccccd",
+          "dcccdc",
+          "dcccdd",
+          "dccdcc",
+          "dccdcd",
+          "dccddc",
+          "dccddd",
+          "dcdccc",
+          "dcdccd",
+          "dcdcdc",
+          "dcdcdd",
+          "dcddcc",
+          "dcddcd",
+          "dcdddc",
+          "dcdddd",
+          "ddaaaa",
+          "ddaaad",
+          "ddaada",
+          "ddaadd",
+          "ddadaa",
+          "ddadad",
+          "ddadda",
+          "ddaddd",
+          "ddbbbb",
+          "ddbbbd",
+          "ddbbdb",
+          "ddbbdd",
+          "ddbdbb",
+          "ddbdbd",
+          "ddbddb",
+          "ddbddd",
+          "ddcccc",
+          "ddcccd",
+          "ddccdc",
+          "ddccdd",
+          "ddcdcc",
+          "ddcdcd",
+          "ddcddc",
+          "ddcddd",
+          "dddaaa",
+          "dddaad",
+          "dddada",
+          "dddadd",
+          "dddbbb",
+          "dddbbd",
+          "dddbdb",
+          "dddbdd",
+          "dddccc",
+          "dddccd",
+          "dddcdc",
+          "dddcdd",
+          "ddddaa",
+          "ddddad",
+          "ddddbb",
+          "ddddbd",
+          "ddddcc",
+          "ddddcd",
+          "ddddda",
+          "dddddb",
+          "dddddc",
+          "dddddd"
+        ]
+      ],
+      "expected": 6,
+      "category": "stress",
+      "note": "long predecessor chains with distractor words should separate hash-map DP from exponential subset recursion"
+    }
+  ]
+}

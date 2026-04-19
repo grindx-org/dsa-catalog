@@ -1,0 +1,8807 @@
+{
+  "problem_id": "stack-using-two-queue",
+  "function": "MyStack",
+  "pattern": "design",
+  "comparison": "exact",
+  "time_limit_s": 1.0,
+  "cases": [
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        false
+      ],
+      "category": "basic",
+      "note": "classic stack-using-queue sample"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        3,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "top",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        2,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "top",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "top",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "top",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "top",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "top",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "top",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "top",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "top"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid stack-via-queue sequences of length 5"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "top",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        4,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        true
+      ],
+      "category": "stress",
+      "note": "batched pushes then pops punish queue rotation on every top/pop"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty",
+        "push",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        [],
+        [
+          8
+        ],
+        [],
+        [],
+        [],
+        [
+          9
+        ],
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        [],
+        [
+          8
+        ],
+        [],
+        [],
+        [],
+        [
+          9
+        ],
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        true,
+        null,
+        2,
+        2,
+        true,
+        null,
+        3,
+        3,
+        true,
+        null,
+        4,
+        4,
+        true,
+        null,
+        5,
+        5,
+        true,
+        null,
+        6,
+        6,
+        true,
+        null,
+        7,
+        7,
+        true,
+        null,
+        8,
+        8,
+        true,
+        null,
+        9,
+        9,
+        true,
+        null,
+        1,
+        1,
+        true,
+        null,
+        2,
+        2,
+        true,
+        null,
+        3,
+        3,
+        true,
+        null,
+        4,
+        4,
+        true,
+        null,
+        5,
+        5,
+        true,
+        null,
+        6,
+        6,
+        true,
+        null,
+        7,
+        7,
+        true,
+        null,
+        8,
+        8,
+        true,
+        null,
+        9,
+        9,
+        true,
+        null,
+        1,
+        1,
+        true,
+        null,
+        2,
+        2,
+        true,
+        null,
+        3,
+        3,
+        true,
+        null,
+        4,
+        4,
+        true,
+        null,
+        5,
+        5,
+        true,
+        null,
+        6,
+        6,
+        true,
+        null,
+        7,
+        7,
+        true
+      ],
+      "category": "stress",
+      "note": "repeated short cycles punish rebuilding the stack view"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "top",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        9,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "category": "stress",
+      "note": "mixed phases punish repeated queue shuffles"
+    }
+  ]
+}

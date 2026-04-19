@@ -1,0 +1,3291 @@
+{
+  "problem_id": "dp-on-tries-min-valid-substring",
+  "function": "minExtraChar",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 2.0,
+  "cases": [
+    {
+      "input": [
+        "leetscode",
+        [
+          "leet",
+          "code",
+          "leetcode"
+        ]
+      ],
+      "expected": 1,
+      "category": "basic",
+      "note": "classic sample with one extra character"
+    },
+    {
+      "input": [
+        "sayhelloworld",
+        [
+          "hello",
+          "world"
+        ]
+      ],
+      "expected": 3,
+      "category": "basic",
+      "note": "prefix characters are extra"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "abc"
+        ]
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "entire string matches one dictionary word"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "each character is a separate word"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "d",
+          "e",
+          "f"
+        ]
+      ],
+      "expected": 3,
+      "category": "basic",
+      "note": "no dictionary word matches, all chars are extra"
+    },
+    {
+      "input": [
+        "",
+        []
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "empty string has zero extra characters"
+    },
+    {
+      "input": [
+        "a",
+        []
+      ],
+      "expected": 1,
+      "category": "basic",
+      "note": "single char with empty dictionary"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "overlapping dictionary words"
+    },
+    {
+      "input": [
+        "a",
+        [
+          "a"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'a' with dict subset"
+    },
+    {
+      "input": [
+        "b",
+        []
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'b' with dict subset"
+    },
+    {
+      "input": [
+        "b",
+        [
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'b' with dict subset"
+    },
+    {
+      "input": [
+        "aa",
+        []
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'aa' with dict subset"
+    },
+    {
+      "input": [
+        "aa",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aa' with dict subset"
+    },
+    {
+      "input": [
+        "aa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aa' with dict subset"
+    },
+    {
+      "input": [
+        "aa",
+        [
+          "aa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aa' with dict subset"
+    },
+    {
+      "input": [
+        "ab",
+        []
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'ab' with dict subset"
+    },
+    {
+      "input": [
+        "ab",
+        [
+          "a",
+          "ab",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'ab' with dict subset"
+    },
+    {
+      "input": [
+        "ab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'ab' with dict subset"
+    },
+    {
+      "input": [
+        "ab",
+        [
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'ab' with dict subset"
+    },
+    {
+      "input": [
+        "ba",
+        []
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'ba' with dict subset"
+    },
+    {
+      "input": [
+        "ba",
+        [
+          "a",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'ba' with dict subset"
+    },
+    {
+      "input": [
+        "ba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'ba' with dict subset"
+    },
+    {
+      "input": [
+        "ba",
+        [
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'ba' with dict subset"
+    },
+    {
+      "input": [
+        "bb",
+        []
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'bb' with dict subset"
+    },
+    {
+      "input": [
+        "bb",
+        [
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bb' with dict subset"
+    },
+    {
+      "input": [
+        "bb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bb' with dict subset"
+    },
+    {
+      "input": [
+        "bb",
+        [
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bb' with dict subset"
+    },
+    {
+      "input": [
+        "aaa",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'aaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaa",
+        [
+          "a",
+          "aa",
+          "aaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaa",
+        [
+          "aaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaa' with dict subset"
+    },
+    {
+      "input": [
+        "aab",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'aab' with dict subset"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a",
+          "aa",
+          "aab",
+          "ab",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aab' with dict subset"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'aab' with dict subset"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "b"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'aab' with dict subset"
+    },
+    {
+      "input": [
+        "aba",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'aba' with dict subset"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "a",
+          "ab",
+          "aba",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aba' with dict subset"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'aba' with dict subset"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "ba"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'aba' with dict subset"
+    },
+    {
+      "input": [
+        "abb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'abb' with dict subset"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "a",
+          "ab",
+          "abb",
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'abb' with dict subset"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'abb' with dict subset"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "bb"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abb' with dict subset"
+    },
+    {
+      "input": [
+        "baa",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'baa' with dict subset"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "a",
+          "aa",
+          "b",
+          "ba",
+          "baa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baa' with dict subset"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'baa' with dict subset"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "baa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baa' with dict subset"
+    },
+    {
+      "input": [
+        "bab",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'bab' with dict subset"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "a",
+          "ab",
+          "b",
+          "ba",
+          "bab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bab' with dict subset"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'bab' with dict subset"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "bab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bab' with dict subset"
+    },
+    {
+      "input": [
+        "bba",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'bba' with dict subset"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "a",
+          "b",
+          "ba",
+          "bb",
+          "bba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bba' with dict subset"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'bba' with dict subset"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "bba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bba' with dict subset"
+    },
+    {
+      "input": [
+        "bbb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'bbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbb",
+        [
+          "b",
+          "bb",
+          "bbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbb",
+        [
+          "bbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbb' with dict subset"
+    },
+    {
+      "input": [
+        "aaaa",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'aaaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaaa",
+        [
+          "a",
+          "aa",
+          "aaa",
+          "aaaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaaa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaaa",
+        [
+          "aaaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaaa' with dict subset"
+    },
+    {
+      "input": [
+        "aaab",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'aaab' with dict subset"
+    },
+    {
+      "input": [
+        "aaab",
+        [
+          "a",
+          "aa",
+          "aaa",
+          "aaab",
+          "aab",
+          "ab",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaab' with dict subset"
+    },
+    {
+      "input": [
+        "aaab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'aaab' with dict subset"
+    },
+    {
+      "input": [
+        "aaab",
+        [
+          "b"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'aaab' with dict subset"
+    },
+    {
+      "input": [
+        "aaba",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'aaba' with dict subset"
+    },
+    {
+      "input": [
+        "aaba",
+        [
+          "a",
+          "aa",
+          "aab",
+          "aaba",
+          "ab",
+          "aba",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aaba' with dict subset"
+    },
+    {
+      "input": [
+        "aaba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'aaba' with dict subset"
+    },
+    {
+      "input": [
+        "aaba",
+        [
+          "ba"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'aaba' with dict subset"
+    },
+    {
+      "input": [
+        "aabb",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'aabb' with dict subset"
+    },
+    {
+      "input": [
+        "aabb",
+        [
+          "a",
+          "aa",
+          "aab",
+          "aabb",
+          "ab",
+          "abb",
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'aabb' with dict subset"
+    },
+    {
+      "input": [
+        "aabb",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'aabb' with dict subset"
+    },
+    {
+      "input": [
+        "aabb",
+        [
+          "bb"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'aabb' with dict subset"
+    },
+    {
+      "input": [
+        "abaa",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'abaa' with dict subset"
+    },
+    {
+      "input": [
+        "abaa",
+        [
+          "a",
+          "aa",
+          "ab",
+          "aba",
+          "abaa",
+          "b",
+          "ba",
+          "baa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'abaa' with dict subset"
+    },
+    {
+      "input": [
+        "abaa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abaa' with dict subset"
+    },
+    {
+      "input": [
+        "abaa",
+        [
+          "baa"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abaa' with dict subset"
+    },
+    {
+      "input": [
+        "abab",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'abab' with dict subset"
+    },
+    {
+      "input": [
+        "abab",
+        [
+          "a",
+          "ab",
+          "aba",
+          "abab",
+          "b",
+          "ba",
+          "bab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'abab' with dict subset"
+    },
+    {
+      "input": [
+        "abab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'abab' with dict subset"
+    },
+    {
+      "input": [
+        "abab",
+        [
+          "bab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abab' with dict subset"
+    },
+    {
+      "input": [
+        "abba",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'abba' with dict subset"
+    },
+    {
+      "input": [
+        "abba",
+        [
+          "a",
+          "ab",
+          "abb",
+          "abba",
+          "b",
+          "ba",
+          "bb",
+          "bba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'abba' with dict subset"
+    },
+    {
+      "input": [
+        "abba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'abba' with dict subset"
+    },
+    {
+      "input": [
+        "abba",
+        [
+          "bba"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abba' with dict subset"
+    },
+    {
+      "input": [
+        "abbb",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'abbb' with dict subset"
+    },
+    {
+      "input": [
+        "abbb",
+        [
+          "a",
+          "ab",
+          "abb",
+          "abbb",
+          "b",
+          "bb",
+          "bbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'abbb' with dict subset"
+    },
+    {
+      "input": [
+        "abbb",
+        [
+          "a"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'abbb' with dict subset"
+    },
+    {
+      "input": [
+        "abbb",
+        [
+          "bbb"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'abbb' with dict subset"
+    },
+    {
+      "input": [
+        "baaa",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'baaa' with dict subset"
+    },
+    {
+      "input": [
+        "baaa",
+        [
+          "a",
+          "aa",
+          "aaa",
+          "b",
+          "ba",
+          "baa",
+          "baaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baaa' with dict subset"
+    },
+    {
+      "input": [
+        "baaa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "string 'baaa' with dict subset"
+    },
+    {
+      "input": [
+        "baaa",
+        [
+          "baaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baaa' with dict subset"
+    },
+    {
+      "input": [
+        "baab",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'baab' with dict subset"
+    },
+    {
+      "input": [
+        "baab",
+        [
+          "a",
+          "aa",
+          "aab",
+          "ab",
+          "b",
+          "ba",
+          "baa",
+          "baab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baab' with dict subset"
+    },
+    {
+      "input": [
+        "baab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'baab' with dict subset"
+    },
+    {
+      "input": [
+        "baab",
+        [
+          "baab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baab' with dict subset"
+    },
+    {
+      "input": [
+        "baba",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'baba' with dict subset"
+    },
+    {
+      "input": [
+        "baba",
+        [
+          "a",
+          "ab",
+          "aba",
+          "b",
+          "ba",
+          "bab",
+          "baba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baba' with dict subset"
+    },
+    {
+      "input": [
+        "baba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'baba' with dict subset"
+    },
+    {
+      "input": [
+        "baba",
+        [
+          "baba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'baba' with dict subset"
+    },
+    {
+      "input": [
+        "babb",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'babb' with dict subset"
+    },
+    {
+      "input": [
+        "babb",
+        [
+          "a",
+          "ab",
+          "abb",
+          "b",
+          "ba",
+          "bab",
+          "babb",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'babb' with dict subset"
+    },
+    {
+      "input": [
+        "babb",
+        [
+          "a"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'babb' with dict subset"
+    },
+    {
+      "input": [
+        "babb",
+        [
+          "bb"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'babb' with dict subset"
+    },
+    {
+      "input": [
+        "bbaa",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'bbaa' with dict subset"
+    },
+    {
+      "input": [
+        "bbaa",
+        [
+          "a",
+          "aa",
+          "b",
+          "ba",
+          "baa",
+          "bb",
+          "bba",
+          "bbaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbaa' with dict subset"
+    },
+    {
+      "input": [
+        "bbaa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "string 'bbaa' with dict subset"
+    },
+    {
+      "input": [
+        "bbaa",
+        [
+          "bbaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbaa' with dict subset"
+    },
+    {
+      "input": [
+        "bbab",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'bbab' with dict subset"
+    },
+    {
+      "input": [
+        "bbab",
+        [
+          "a",
+          "ab",
+          "b",
+          "ba",
+          "bab",
+          "bb",
+          "bba",
+          "bbab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbab' with dict subset"
+    },
+    {
+      "input": [
+        "bbab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'bbab' with dict subset"
+    },
+    {
+      "input": [
+        "bbab",
+        [
+          "bbab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbab' with dict subset"
+    },
+    {
+      "input": [
+        "bbba",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'bbba' with dict subset"
+    },
+    {
+      "input": [
+        "bbba",
+        [
+          "a",
+          "b",
+          "ba",
+          "bb",
+          "bba",
+          "bbb",
+          "bbba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbba' with dict subset"
+    },
+    {
+      "input": [
+        "bbba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "string 'bbba' with dict subset"
+    },
+    {
+      "input": [
+        "bbba",
+        [
+          "bbba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbba' with dict subset"
+    },
+    {
+      "input": [
+        "bbbb",
+        []
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "string 'bbbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbbb",
+        [
+          "b",
+          "bb",
+          "bbb",
+          "bbbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbbb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbbb' with dict subset"
+    },
+    {
+      "input": [
+        "bbbb",
+        [
+          "bbbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "string 'bbbb' with dict subset"
+    },
+    {
+      "input": [
+        "aaa",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a",
+          "aa",
+          "aab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aab",
+        [
+          "a",
+          "aa",
+          "aab",
+          "ab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        [
+          "a",
+          "aa",
+          "aac"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        [
+          "a",
+          "aa",
+          "aac",
+          "ac"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aac",
+        [
+          "a",
+          "aa",
+          "aac",
+          "ac",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "a",
+          "ab",
+          "aba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aba",
+        [
+          "a",
+          "ab",
+          "aba",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "a",
+          "ab",
+          "abb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abb",
+        [
+          "a",
+          "ab",
+          "abb",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "ab",
+          "abc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "ab",
+          "abc",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "ab",
+          "abc",
+          "b",
+          "bc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abc",
+        [
+          "a",
+          "ab",
+          "abc",
+          "b",
+          "bc",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        [
+          "a",
+          "ac"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        [
+          "a",
+          "ac",
+          "aca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        [
+          "a",
+          "ac",
+          "aca",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "aca",
+        [
+          "a",
+          "ac",
+          "aca",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a",
+          "ac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a",
+          "ac",
+          "acb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a",
+          "ac",
+          "acb",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a",
+          "ac",
+          "acb",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acb",
+        [
+          "a",
+          "ac",
+          "acb",
+          "b",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        [
+          "a",
+          "ac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        [
+          "a",
+          "ac",
+          "acc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        [
+          "a",
+          "ac",
+          "acc",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "acc",
+        [
+          "a",
+          "ac",
+          "acc",
+          "c",
+          "cc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "a",
+          "aa",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "baa",
+        [
+          "a",
+          "aa",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "a",
+          "ab",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bab",
+        [
+          "a",
+          "ab",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a",
+          "ac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a",
+          "ac",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a",
+          "ac",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a",
+          "ac",
+          "b",
+          "ba",
+          "bac"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bac",
+        [
+          "a",
+          "ac",
+          "b",
+          "ba",
+          "bac",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "a",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bba",
+        [
+          "a",
+          "b",
+          "ba",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbb",
+        [
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        [
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        [
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        [
+          "b",
+          "bb",
+          "bbc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        [
+          "b",
+          "bb",
+          "bbc",
+          "bc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bbc",
+        [
+          "b",
+          "bb",
+          "bbc",
+          "bc",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a",
+          "b",
+          "bc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a",
+          "b",
+          "bc",
+          "bca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a",
+          "b",
+          "bc",
+          "bca",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bca",
+        [
+          "a",
+          "b",
+          "bc",
+          "bca",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        [
+          "b",
+          "bc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        [
+          "b",
+          "bc",
+          "bcb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        [
+          "b",
+          "bc",
+          "bcb",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcb",
+        [
+          "b",
+          "bc",
+          "bcb",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        [
+          "b"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        [
+          "b",
+          "bc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        [
+          "b",
+          "bc",
+          "bcc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        [
+          "b",
+          "bc",
+          "bcc",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "bcc",
+        [
+          "b",
+          "bc",
+          "bcc",
+          "c",
+          "cc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        [
+          "a"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        [
+          "a",
+          "aa",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        [
+          "a",
+          "aa",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "caa",
+        [
+          "a",
+          "aa",
+          "c",
+          "ca",
+          "caa"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a",
+          "ab"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a",
+          "ab",
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a",
+          "ab",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a",
+          "ab",
+          "b",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cab",
+        [
+          "a",
+          "ab",
+          "b",
+          "c",
+          "ca",
+          "cab"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        [
+          "a",
+          "ac"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        [
+          "a",
+          "ac",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        [
+          "a",
+          "ac",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cac",
+        [
+          "a",
+          "ac",
+          "c",
+          "ca",
+          "cac"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a",
+          "b",
+          "ba"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a",
+          "b",
+          "ba",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a",
+          "b",
+          "ba",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cba",
+        [
+          "a",
+          "b",
+          "ba",
+          "c",
+          "cb",
+          "cba"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        [
+          "b",
+          "bb"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        [
+          "b",
+          "bb",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        [
+          "b",
+          "bb",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbb",
+        [
+          "b",
+          "bb",
+          "c",
+          "cb",
+          "cbb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        [
+          "b"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        [
+          "b",
+          "bc"
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        [
+          "b",
+          "bc",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        [
+          "b",
+          "bc",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cbc",
+        [
+          "b",
+          "bc",
+          "c",
+          "cb",
+          "cbc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        [
+          "a"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        [
+          "a",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        [
+          "a",
+          "c",
+          "ca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        [
+          "a",
+          "c",
+          "ca",
+          "cc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "cca",
+        [
+          "a",
+          "c",
+          "ca",
+          "cc",
+          "cca"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        [
+          "b"
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        [
+          "b",
+          "c",
+          "cb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        [
+          "b",
+          "c",
+          "cb",
+          "cc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccb",
+        [
+          "b",
+          "c",
+          "cb",
+          "cc",
+          "ccb"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccc",
+        []
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccc",
+        [
+          "c"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccc",
+        [
+          "c",
+          "cc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "ccc",
+        [
+          "c",
+          "cc",
+          "ccc"
+        ]
+      ],
+      "expected": 0,
+      "category": "exhaustive",
+      "note": "3-letter string over abc with growing dictionary prefix"
+    },
+    {
+      "input": [
+        "abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghab",
+        [
+          "a",
+          "ab",
+          "abc",
+          "abcd",
+          "abcde",
+          "c",
+          "cd",
+          "cde",
+          "cdef",
+          "cdefg",
+          "e",
+          "ef",
+          "efg",
+          "efgh",
+          "efgha",
+          "g",
+          "gh",
+          "gha",
+          "ghab",
+          "ghabc"
+        ]
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "max-length string with many overlapping dictionary words"
+    },
+    {
+      "input": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        [
+          "a",
+          "aa",
+          "aaa",
+          "aaaa",
+          "aaaaa",
+          "aaaaaa",
+          "aaaaaaa",
+          "aaaaaaaa",
+          "aaaaaaaaa",
+          "aaaaaaaaaa",
+          "aaaaaaaaaaa",
+          "aaaaaaaaaaaa",
+          "aaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "all-same-char string with all prefix lengths in dictionary"
+    },
+    {
+      "input": [
+        "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde",
+        [
+          "mnop",
+          "qrs",
+          "wvu",
+          "xyz"
+        ]
+      ],
+      "expected": 50,
+      "category": "stress",
+      "note": "no dictionary word matches, all characters are extra"
+    },
+    {
+      "input": [
+        "aaaaabaaaaabaaaaabaaaaabaaaaabaaaaabaaaaabaaaaabaa",
+        [
+          "aaaaab",
+          "aaaaa",
+          "a",
+          "aa",
+          "aaa",
+          "aaaa"
+        ]
+      ],
+      "expected": 0,
+      "category": "stress",
+      "note": "repeated pattern with overlapping dictionary choices exercises DP optimality"
+    }
+  ]
+}

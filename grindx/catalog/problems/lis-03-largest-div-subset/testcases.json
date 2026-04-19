@@ -1,0 +1,1689 @@
+{
+  "problem_id": "lis-03-largest-div-subset",
+  "function": "largestDivisibleSubset",
+  "pattern": "function",
+  "comparison": "custom",
+  "time_limit_s": 1.0,
+  "cases": [
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 2,
+      "category": "basic",
+      "note": "either [1,2] or [1,3] is valid"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          8
+        ]
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "entire chain is divisible"
+    },
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          6
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          8
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          12
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          8
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          6
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          6,
+          8
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          6,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          8,
+          12
+        ]
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          6
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          8
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          4,
+          6,
+          8,
+          12
+        ]
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all distinct subsets up to size 6 from {1,2,3,4,6,8,12}"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536,
+          131072,
+          262144,
+          524288,
+          1048576,
+          2097152,
+          4194304,
+          8388608
+        ]
+      ],
+      "expected": 24,
+      "category": "stress",
+      "note": "long divisibility chains should separate quadratic subset DP from exponential subset recursion"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536,
+          131072,
+          262144,
+          524288,
+          1048576,
+          2097152,
+          4194304,
+          8388608,
+          16777216,
+          33554432
+        ]
+      ],
+      "expected": 26,
+      "category": "stress",
+      "note": "long divisibility chains should separate quadratic subset DP from exponential subset recursion"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536,
+          131072,
+          262144,
+          524288,
+          1048576,
+          2097152,
+          4194304,
+          8388608,
+          16777216,
+          33554432,
+          67108864,
+          134217728
+        ]
+      ],
+      "expected": 28,
+      "category": "stress",
+      "note": "long divisibility chains should separate quadratic subset DP from exponential subset recursion"
+    }
+  ]
+}

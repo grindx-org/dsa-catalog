@@ -1,0 +1,4529 @@
+{
+  "problem_id": "longest-palindromic-substring",
+  "function": "longestPalindrome",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 0.5,
+  "cases": [
+    {
+      "input": [
+        "babad"
+      ],
+      "expected": "bab",
+      "category": "basic",
+      "note": "curated palindrome substring sample"
+    },
+    {
+      "input": [
+        "cbbd"
+      ],
+      "expected": "bb",
+      "category": "basic",
+      "note": "curated palindrome substring sample"
+    },
+    {
+      "input": [
+        "a"
+      ],
+      "expected": "a",
+      "category": "basic",
+      "note": "curated palindrome substring sample"
+    },
+    {
+      "input": [
+        "ac"
+      ],
+      "expected": "a",
+      "category": "basic",
+      "note": "curated palindrome substring sample"
+    },
+    {
+      "input": [
+        "forgeeksskeegfor"
+      ],
+      "expected": "geeksskeeg",
+      "category": "basic",
+      "note": "curated palindrome substring sample"
+    },
+    {
+      "input": [
+        "b"
+      ],
+      "expected": "b",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aa"
+      ],
+      "expected": "aa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ab"
+      ],
+      "expected": "a",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ba"
+      ],
+      "expected": "b",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bb"
+      ],
+      "expected": "bb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaa"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aab"
+      ],
+      "expected": "aa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aba"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abb"
+      ],
+      "expected": "bb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baa"
+      ],
+      "expected": "aa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bab"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bba"
+      ],
+      "expected": "bb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbb"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaab"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaba"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabb"
+      ],
+      "expected": "aa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaa"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abab"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbb"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaa"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baba"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babb"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaa"
+      ],
+      "expected": "bb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbab"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbba"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaab"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaba"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabb"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabab"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbb"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaa"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababb"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaa"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbb"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaa"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaba"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaa"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbab"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbba"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaa"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaab"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaba"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabb"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabab"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbb"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaab"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababb"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbb"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaa"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababb"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaa"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabba"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaa"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaba"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaa"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbab"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbba"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbb"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaa"
+      ],
+      "expected": "aaaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaab"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaba"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabb"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabab"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabba"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbb"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaa"
+      ],
+      "expected": "aaabaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaab"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababb"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaab"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabb"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaa"
+      ],
+      "expected": "aababaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbb"
+      ],
+      "expected": "aba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaab"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaa"
+      ],
+      "expected": "aabbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaba"
+      ],
+      "expected": "abaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaa"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabab"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababa"
+      ],
+      "expected": "abababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababb"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabba"
+      ],
+      "expected": "abbabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabb"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaa"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbab"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbba"
+      ],
+      "expected": "abbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbb"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaa"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaab"
+      ],
+      "expected": "baaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaba"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabb"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaa"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaab"
+      ],
+      "expected": "baabaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababab"
+      ],
+      "expected": "bababab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababba"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbb"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaba"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabb"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbab"
+      ],
+      "expected": "babbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabb"
+      ],
+      "expected": "bbaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabba"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaa"
+      ],
+      "expected": "bab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababb"
+      ],
+      "expected": "bbababb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaa"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbba"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaa"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabba"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbb"
+      ],
+      "expected": "bbbabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaa"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaab"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaba"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaa"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbab"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbba"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbb"
+      ],
+      "expected": "bbbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaaa"
+      ],
+      "expected": "aaaaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaab"
+      ],
+      "expected": "aaaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaba"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaabb"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabab"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabba"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabbb"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaaa"
+      ],
+      "expected": "aaabaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaab"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaababb"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbab"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbbb"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaaa"
+      ],
+      "expected": "aaabaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaab"
+      ],
+      "expected": "aaabaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaabb"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababaa"
+      ],
+      "expected": "aababaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababbb"
+      ],
+      "expected": "aaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaaa"
+      ],
+      "expected": "aaabbaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaab"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbaa"
+      ],
+      "expected": "aabbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaba"
+      ],
+      "expected": "abaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaabb"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabaa"
+      ],
+      "expected": "aabaabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabab"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabba"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabbb"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaaa"
+      ],
+      "expected": "aababaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaab"
+      ],
+      "expected": "aababaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabababa"
+      ],
+      "expected": "abababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabababb"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbbb"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaab"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaba"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaabb"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabba"
+      ],
+      "expected": "abbabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaaa"
+      ],
+      "expected": "aabbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaab"
+      ],
+      "expected": "aabbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbabb"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbaa"
+      ],
+      "expected": "aabbbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbab"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbba"
+      ],
+      "expected": "abbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbbb"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaaa"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaab"
+      ],
+      "expected": "baaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaba"
+      ],
+      "expected": "abaaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaabb"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabaa"
+      ],
+      "expected": "abaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabab"
+      ],
+      "expected": "abaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabbb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaaa"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaab"
+      ],
+      "expected": "baabaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaababa"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaababb"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaaa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaabb"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababaa"
+      ],
+      "expected": "abababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababab"
+      ],
+      "expected": "abababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababba"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababbb"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaba"
+      ],
+      "expected": "ababbaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbabb"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbab"
+      ],
+      "expected": "babbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaabb"
+      ],
+      "expected": "bbaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabba"
+      ],
+      "expected": "abbaabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabbb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaab"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbababa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbababb"
+      ],
+      "expected": "bbababb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbaa"
+      ],
+      "expected": "abbabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbab"
+      ],
+      "expected": "abbabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbba"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabba"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabbb"
+      ],
+      "expected": "bbbabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaaa"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaab"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbabb"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbaa"
+      ],
+      "expected": "abbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbab"
+      ],
+      "expected": "abbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbba"
+      ],
+      "expected": "abbbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbbb"
+      ],
+      "expected": "bbbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaaa"
+      ],
+      "expected": "aaaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaab"
+      ],
+      "expected": "baaaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaba"
+      ],
+      "expected": "baaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaabb"
+      ],
+      "expected": "baaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabaa"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabba"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabbb"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaaa"
+      ],
+      "expected": "aaabaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaababa"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaababb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbbb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaab"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaba"
+      ],
+      "expected": "baabaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaabb"
+      ],
+      "expected": "baabaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababaa"
+      ],
+      "expected": "aababaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababab"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaaa"
+      ],
+      "expected": "aabbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaab"
+      ],
+      "expected": "baabbaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbabb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbaa"
+      ],
+      "expected": "aabbbaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbbb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaba"
+      ],
+      "expected": "abaaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaabb"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabaa"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabab"
+      ],
+      "expected": "babaabab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabba"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabbb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaaa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babababa"
+      ],
+      "expected": "bababab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babababb"
+      ],
+      "expected": "bababab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbaa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbba"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbbb"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaaa"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaba"
+      ],
+      "expected": "abba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabaa"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabba"
+      ],
+      "expected": "abbabba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabbb"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaaa"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaab"
+      ],
+      "expected": "abbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaba"
+      ],
+      "expected": "babbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbabb"
+      ],
+      "expected": "babbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbaa"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbab"
+      ],
+      "expected": "babbbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbba"
+      ],
+      "expected": "abbbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbbb"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaaa"
+      ],
+      "expected": "aaaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaab"
+      ],
+      "expected": "baaaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaba"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaabb"
+      ],
+      "expected": "bbaaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabaa"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabba"
+      ],
+      "expected": "bbaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabbb"
+      ],
+      "expected": "bbaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaab"
+      ],
+      "expected": "baabaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaababa"
+      ],
+      "expected": "ababa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaababb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbaa"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbab"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbba"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbbb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaaa"
+      ],
+      "expected": "aaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaba"
+      ],
+      "expected": "abaaba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaabb"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababaa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababab"
+      ],
+      "expected": "bababab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababba"
+      ],
+      "expected": "bbababb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababbb"
+      ],
+      "expected": "bbababb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaaa"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaab"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaba"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbabb"
+      ],
+      "expected": "bbabbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbaa"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbab"
+      ],
+      "expected": "babbbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbba"
+      ],
+      "expected": "abbbba",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbbb"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaaa"
+      ],
+      "expected": "aaaaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaab"
+      ],
+      "expected": "baaaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaba"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaabb"
+      ],
+      "expected": "bbaaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabaa"
+      ],
+      "expected": "aabaa",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabba"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabbb"
+      ],
+      "expected": "bbbaabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaaa"
+      ],
+      "expected": "bbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaab"
+      ],
+      "expected": "baab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbababa"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbababb"
+      ],
+      "expected": "bbababb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbaa"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbab"
+      ],
+      "expected": "babbab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbba"
+      ],
+      "expected": "bbbabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbbb"
+      ],
+      "expected": "bbbabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaaa"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaab"
+      ],
+      "expected": "baaab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaba"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaabb"
+      ],
+      "expected": "bbaabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabaa"
+      ],
+      "expected": "bbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabab"
+      ],
+      "expected": "babab",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabba"
+      ],
+      "expected": "bbabb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabbb"
+      ],
+      "expected": "bbbabbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaaa"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaab"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaba"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbabb"
+      ],
+      "expected": "bbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbaa"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbab"
+      ],
+      "expected": "bbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbba"
+      ],
+      "expected": "bbbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbbb"
+      ],
+      "expected": "bbbbbbbb",
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxracecaryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+      ],
+      "expected": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "expected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "expected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      ],
+      "expected": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      ],
+      "expected": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabca"
+      ],
+      "expected": "a",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabba"
+      ],
+      "expected": "abbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabba",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      ],
+      "expected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcba"
+      ],
+      "expected": "abcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcba",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+      ],
+      "expected": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab"
+      ],
+      "expected": "abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "aaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaab"
+      ],
+      "expected": "aaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaabaaaa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "xyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxy"
+      ],
+      "expected": "xyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyx",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      ],
+      "expected": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
+      ],
+      "expected": "a",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcba"
+      ],
+      "expected": "abcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcbaabcba",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "aaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaa"
+      ],
+      "expected": "aaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaaaaaaabaaaaa",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccabbacccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      ],
+      "expected": "ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccabbacccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddracecardddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ],
+      "expected": "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddracecardddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabca"
+      ],
+      "expected": "a",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "qwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqw"
+      ],
+      "expected": "q",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+      ],
+      "expected": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "noonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoon"
+      ],
+      "expected": "noonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoonnoon",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxyqrstuvwxypq"
+      ],
+      "expected": "pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll"
+      ],
+      "expected": "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbacccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      ],
+      "expected": "abbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabba",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "rotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorr"
+      ],
+      "expected": "rotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavatorrotavator",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "madamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadamm"
+      ],
+      "expected": "madamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadammadamimadam",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyxxyyx"
+      ],
+      "expected": "abcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcbaabcddcba",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+      ],
+      "expected": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "tacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocatta"
+      ],
+      "expected": "tacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocattacocat",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu"
+      ],
+      "expected": "uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "levellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevel"
+      ],
+      "expected": "levellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevellevel",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "deeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeed"
+      ],
+      "expected": "deeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeeddeed",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "radarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradar"
+      ],
+      "expected": "radarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradarradar",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabcc"
+      ],
+      "expected": "ccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabccbaabcc",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxc"
+      ],
+      "expected": "cxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxcbaabcxyzyxc",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+      ],
+      "expected": "pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "xyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzxxyzzyzzx"
+      ],
+      "expected": "zzyzz",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "redderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredd"
+      ],
+      "expected": "dderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredderredd",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "abaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxbaabaxyzyxba"
+      ],
+      "expected": "xyzyx",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      ],
+      "expected": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "racecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarra"
+      ],
+      "expected": "racecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecarracecar",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+      ],
+      "expected": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+      ],
+      "expected": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ],
+      "expected": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      ],
+      "expected": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "expected": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+      ],
+      "expected": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+      ],
+      "expected": "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    },
+    {
+      "input": [
+        "xyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzz"
+      ],
+      "expected": "zzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzzyxxyzz",
+      "category": "stress",
+      "note": "max-size longest-palindrome stress punishes cubic substring enumeration"
+    }
+  ]
+}

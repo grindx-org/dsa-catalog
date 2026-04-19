@@ -1,0 +1,1823 @@
+{
+  "problem_id": "palindrome-linked-list",
+  "function": "isPalindrome",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "single node is a palindrome"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "even palindrome"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "odd palindrome"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "two-node non-palindrome"
+    },
+    {
+      "input": [
+        [
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "all binary lists up to length 6"
+    }
+  ]
+}

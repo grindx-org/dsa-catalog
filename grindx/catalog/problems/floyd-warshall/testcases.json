@@ -1,0 +1,2769 @@
+{
+  "problem_id": "floyd-warshall",
+  "function": "floydWarshall",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          [
+            0,
+            3,
+            -1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            2,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          5,
+          0
+        ]
+      ],
+      "category": "basic",
+      "note": "all-pairs shortest paths over a sparse graph"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -2
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -2
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "edge",
+      "note": "negative edge without alternate routes"
+    },
+    {
+      "input": [
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          -1,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            -1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          9,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          4
+        ],
+        [
+          -1,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            -1,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          6,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            -1
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            -1,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    },
+    {
+      "input": [
+        [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            5,
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "category": "generated",
+      "note": "all positive weighted directed graphs up to 3 nodes"
+    }
+  ]
+}

@@ -1,0 +1,2063 @@
+{
+  "problem_id": "convert-sorted-array-to-binary-search-tree",
+  "function": "sortedArrayToBST",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          -10,
+          -3,
+          0,
+          5,
+          9
+        ]
+      ],
+      "expected": [
+        -10,
+        -3,
+        0,
+        5,
+        9
+      ],
+      "category": "basic",
+      "note": "classic example"
+    },
+    {
+      "input": [
+        [
+          -3
+        ]
+      ],
+      "expected": [
+        -3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2
+        ]
+      ],
+      "expected": [
+        -2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1
+        ]
+      ],
+      "expected": [
+        -1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0
+        ]
+      ],
+      "expected": [
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          2
+        ]
+      ],
+      "expected": [
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          3
+        ]
+      ],
+      "expected": [
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1
+        ]
+      ],
+      "expected": [
+        -3,
+        -1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0
+        ]
+      ],
+      "expected": [
+        -3,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1
+        ]
+      ],
+      "expected": [
+        -2,
+        -1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0
+        ]
+      ],
+      "expected": [
+        -2,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          1
+        ]
+      ],
+      "expected": [
+        -2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "expected": [
+        -1,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "expected": [
+        -1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          2
+        ]
+      ],
+      "expected": [
+        -1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          1
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          0
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        0
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          0,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        0,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          0,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        0,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          -1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        -1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -2,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -2,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          -1,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        -1,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -3,
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -3,
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        -1,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -2,
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all sorted unique arrays up to length 5 from [-3..3]"
+    },
+    {
+      "input": [
+        [
+          -8,
+          -5,
+          -2,
+          0,
+          3,
+          6,
+          9
+        ]
+      ],
+      "expected": [
+        -8,
+        -5,
+        -2,
+        0,
+        3,
+        6,
+        9
+      ],
+      "category": "edge",
+      "note": "odd length larger array"
+    },
+    {
+      "input": [
+        [
+          -7,
+          -4,
+          -1,
+          2,
+          5,
+          8
+        ]
+      ],
+      "expected": [
+        -7,
+        -4,
+        -1,
+        2,
+        5,
+        8
+      ],
+      "category": "edge",
+      "note": "even length larger array"
+    }
+  ]
+}

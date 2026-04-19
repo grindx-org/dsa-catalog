@@ -1,0 +1,2465 @@
+{
+  "problem_id": "reverse-bits",
+  "function": "reverseBits",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        43261596
+      ],
+      "expected": 964176192,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        4294967293
+      ],
+      "expected": 3221225471,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        1
+      ],
+      "expected": 2147483648,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        2147483648
+      ],
+      "expected": 1,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        4294967295
+      ],
+      "expected": 4294967295,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        4294967294
+      ],
+      "expected": 2147483647,
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        2
+      ],
+      "expected": 1073741824,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        3
+      ],
+      "expected": 3221225472,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        4
+      ],
+      "expected": 536870912,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": 2684354560,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        6
+      ],
+      "expected": 1610612736,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": 3758096384,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": 268435456,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        9
+      ],
+      "expected": 2415919104,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": 1342177280,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        11
+      ],
+      "expected": 3489660928,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        12
+      ],
+      "expected": 805306368,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        13
+      ],
+      "expected": 2952790016,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        14
+      ],
+      "expected": 1879048192,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": 4026531840,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        16
+      ],
+      "expected": 134217728,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        17
+      ],
+      "expected": 2281701376,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        18
+      ],
+      "expected": 1207959552,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        19
+      ],
+      "expected": 3355443200,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        20
+      ],
+      "expected": 671088640,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        21
+      ],
+      "expected": 2818572288,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        22
+      ],
+      "expected": 1744830464,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        23
+      ],
+      "expected": 3892314112,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        24
+      ],
+      "expected": 402653184,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        25
+      ],
+      "expected": 2550136832,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        26
+      ],
+      "expected": 1476395008,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        27
+      ],
+      "expected": 3623878656,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        28
+      ],
+      "expected": 939524096,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        29
+      ],
+      "expected": 3087007744,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        30
+      ],
+      "expected": 2013265920,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        31
+      ],
+      "expected": 4160749568,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        32
+      ],
+      "expected": 67108864,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        33
+      ],
+      "expected": 2214592512,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        34
+      ],
+      "expected": 1140850688,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        35
+      ],
+      "expected": 3288334336,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        36
+      ],
+      "expected": 603979776,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        37
+      ],
+      "expected": 2751463424,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        38
+      ],
+      "expected": 1677721600,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        39
+      ],
+      "expected": 3825205248,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        40
+      ],
+      "expected": 335544320,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        41
+      ],
+      "expected": 2483027968,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": 1409286144,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        43
+      ],
+      "expected": 3556769792,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        44
+      ],
+      "expected": 872415232,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        45
+      ],
+      "expected": 3019898880,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        46
+      ],
+      "expected": 1946157056,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        47
+      ],
+      "expected": 4093640704,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        48
+      ],
+      "expected": 201326592,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        49
+      ],
+      "expected": 2348810240,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        50
+      ],
+      "expected": 1275068416,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        51
+      ],
+      "expected": 3422552064,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        52
+      ],
+      "expected": 738197504,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        53
+      ],
+      "expected": 2885681152,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        54
+      ],
+      "expected": 1811939328,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        55
+      ],
+      "expected": 3959422976,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        56
+      ],
+      "expected": 469762048,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        57
+      ],
+      "expected": 2617245696,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        58
+      ],
+      "expected": 1543503872,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        59
+      ],
+      "expected": 3690987520,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        60
+      ],
+      "expected": 1006632960,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        61
+      ],
+      "expected": 3154116608,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        62
+      ],
+      "expected": 2080374784,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        63
+      ],
+      "expected": 4227858432,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        64
+      ],
+      "expected": 33554432,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        65
+      ],
+      "expected": 2181038080,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        66
+      ],
+      "expected": 1107296256,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        67
+      ],
+      "expected": 3254779904,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        68
+      ],
+      "expected": 570425344,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        69
+      ],
+      "expected": 2717908992,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        70
+      ],
+      "expected": 1644167168,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        71
+      ],
+      "expected": 3791650816,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        72
+      ],
+      "expected": 301989888,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        73
+      ],
+      "expected": 2449473536,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        74
+      ],
+      "expected": 1375731712,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        75
+      ],
+      "expected": 3523215360,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        76
+      ],
+      "expected": 838860800,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        77
+      ],
+      "expected": 2986344448,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        78
+      ],
+      "expected": 1912602624,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        79
+      ],
+      "expected": 4060086272,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        80
+      ],
+      "expected": 167772160,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        81
+      ],
+      "expected": 2315255808,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        82
+      ],
+      "expected": 1241513984,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        83
+      ],
+      "expected": 3388997632,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        84
+      ],
+      "expected": 704643072,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        85
+      ],
+      "expected": 2852126720,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        86
+      ],
+      "expected": 1778384896,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        87
+      ],
+      "expected": 3925868544,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        88
+      ],
+      "expected": 436207616,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        89
+      ],
+      "expected": 2583691264,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        90
+      ],
+      "expected": 1509949440,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        91
+      ],
+      "expected": 3657433088,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        92
+      ],
+      "expected": 973078528,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        93
+      ],
+      "expected": 3120562176,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        94
+      ],
+      "expected": 2046820352,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        95
+      ],
+      "expected": 4194304000,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        96
+      ],
+      "expected": 100663296,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        97
+      ],
+      "expected": 2248146944,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        98
+      ],
+      "expected": 1174405120,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        99
+      ],
+      "expected": 3321888768,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        100
+      ],
+      "expected": 637534208,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        101
+      ],
+      "expected": 2785017856,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        102
+      ],
+      "expected": 1711276032,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        103
+      ],
+      "expected": 3858759680,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        104
+      ],
+      "expected": 369098752,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        105
+      ],
+      "expected": 2516582400,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        106
+      ],
+      "expected": 1442840576,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        107
+      ],
+      "expected": 3590324224,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        108
+      ],
+      "expected": 905969664,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        109
+      ],
+      "expected": 3053453312,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        110
+      ],
+      "expected": 1979711488,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        111
+      ],
+      "expected": 4127195136,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        112
+      ],
+      "expected": 234881024,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        113
+      ],
+      "expected": 2382364672,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        114
+      ],
+      "expected": 1308622848,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        115
+      ],
+      "expected": 3456106496,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        116
+      ],
+      "expected": 771751936,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        117
+      ],
+      "expected": 2919235584,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        118
+      ],
+      "expected": 1845493760,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        119
+      ],
+      "expected": 3992977408,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        120
+      ],
+      "expected": 503316480,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        121
+      ],
+      "expected": 2650800128,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        122
+      ],
+      "expected": 1577058304,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": 3724541952,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        124
+      ],
+      "expected": 1040187392,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        125
+      ],
+      "expected": 3187671040,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        126
+      ],
+      "expected": 2113929216,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        127
+      ],
+      "expected": 4261412864,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        128
+      ],
+      "expected": 16777216,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        129
+      ],
+      "expected": 2164260864,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        130
+      ],
+      "expected": 1090519040,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        131
+      ],
+      "expected": 3238002688,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        132
+      ],
+      "expected": 553648128,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        133
+      ],
+      "expected": 2701131776,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        134
+      ],
+      "expected": 1627389952,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        135
+      ],
+      "expected": 3774873600,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        136
+      ],
+      "expected": 285212672,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        137
+      ],
+      "expected": 2432696320,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        138
+      ],
+      "expected": 1358954496,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        139
+      ],
+      "expected": 3506438144,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        140
+      ],
+      "expected": 822083584,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        141
+      ],
+      "expected": 2969567232,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        142
+      ],
+      "expected": 1895825408,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        143
+      ],
+      "expected": 4043309056,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        144
+      ],
+      "expected": 150994944,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        145
+      ],
+      "expected": 2298478592,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        146
+      ],
+      "expected": 1224736768,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        147
+      ],
+      "expected": 3372220416,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        148
+      ],
+      "expected": 687865856,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        149
+      ],
+      "expected": 2835349504,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        150
+      ],
+      "expected": 1761607680,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        151
+      ],
+      "expected": 3909091328,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        152
+      ],
+      "expected": 419430400,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        153
+      ],
+      "expected": 2566914048,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        154
+      ],
+      "expected": 1493172224,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        155
+      ],
+      "expected": 3640655872,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        156
+      ],
+      "expected": 956301312,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        157
+      ],
+      "expected": 3103784960,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        158
+      ],
+      "expected": 2030043136,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        159
+      ],
+      "expected": 4177526784,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        160
+      ],
+      "expected": 83886080,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        161
+      ],
+      "expected": 2231369728,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        162
+      ],
+      "expected": 1157627904,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        163
+      ],
+      "expected": 3305111552,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        164
+      ],
+      "expected": 620756992,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        165
+      ],
+      "expected": 2768240640,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        166
+      ],
+      "expected": 1694498816,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        167
+      ],
+      "expected": 3841982464,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        168
+      ],
+      "expected": 352321536,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        169
+      ],
+      "expected": 2499805184,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        170
+      ],
+      "expected": 1426063360,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        171
+      ],
+      "expected": 3573547008,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        172
+      ],
+      "expected": 889192448,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        173
+      ],
+      "expected": 3036676096,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        174
+      ],
+      "expected": 1962934272,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        175
+      ],
+      "expected": 4110417920,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        176
+      ],
+      "expected": 218103808,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        177
+      ],
+      "expected": 2365587456,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        178
+      ],
+      "expected": 1291845632,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        179
+      ],
+      "expected": 3439329280,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        180
+      ],
+      "expected": 754974720,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        181
+      ],
+      "expected": 2902458368,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        182
+      ],
+      "expected": 1828716544,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        183
+      ],
+      "expected": 3976200192,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        184
+      ],
+      "expected": 486539264,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        185
+      ],
+      "expected": 2634022912,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        186
+      ],
+      "expected": 1560281088,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        187
+      ],
+      "expected": 3707764736,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        188
+      ],
+      "expected": 1023410176,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        189
+      ],
+      "expected": 3170893824,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        190
+      ],
+      "expected": 2097152000,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        191
+      ],
+      "expected": 4244635648,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        192
+      ],
+      "expected": 50331648,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        193
+      ],
+      "expected": 2197815296,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        194
+      ],
+      "expected": 1124073472,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        195
+      ],
+      "expected": 3271557120,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        196
+      ],
+      "expected": 587202560,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        197
+      ],
+      "expected": 2734686208,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        198
+      ],
+      "expected": 1660944384,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        199
+      ],
+      "expected": 3808428032,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        200
+      ],
+      "expected": 318767104,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        201
+      ],
+      "expected": 2466250752,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        202
+      ],
+      "expected": 1392508928,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        203
+      ],
+      "expected": 3539992576,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        204
+      ],
+      "expected": 855638016,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        205
+      ],
+      "expected": 3003121664,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        206
+      ],
+      "expected": 1929379840,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        207
+      ],
+      "expected": 4076863488,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        208
+      ],
+      "expected": 184549376,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        209
+      ],
+      "expected": 2332033024,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        210
+      ],
+      "expected": 1258291200,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        211
+      ],
+      "expected": 3405774848,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        212
+      ],
+      "expected": 721420288,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        213
+      ],
+      "expected": 2868903936,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        214
+      ],
+      "expected": 1795162112,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        215
+      ],
+      "expected": 3942645760,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        216
+      ],
+      "expected": 452984832,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        217
+      ],
+      "expected": 2600468480,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        218
+      ],
+      "expected": 1526726656,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        219
+      ],
+      "expected": 3674210304,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        220
+      ],
+      "expected": 989855744,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        221
+      ],
+      "expected": 3137339392,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        222
+      ],
+      "expected": 2063597568,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        223
+      ],
+      "expected": 4211081216,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        224
+      ],
+      "expected": 117440512,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        225
+      ],
+      "expected": 2264924160,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        226
+      ],
+      "expected": 1191182336,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        227
+      ],
+      "expected": 3338665984,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        228
+      ],
+      "expected": 654311424,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        229
+      ],
+      "expected": 2801795072,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        230
+      ],
+      "expected": 1728053248,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        231
+      ],
+      "expected": 3875536896,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        232
+      ],
+      "expected": 385875968,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        233
+      ],
+      "expected": 2533359616,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        234
+      ],
+      "expected": 1459617792,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        235
+      ],
+      "expected": 3607101440,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        236
+      ],
+      "expected": 922746880,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        237
+      ],
+      "expected": 3070230528,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        238
+      ],
+      "expected": 1996488704,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        239
+      ],
+      "expected": 4143972352,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        240
+      ],
+      "expected": 251658240,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        241
+      ],
+      "expected": 2399141888,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        242
+      ],
+      "expected": 1325400064,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        243
+      ],
+      "expected": 3472883712,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        244
+      ],
+      "expected": 788529152,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        245
+      ],
+      "expected": 2936012800,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        246
+      ],
+      "expected": 1862270976,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        247
+      ],
+      "expected": 4009754624,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        248
+      ],
+      "expected": 520093696,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        249
+      ],
+      "expected": 2667577344,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        250
+      ],
+      "expected": 1593835520,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        251
+      ],
+      "expected": 3741319168,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        252
+      ],
+      "expected": 1056964608,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        253
+      ],
+      "expected": 3204448256,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        254
+      ],
+      "expected": 2130706432,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        255
+      ],
+      "expected": 4278190080,
+      "category": "exhaustive",
+      "note": "all 8-bit values"
+    },
+    {
+      "input": [
+        256
+      ],
+      "expected": 8388608,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        512
+      ],
+      "expected": 4194304,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        1024
+      ],
+      "expected": 2097152,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        2048
+      ],
+      "expected": 1048576,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        4096
+      ],
+      "expected": 524288,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        8192
+      ],
+      "expected": 262144,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        16384
+      ],
+      "expected": 131072,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        32768
+      ],
+      "expected": 65536,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        65536
+      ],
+      "expected": 32768,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        131072
+      ],
+      "expected": 16384,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        262144
+      ],
+      "expected": 8192,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        524288
+      ],
+      "expected": 4096,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        1048576
+      ],
+      "expected": 2048,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        2097152
+      ],
+      "expected": 1024,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        4194304
+      ],
+      "expected": 512,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        8388608
+      ],
+      "expected": 256,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        16777216
+      ],
+      "expected": 128,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        33554432
+      ],
+      "expected": 64,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        67108864
+      ],
+      "expected": 32,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        134217728
+      ],
+      "expected": 16,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        268435456
+      ],
+      "expected": 8,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        536870912
+      ],
+      "expected": 4,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        1073741824
+      ],
+      "expected": 2,
+      "category": "edge",
+      "note": "single bit set at each position"
+    },
+    {
+      "input": [
+        2147483649
+      ],
+      "expected": 2147483649,
+      "category": "edge",
+      "note": "palindromic or alternating bit patterns"
+    },
+    {
+      "input": [
+        3221225475
+      ],
+      "expected": 3221225475,
+      "category": "edge",
+      "note": "palindromic or alternating bit patterns"
+    },
+    {
+      "input": [
+        2863311530
+      ],
+      "expected": 1431655765,
+      "category": "edge",
+      "note": "palindromic or alternating bit patterns"
+    },
+    {
+      "input": [
+        1167696004
+      ],
+      "expected": 554015138,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        2096065187
+      ],
+      "expected": 3310810942,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        351669114
+      ],
+      "expected": 1590718248,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        1454849278
+      ],
+      "expected": 2134699370,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        310670484
+      ],
+      "expected": 690889032,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        47400841
+      ],
+      "expected": 2447559488,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        2684086371
+      ],
+      "expected": 3323453433,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        579868526
+      ],
+      "expected": 1994918212,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        3165251844
+      ],
+      "expected": 546805053,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        3080787439
+      ],
+      "expected": 4155016685,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        1752910970
+      ],
+      "expected": 1580391958,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        3008414529
+      ],
+      "expected": 2193820365,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        3964075491
+      ],
+      "expected": 3351208503,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        739641463
+      ],
+      "expected": 3994052660,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        1081743298
+      ],
+      "expected": 1139301890,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        4134646052
+      ],
+      "expected": 613256815,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        402672965
+      ],
+      "expected": 2729574424,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        385809530
+      ],
+      "expected": 1581219688,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        3226290910
+      ],
+      "expected": 2069017091,
+      "category": "stress",
+      "note": "random 32-bit values"
+    },
+    {
+      "input": [
+        2762740752
+      ],
+      "expected": 136852773,
+      "category": "stress",
+      "note": "random 32-bit values"
+    }
+  ]
+}

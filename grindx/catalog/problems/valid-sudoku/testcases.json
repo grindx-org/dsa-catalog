@@ -1,0 +1,571 @@
+{
+  "problem_id": "valid-sudoku",
+  "pattern": "function",
+  "comparison": "exact",
+  "arg_types": [
+    "board_rows"
+  ],
+  "return_type": "bool",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          "53..7....",
+          "6..195...",
+          ".98....6.",
+          "8...6...3",
+          "4..8.3..1",
+          "7...2...6",
+          ".6....28.",
+          "...419..5",
+          "....8..79"
+        ]
+      ],
+      "expected": true,
+      "category": "basic",
+      "note": "standard valid partially filled board"
+    },
+    {
+      "input": [
+        [
+          "53..7...5",
+          "6..195...",
+          ".98....6.",
+          "8...6...3",
+          "4..8.3..1",
+          "7...2...6",
+          ".6....28.",
+          "...419..5",
+          "....8..79"
+        ]
+      ],
+      "expected": false,
+      "category": "basic",
+      "note": "duplicate in a row"
+    },
+    {
+      "input": [
+        [
+          "53..7....",
+          "5..195...",
+          ".98....6.",
+          "8...6...3",
+          "4..8.3..1",
+          "7...2...6",
+          ".6....28.",
+          "...419..5",
+          "....8..79"
+        ]
+      ],
+      "expected": false,
+      "category": "basic",
+      "note": "duplicate in a column"
+    },
+    {
+      "input": [
+        [
+          "539.7....",
+          "6..195...",
+          ".98....6.",
+          "8...6...3",
+          "4..8.3..1",
+          "7...2...6",
+          ".6....28.",
+          "...419..5",
+          "....8..79"
+        ]
+      ],
+      "expected": false,
+      "category": "basic",
+      "note": "duplicate in a 3x3 box"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "fully solved valid board"
+    },
+    {
+      "input": [
+        [
+          ".34678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "6.2195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "19.342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859.61423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "4268.3791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "71392.856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537.84",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "2874196.5",
+          "345286179"
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "34528617."
+        ]
+      ],
+      "expected": true,
+      "category": "exhaustive",
+      "note": "single blank cell should remain valid"
+    },
+    {
+      "input": [
+        [
+          "554678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "677195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198842567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859771423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426855791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924456",
+          "961537284",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537224",
+          "287419635",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419633",
+          "345286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          "534678912",
+          "672195348",
+          "198342567",
+          "859761423",
+          "426853791",
+          "713924856",
+          "961537284",
+          "287419635",
+          "945286179"
+        ]
+      ],
+      "expected": false,
+      "category": "exhaustive",
+      "note": "single duplicated digit should invalidate the board"
+    },
+    {
+      "input": [
+        [
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "completely empty board is valid"
+    },
+    {
+      "input": [
+        [
+          "1........",
+          ".........",
+          "..1......",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "box-only duplicate (0,0) and (2,2) \u2014 catches row+col-only checkers"
+    },
+    {
+      "input": [
+        [
+          ".........",
+          ".........",
+          ".........",
+          "...5.....",
+          ".........",
+          ".....5...",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "box-only duplicate in center box \u2014 (3,3) and (5,5)"
+    },
+    {
+      "input": [
+        [
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "......9..",
+          ".........",
+          "........9"
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "box-only duplicate in bottom-right box"
+    },
+    {
+      "input": [
+        [
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "....5....",
+          ".........",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "single digit on board \u2014 trivially valid"
+    },
+    {
+      "input": [
+        [
+          "..33.....",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "row duplicate across box boundary \u2014 catches incomplete row checking"
+    },
+    {
+      "input": [
+        [
+          ".........",
+          ".........",
+          "7........",
+          "7........",
+          ".........",
+          ".........",
+          ".........",
+          ".........",
+          "........."
+        ]
+      ],
+      "expected": false,
+      "category": "edge",
+      "note": "column duplicate across box boundary \u2014 catches incomplete col checking"
+    },
+    {
+      "input": [
+        [
+          "1...2...3",
+          ".........",
+          ".........",
+          "...4...5.",
+          ".........",
+          ".........",
+          "..6...7..",
+          ".........",
+          "8.......9"
+        ]
+      ],
+      "expected": true,
+      "category": "edge",
+      "note": "sparse valid board with one digit per box"
+    }
+  ],
+  "function": "isValidSudoku"
+}

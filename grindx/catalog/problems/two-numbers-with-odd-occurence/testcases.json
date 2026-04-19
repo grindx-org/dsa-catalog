@@ -1,0 +1,4893 @@
+{
+  "problem_id": "two-numbers-with-odd-occurence",
+  "function": "twoOddOccurrences",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        [
+          4,
+          2,
+          4,
+          5,
+          2,
+          3,
+          3,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          2,
+          4
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          2,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "basic",
+      "note": "curated sample"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          3,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          4,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          5,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          5,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          5,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          6,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        1,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        1,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        1,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          3,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          4,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          5,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          5,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          5,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          6,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        2,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        2,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          2,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          4,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          5,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          5,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          5,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          6,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        3,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        3,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          3,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        3,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          5,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          5,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          5,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          6,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        4,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        4,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          4,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        4,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          6,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          6,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          6,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        5,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        5,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          5,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        5,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          7,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        6,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          7,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        6,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          7,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        6,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        6,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        6,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        6,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        6,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        6,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        6,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        6,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        6,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        6,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        6,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        6,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          6,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        6,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          8,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        7,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          8,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        7,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          8,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        7,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        7,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        7,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        7,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        7,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        7,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        7,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        7,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        7,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          7,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        7,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          9,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        8,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          9,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        8,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          9,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        8,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        8,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        8,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        8,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        8,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        8,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          8,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        8,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          10,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        9,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          10,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        9,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          10,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        9,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        9,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        9,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          9,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        9,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          10,
+          11,
+          20,
+          20
+        ]
+      ],
+      "expected": [
+        10,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          10,
+          11,
+          21,
+          21
+        ]
+      ],
+      "expected": [
+        10,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          10,
+          11,
+          22,
+          22
+        ]
+      ],
+      "expected": [
+        10,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "small arrays with two odd-occurrence elements"
+    },
+    {
+      "input": [
+        [
+          1,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          1,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          1,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          1,
+          6
+        ]
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          1,
+          7
+        ]
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          1,
+          8
+        ]
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          4
+        ]
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          5
+        ]
+      ],
+      "expected": [
+        2,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          6
+        ]
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          7
+        ]
+      ],
+      "expected": [
+        2,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          2,
+          8
+        ]
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          3,
+          5
+        ]
+      ],
+      "expected": [
+        3,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          3,
+          6
+        ]
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          3,
+          7
+        ]
+      ],
+      "expected": [
+        3,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          3,
+          8
+        ]
+      ],
+      "expected": [
+        3,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          4,
+          6
+        ]
+      ],
+      "expected": [
+        4,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          4,
+          7
+        ]
+      ],
+      "expected": [
+        4,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          4,
+          8
+        ]
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          5,
+          6
+        ]
+      ],
+      "expected": [
+        5,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          5,
+          7
+        ]
+      ],
+      "expected": [
+        5,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          5,
+          8
+        ]
+      ],
+      "expected": [
+        5,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          6,
+          7
+        ]
+      ],
+      "expected": [
+        6,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          6,
+          8
+        ]
+      ],
+      "expected": [
+        6,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          7,
+          8
+        ]
+      ],
+      "expected": [
+        7,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "minimal two-element arrays"
+    },
+    {
+      "input": [
+        [
+          16,
+          25,
+          11,
+          25,
+          22,
+          13,
+          5,
+          14,
+          13,
+          16,
+          7,
+          26,
+          3,
+          15,
+          23,
+          10,
+          21,
+          20,
+          10,
+          2,
+          14,
+          4,
+          12,
+          17,
+          4,
+          22,
+          24,
+          3,
+          1,
+          20,
+          9,
+          21,
+          18,
+          23,
+          8,
+          9,
+          17,
+          5,
+          6,
+          7,
+          15,
+          8,
+          18,
+          11,
+          19,
+          24,
+          26,
+          6,
+          12,
+          19
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "stress",
+      "note": "random array of size 50"
+    },
+    {
+      "input": [
+        [
+          65,
+          94,
+          27,
+          32,
+          89,
+          82,
+          25,
+          99,
+          33,
+          64,
+          78,
+          18,
+          41,
+          29,
+          96,
+          89,
+          97,
+          50,
+          77,
+          24,
+          40,
+          25,
+          69,
+          37,
+          66,
+          21,
+          28,
+          43,
+          35,
+          82,
+          45,
+          68,
+          86,
+          72,
+          66,
+          73,
+          101,
+          32,
+          100,
+          33,
+          84,
+          55,
+          28,
+          71,
+          30,
+          94,
+          9,
+          46,
+          50,
+          80,
+          70,
+          48,
+          34,
+          53,
+          11,
+          92,
+          36,
+          80,
+          60,
+          51,
+          12,
+          23,
+          20,
+          31,
+          26,
+          8,
+          64,
+          88,
+          54,
+          11,
+          19,
+          2,
+          34,
+          83,
+          75,
+          73,
+          42,
+          97,
+          4,
+          52,
+          38,
+          61,
+          47,
+          22,
+          18,
+          17,
+          10,
+          8,
+          98,
+          15,
+          10,
+          68,
+          6,
+          71,
+          43,
+          9,
+          54,
+          31,
+          95,
+          46,
+          7,
+          91,
+          93,
+          67,
+          85,
+          49,
+          90,
+          41,
+          19,
+          62,
+          29,
+          36,
+          27,
+          4,
+          24,
+          17,
+          63,
+          14,
+          47,
+          40,
+          45,
+          58,
+          81,
+          6,
+          51,
+          15,
+          12,
+          63,
+          13,
+          59,
+          78,
+          58,
+          67,
+          59,
+          13,
+          87,
+          44,
+          88,
+          5,
+          100,
+          99,
+          7,
+          39,
+          87,
+          60,
+          3,
+          85,
+          52,
+          72,
+          69,
+          74,
+          57,
+          76,
+          101,
+          22,
+          84,
+          81,
+          23,
+          98,
+          95,
+          74,
+          61,
+          26,
+          90,
+          21,
+          35,
+          79,
+          56,
+          93,
+          53,
+          83,
+          76,
+          1,
+          92,
+          55,
+          56,
+          49,
+          3,
+          16,
+          57,
+          42,
+          86,
+          70,
+          62,
+          44,
+          20,
+          30,
+          96,
+          16,
+          91,
+          65,
+          77,
+          39,
+          75,
+          38,
+          14,
+          48,
+          5,
+          37,
+          79
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "stress",
+      "note": "random array of size 200"
+    },
+    {
+      "input": [
+        [
+          171,
+          143,
+          171,
+          228,
+          201,
+          127,
+          178,
+          39,
+          200,
+          208,
+          152,
+          65,
+          218,
+          65,
+          54,
+          61,
+          94,
+          26,
+          150,
+          248,
+          123,
+          218,
+          54,
+          88,
+          169,
+          102,
+          139,
+          108,
+          161,
+          233,
+          11,
+          18,
+          225,
+          229,
+          204,
+          97,
+          170,
+          246,
+          244,
+          187,
+          37,
+          138,
+          130,
+          149,
+          158,
+          31,
+          243,
+          175,
+          230,
+          167,
+          150,
+          172,
+          172,
+          46,
+          9,
+          71,
+          134,
+          182,
+          101,
+          6,
+          24,
+          220,
+          168,
+          136,
+          111,
+          49,
+          151,
+          163,
+          144,
+          79,
+          34,
+          144,
+          36,
+          146,
+          1,
+          131,
+          133,
+          15,
+          36,
+          83,
+          247,
+          133,
+          45,
+          7,
+          68,
+          29,
+          16,
+          241,
+          50,
+          93,
+          69,
+          77,
+          124,
+          95,
+          179,
+          62,
+          213,
+          94,
+          33,
+          26,
+          227,
+          76,
+          112,
+          44,
+          135,
+          249,
+          129,
+          3,
+          205,
+          213,
+          91,
+          179,
+          107,
+          147,
+          53,
+          199,
+          34,
+          240,
+          199,
+          148,
+          102,
+          224,
+          247,
+          11,
+          72,
+          191,
+          80,
+          177,
+          89,
+          211,
+          104,
+          186,
+          153,
+          78,
+          16,
+          126,
+          197,
+          235,
+          190,
+          18,
+          239,
+          156,
+          132,
+          8,
+          30,
+          193,
+          184,
+          21,
+          244,
+          231,
+          85,
+          40,
+          5,
+          142,
+          68,
+          225,
+          139,
+          221,
+          164,
+          190,
+          117,
+          137,
+          100,
+          138,
+          136,
+          180,
+          114,
+          248,
+          222,
+          51,
+          230,
+          159,
+          91,
+          13,
+          210,
+          221,
+          60,
+          7,
+          122,
+          49,
+          240,
+          160,
+          128,
+          37,
+          188,
+          167,
+          106,
+          38,
+          202,
+          237,
+          31,
+          189,
+          246,
+          85,
+          118,
+          57,
+          52,
+          69,
+          25,
+          216,
+          162,
+          70,
+          143,
+          196,
+          40,
+          217,
+          33,
+          95,
+          120,
+          98,
+          200,
+          39,
+          183,
+          115,
+          88,
+          116,
+          84,
+          156,
+          232,
+          160,
+          180,
+          76,
+          148,
+          13,
+          141,
+          75,
+          165,
+          204,
+          117,
+          15,
+          145,
+          81,
+          51,
+          48,
+          52,
+          161,
+          236,
+          185,
+          96,
+          73,
+          212,
+          215,
+          48,
+          83,
+          98,
+          182,
+          58,
+          174,
+          104,
+          82,
+          220,
+          198,
+          56,
+          100,
+          5,
+          154,
+          53,
+          125,
+          10,
+          57,
+          109,
+          202,
+          64,
+          4,
+          14,
+          43,
+          151,
+          223,
+          249,
+          112,
+          86,
+          175,
+          226,
+          42,
+          14,
+          55,
+          134,
+          116,
+          168,
+          22,
+          32,
+          27,
+          245,
+          154,
+          114,
+          35,
+          92,
+          189,
+          137,
+          192,
+          214,
+          71,
+          234,
+          64,
+          24,
+          165,
+          243,
+          162,
+          66,
+          157,
+          147,
+          50,
+          6,
+          115,
+          216,
+          3,
+          125,
+          195,
+          41,
+          194,
+          32,
+          38,
+          28,
+          120,
+          158,
+          106,
+          207,
+          209,
+          166,
+          219,
+          119,
+          233,
+          131,
+          128,
+          10,
+          19,
+          73,
+          122,
+          170,
+          127,
+          60,
+          157,
+          29,
+          185,
+          196,
+          238,
+          27,
+          103,
+          211,
+          45,
+          23,
+          96,
+          9,
+          192,
+          129,
+          194,
+          231,
+          74,
+          99,
+          8,
+          56,
+          59,
+          78,
+          35,
+          121,
+          12,
+          25,
+          103,
+          61,
+          173,
+          152,
+          113,
+          118,
+          214,
+          191,
+          43,
+          97,
+          90,
+          110,
+          181,
+          74,
+          232,
+          228,
+          178,
+          238,
+          195,
+          121,
+          4,
+          212,
+          237,
+          63,
+          234,
+          12,
+          113,
+          19,
+          123,
+          89,
+          82,
+          227,
+          173,
+          75,
+          42,
+          201,
+          77,
+          80,
+          241,
+          41,
+          132,
+          239,
+          87,
+          205,
+          28,
+          2,
+          166,
+          206,
+          17,
+          187,
+          20,
+          101,
+          141,
+          203,
+          47,
+          250,
+          163,
+          176,
+          84,
+          181,
+          70,
+          242,
+          107,
+          208,
+          92,
+          186,
+          99,
+          17,
+          72,
+          155,
+          251,
+          30,
+          105,
+          22,
+          119,
+          242,
+          207,
+          135,
+          209,
+          183,
+          164,
+          111,
+          124,
+          146,
+          66,
+          203,
+          63,
+          250,
+          210,
+          110,
+          81,
+          251,
+          177,
+          219,
+          46,
+          155,
+          193,
+          59,
+          235,
+          23,
+          130,
+          126,
+          198,
+          44,
+          159,
+          222,
+          55,
+          223,
+          215,
+          245,
+          206,
+          93,
+          87,
+          188,
+          140,
+          140,
+          153,
+          105,
+          108,
+          86,
+          184,
+          62,
+          229,
+          47,
+          67,
+          145,
+          217,
+          149,
+          20,
+          176,
+          90,
+          236,
+          226,
+          67,
+          109,
+          58,
+          224,
+          142,
+          197,
+          169,
+          21,
+          79,
+          174
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "stress",
+      "note": "random array of size 500"
+    },
+    {
+      "input": [
+        [
+          469,
+          486,
+          342,
+          387,
+          482,
+          319,
+          194,
+          17,
+          252,
+          437,
+          400,
+          18,
+          495,
+          129,
+          408,
+          198,
+          449,
+          496,
+          169,
+          132,
+          315,
+          442,
+          178,
+          13,
+          150,
+          191,
+          264,
+          7,
+          420,
+          107,
+          141,
+          138,
+          311,
+          359,
+          105,
+          355,
+          447,
+          296,
+          2,
+          500,
+          325,
+          441,
+          394,
+          378,
+          389,
+          152,
+          443,
+          361,
+          251,
+          99,
+          130,
+          205,
+          278,
+          64,
+          201,
+          126,
+          135,
+          124,
+          265,
+          57,
+          121,
+          217,
+          200,
+          197,
+          33,
+          237,
+          395,
+          223,
+          130,
+          448,
+          82,
+          89,
+          219,
+          345,
+          123,
+          194,
+          500,
+          155,
+          187,
+          348,
+          363,
+          136,
+          173,
+          403,
+          351,
+          185,
+          259,
+          134,
+          71,
+          441,
+          328,
+          12,
+          212,
+          477,
+          324,
+          184,
+          226,
+          412,
+          211,
+          44,
+          230,
+          450,
+          16,
+          424,
+          418,
+          12,
+          65,
+          338,
+          255,
+          122,
+          299,
+          110,
+          294,
+          407,
+          314,
+          260,
+          223,
+          182,
+          350,
+          430,
+          234,
+          211,
+          284,
+          322,
+          69,
+          206,
+          419,
+          164,
+          85,
+          218,
+          215,
+          446,
+          43,
+          371,
+          289,
+          470,
+          14,
+          229,
+          174,
+          214,
+          332,
+          426,
+          493,
+          38,
+          302,
+          339,
+          74,
+          440,
+          320,
+          300,
+          459,
+          52,
+          208,
+          322,
+          318,
+          238,
+          308,
+          210,
+          263,
+          398,
+          398,
+          248,
+          218,
+          155,
+          195,
+          95,
+          20,
+          224,
+          51,
+          139,
+          98,
+          282,
+          473,
+          499,
+          160,
+          101,
+          252,
+          306,
+          105,
+          370,
+          432,
+          463,
+          364,
+          437,
+          80,
+          446,
+          166,
+          61,
+          41,
+          148,
+          447,
+          350,
+          346,
+          86,
+          69,
+          53,
+          357,
+          172,
+          83,
+          303,
+          72,
+          471,
+          385,
+          456,
+          6,
+          143,
+          232,
+          45,
+          227,
+          80,
+          416,
+          268,
+          393,
+          454,
+          250,
+          4,
+          111,
+          242,
+          235,
+          272,
+          321,
+          391,
+          315,
+          37,
+          374,
+          373,
+          312,
+          451,
+          410,
+          58,
+          205,
+          253,
+          298,
+          171,
+          63,
+          495,
+          347,
+          256,
+          24,
+          116,
+          104,
+          156,
+          143,
+          336,
+          25,
+          330,
+          292,
+          317,
+          375,
+          307,
+          393,
+          362,
+          316,
+          433,
+          468,
+          67,
+          20,
+          76,
+          81,
+          427,
+          23,
+          347,
+          292,
+          44,
+          241,
+          28,
+          157,
+          363,
+          269,
+          251,
+          291,
+          166,
+          142,
+          31,
+          384,
+          93,
+          146,
+          497,
+          294,
+          390,
+          489,
+          39,
+          435,
+          77,
+          233,
+          94,
+          246,
+          389,
+          339,
+          271,
+          344,
+          1,
+          314,
+          10,
+          323,
+          128,
+          245,
+          471,
+          466,
+          31,
+          167,
+          129,
+          375,
+          466,
+          269,
+          97,
+          160,
+          92,
+          5,
+          140,
+          77,
+          312,
+          173,
+          6,
+          195,
+          390,
+          189,
+          247,
+          267,
+          91,
+          172,
+          167,
+          433,
+          270,
+          378,
+          275,
+          3,
+          161,
+          415,
+          152,
+          229,
+          457,
+          95,
+          128,
+          66,
+          40,
+          341,
+          215,
+          90,
+          369,
+          436,
+          282,
+          126,
+          131,
+          196,
+          376,
+          362,
+          476,
+          133,
+          334,
+          440,
+          349,
+          487,
+          123,
+          354,
+          98,
+          236,
+          346,
+          190,
+          94,
+          170,
+          491,
+          281,
+          179,
+          153,
+          11,
+          456,
+          425,
+          34,
+          262,
+          250,
+          348,
+          496,
+          216,
+          92,
+          279,
+          81,
+          108,
+          421,
+          214,
+          183,
+          8,
+          459,
+          49,
+          333,
+          382,
+          270,
+          352,
+          273,
+          349,
+          48,
+          175,
+          15,
+          164,
+          474,
+          274,
+          35,
+          422,
+          369,
+          178,
+          56,
+          383,
+          241,
+          276,
+          287,
+          260,
+          232,
+          405,
+          210,
+          424,
+          87,
+          59,
+          49,
+          414,
+          40,
+          367,
+          463,
+          307,
+          411,
+          298,
+          484,
+          402,
+          158,
+          380,
+          71,
+          458,
+          449,
+          337,
+          151,
+          21,
+          8,
+          116,
+          213,
+          400,
+          494,
+          21,
+          264,
+          293,
+          62,
+          73,
+          151,
+          427,
+          176,
+          464,
+          145,
+          499,
+          277,
+          460,
+          125,
+          343,
+          156,
+          461,
+          149,
+          467,
+          377,
+          90,
+          275,
+          361,
+          353,
+          193,
+          404,
+          487,
+          75,
+          125,
+          38,
+          89,
+          356,
+          479,
+          78,
+          169,
+          354,
+          185,
+          63,
+          411,
+          111,
+          321,
+          217,
+          486,
+          434,
+          61,
+          124,
+          492,
+          112,
+          327,
+          374,
+          144,
+          186,
+          18,
+          410,
+          452,
+          453,
+          469,
+          485,
+          144,
+          423,
+          352,
+          335,
+          279,
+          295,
+          388,
+          236,
+          42,
+          203,
+          146,
+          96,
+          344,
+          254,
+          420,
+          22,
+          397,
+          245,
+          501,
+          66,
+          286,
+          320,
+          257,
+          103,
+          253,
+          162,
+          280,
+          138,
+          183,
+          419,
+          484,
+          204,
+          228,
+          22,
+          450,
+          87,
+          88,
+          267,
+          340,
+          86,
+          366,
+          238,
+          422,
+          439,
+          141,
+          451,
+          365,
+          161,
+          263,
+          481,
+          181,
+          59,
+          255,
+          368,
+          300,
+          16,
+          65,
+          102,
+          384,
+          360,
+          82,
+          201,
+          119,
+          431,
+          176,
+          114,
+          382,
+          112,
+          231,
+          189,
+          247,
+          311,
+          196,
+          225,
+          334,
+          462,
+          465,
+          148,
+          47,
+          467,
+          413,
+          233,
+          10,
+          388,
+          488,
+          11,
+          364,
+          246,
+          399,
+          140,
+          139,
+          406,
+          276,
+          288,
+          479,
+          343,
+          480,
+          84,
+          177,
+          283,
+          324,
+          145,
+          35,
+          341,
+          480,
+          118,
+          331,
+          304,
+          131,
+          134,
+          120,
+          7,
+          301,
+          477,
+          413,
+          415,
+          171,
+          99,
+          55,
+          442,
+          265,
+          306,
+          15,
+          192,
+          220,
+          386,
+          174,
+          249,
+          385,
+          365,
+          316,
+          436,
+          293,
+          158,
+          3,
+          317,
+          248,
+          58,
+          168,
+          475,
+          14,
+          199,
+          379,
+          310,
+          149,
+          304,
+          461,
+          439,
+          96,
+          184,
+          285,
+          55,
+          74,
+          470,
+          325,
+          336,
+          404,
+          377,
+          399,
+          109,
+          430,
+          163,
+          483,
+          272,
+          492,
+          360,
+          242,
+          177,
+          73,
+          266,
+          448,
+          283,
+          285,
+          310,
+          83,
+          353,
+          429,
+          381,
+          445,
+          491,
+          213,
+          188,
+          133,
+          319,
+          373,
+          345,
+          309,
+          76,
+          329,
+          425,
+          88,
+          221,
+          84,
+          476,
+          106,
+          291,
+          271,
+          179,
+          62,
+          209,
+          39,
+          295,
+          216,
+          396,
+          120,
+          132,
+          50,
+          208,
+          30,
+          27,
+          180,
+          468,
+          33,
+          473,
+          100,
+          244,
+          326,
+          104,
+          137,
+          219,
+          458,
+          358,
+          335,
+          234,
+          395,
+          46,
+          157,
+          355,
+          198,
+          136,
+          297,
+          135,
+          305,
+          497,
+          288,
+          332,
+          209,
+          381,
+          68,
+          197,
+          222,
+          417,
+          200,
+          489,
+          490,
+          465,
+          432,
+          426,
+          278,
+          290,
+          445,
+          147,
+          429,
+          498,
+          50,
+          240,
+          106,
+          29,
+          165,
+          273,
+          338,
+          244,
+          296,
+          402,
+          29,
+          93,
+          289,
+          323,
+          142,
+          19,
+          394,
+          230,
+          356,
+          392,
+          204,
+          407,
+          190,
+          235,
+          115,
+          108,
+          45,
+          180,
+          19,
+          326,
+          48,
+          303,
+          17,
+          122,
+          191,
+          43,
+          277,
+          9,
+          79,
+          493,
+          380,
+          383,
+          318,
+          36,
+          51,
+          5,
+          483,
+          309,
+          113,
+          103,
+          32,
+          182,
+          494,
+          329,
+          224,
+          261,
+          488,
+          367,
+          327,
+          258,
+          243,
+          401,
+          9,
+          206,
+          287,
+          68,
+          107,
+          228,
+          52,
+          207,
+          64,
+          485,
+          490,
+          434,
+          91,
+          376,
+          428,
+          478,
+          366,
+          472,
+          114,
+          368,
+          313,
+          239,
+          280,
+          36,
+          372,
+          337,
+          501,
+          101,
+          438,
+          54,
+          175,
+          153,
+          397,
+          42,
+          30,
+          162,
+          47,
+          227,
+          28,
+          472,
+          423,
+          23,
+          403,
+          193,
+          237,
+          13,
+          41,
+          457,
+          372,
+          391,
+          453,
+          118,
+          286,
+          444,
+          333,
+          27,
+          435,
+          405,
+          305,
+          281,
+          284,
+          127,
+          4,
+          243,
+          24,
+          25,
+          387,
+          414,
+          187,
+          474,
+          258,
+          409,
+          222,
+          299,
+          32,
+          212,
+          370,
+          60,
+          498,
+          261,
+          202,
+          452,
+          357,
+          297,
+          26,
+          186,
+          328,
+          150,
+          421,
+          256,
+          115,
+          455,
+          462,
+          431,
+          137,
+          226,
+          340,
+          100,
+          110,
+          199,
+          443,
+          192,
+          313,
+          268,
+          371,
+          121,
+          478,
+          34,
+          54,
+          46,
+          117,
+          302,
+          412,
+          78,
+          408,
+          254,
+          308,
+          290,
+          154,
+          109,
+          221,
+          113,
+          379,
+          60,
+          79,
+          428,
+          220,
+          57,
+          159,
+          70,
+          482,
+          203,
+          274,
+          188,
+          460,
+          117,
+          392,
+          257,
+          359,
+          26,
+          301,
+          416,
+          97,
+          168,
+          70,
+          409,
+          37,
+          159,
+          127,
+          240,
+          358,
+          262,
+          259,
+          342,
+          67,
+          351,
+          75,
+          266,
+          464,
+          163,
+          72,
+          231,
+          207,
+          154,
+          444,
+          249,
+          85,
+          53,
+          119,
+          481,
+          147,
+          202,
+          418,
+          239,
+          438,
+          455,
+          454,
+          475,
+          225,
+          401,
+          330,
+          417,
+          406,
+          181,
+          165,
+          331,
+          386,
+          170,
+          396,
+          102,
+          56
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "stress",
+      "note": "random array of size 1000"
+    }
+  ]
+}

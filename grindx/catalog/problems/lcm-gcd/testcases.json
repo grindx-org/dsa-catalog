@@ -1,0 +1,10941 @@
+{
+  "problem_id": "lcm-gcd",
+  "function": "lcmAndGcd",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5.0,
+  "cases": [
+    {
+      "input": [
+        12,
+        18
+      ],
+      "expected": [
+        6,
+        36
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        5,
+        7
+      ],
+      "expected": [
+        1,
+        35
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        100,
+        25
+      ],
+      "expected": [
+        25,
+        100
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        1,
+        100
+      ],
+      "expected": [
+        1,
+        100
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        6,
+        6
+      ],
+      "expected": [
+        6,
+        6
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        14,
+        21
+      ],
+      "expected": [
+        7,
+        42
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        48,
+        36
+      ],
+      "expected": [
+        12,
+        144
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        17,
+        13
+      ],
+      "expected": [
+        1,
+        221
+      ],
+      "category": "basic",
+      "note": "curated lcm-gcd sample"
+    },
+    {
+      "input": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        3
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        4
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        5
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        6
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        7
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        8
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        9
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        10
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        11
+      ],
+      "expected": [
+        1,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        12
+      ],
+      "expected": [
+        1,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        13
+      ],
+      "expected": [
+        1,
+        13
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        14
+      ],
+      "expected": [
+        1,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        15
+      ],
+      "expected": [
+        1,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        16
+      ],
+      "expected": [
+        1,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        17
+      ],
+      "expected": [
+        1,
+        17
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        18
+      ],
+      "expected": [
+        1,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        19
+      ],
+      "expected": [
+        1,
+        19
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        20
+      ],
+      "expected": [
+        1,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        21
+      ],
+      "expected": [
+        1,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        22
+      ],
+      "expected": [
+        1,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        23
+      ],
+      "expected": [
+        1,
+        23
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        24
+      ],
+      "expected": [
+        1,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        25
+      ],
+      "expected": [
+        1,
+        25
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        26
+      ],
+      "expected": [
+        1,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        27
+      ],
+      "expected": [
+        1,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        28
+      ],
+      "expected": [
+        1,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        29
+      ],
+      "expected": [
+        1,
+        29
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1,
+        30
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        1
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        2
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        3
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        4
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        5
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        6
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        7
+      ],
+      "expected": [
+        1,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        8
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        9
+      ],
+      "expected": [
+        1,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        10
+      ],
+      "expected": [
+        2,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        11
+      ],
+      "expected": [
+        1,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        12
+      ],
+      "expected": [
+        2,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        13
+      ],
+      "expected": [
+        1,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        14
+      ],
+      "expected": [
+        2,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        15
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        16
+      ],
+      "expected": [
+        2,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        17
+      ],
+      "expected": [
+        1,
+        34
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        18
+      ],
+      "expected": [
+        2,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        19
+      ],
+      "expected": [
+        1,
+        38
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        20
+      ],
+      "expected": [
+        2,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        21
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        22
+      ],
+      "expected": [
+        2,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        23
+      ],
+      "expected": [
+        1,
+        46
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        24
+      ],
+      "expected": [
+        2,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        25
+      ],
+      "expected": [
+        1,
+        50
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        26
+      ],
+      "expected": [
+        2,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        27
+      ],
+      "expected": [
+        1,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        28
+      ],
+      "expected": [
+        2,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        29
+      ],
+      "expected": [
+        1,
+        58
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        2,
+        30
+      ],
+      "expected": [
+        2,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        1
+      ],
+      "expected": [
+        1,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        2
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        3
+      ],
+      "expected": [
+        3,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        4
+      ],
+      "expected": [
+        1,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        5
+      ],
+      "expected": [
+        1,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        6
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        7
+      ],
+      "expected": [
+        1,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        8
+      ],
+      "expected": [
+        1,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        9
+      ],
+      "expected": [
+        3,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        10
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        11
+      ],
+      "expected": [
+        1,
+        33
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        12
+      ],
+      "expected": [
+        3,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        13
+      ],
+      "expected": [
+        1,
+        39
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        14
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        15
+      ],
+      "expected": [
+        3,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        16
+      ],
+      "expected": [
+        1,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        17
+      ],
+      "expected": [
+        1,
+        51
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        18
+      ],
+      "expected": [
+        3,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        19
+      ],
+      "expected": [
+        1,
+        57
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        20
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        21
+      ],
+      "expected": [
+        3,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        22
+      ],
+      "expected": [
+        1,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        23
+      ],
+      "expected": [
+        1,
+        69
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        24
+      ],
+      "expected": [
+        3,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        25
+      ],
+      "expected": [
+        1,
+        75
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        26
+      ],
+      "expected": [
+        1,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        27
+      ],
+      "expected": [
+        3,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        28
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        29
+      ],
+      "expected": [
+        1,
+        87
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        3,
+        30
+      ],
+      "expected": [
+        3,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        1
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        2
+      ],
+      "expected": [
+        2,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        3
+      ],
+      "expected": [
+        1,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        4
+      ],
+      "expected": [
+        4,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        5
+      ],
+      "expected": [
+        1,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        6
+      ],
+      "expected": [
+        2,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        7
+      ],
+      "expected": [
+        1,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        8
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        9
+      ],
+      "expected": [
+        1,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        10
+      ],
+      "expected": [
+        2,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        11
+      ],
+      "expected": [
+        1,
+        44
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        12
+      ],
+      "expected": [
+        4,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        13
+      ],
+      "expected": [
+        1,
+        52
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        14
+      ],
+      "expected": [
+        2,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        15
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        16
+      ],
+      "expected": [
+        4,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        17
+      ],
+      "expected": [
+        1,
+        68
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        18
+      ],
+      "expected": [
+        2,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        19
+      ],
+      "expected": [
+        1,
+        76
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        20
+      ],
+      "expected": [
+        4,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        21
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        22
+      ],
+      "expected": [
+        2,
+        44
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        23
+      ],
+      "expected": [
+        1,
+        92
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        24
+      ],
+      "expected": [
+        4,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        25
+      ],
+      "expected": [
+        1,
+        100
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        26
+      ],
+      "expected": [
+        2,
+        52
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        27
+      ],
+      "expected": [
+        1,
+        108
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        28
+      ],
+      "expected": [
+        4,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        29
+      ],
+      "expected": [
+        1,
+        116
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        4,
+        30
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        1
+      ],
+      "expected": [
+        1,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        2
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        3
+      ],
+      "expected": [
+        1,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        4
+      ],
+      "expected": [
+        1,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        5
+      ],
+      "expected": [
+        5,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        6
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        8
+      ],
+      "expected": [
+        1,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        9
+      ],
+      "expected": [
+        1,
+        45
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        10
+      ],
+      "expected": [
+        5,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        11
+      ],
+      "expected": [
+        1,
+        55
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        12
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        13
+      ],
+      "expected": [
+        1,
+        65
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        14
+      ],
+      "expected": [
+        1,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        15
+      ],
+      "expected": [
+        5,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        16
+      ],
+      "expected": [
+        1,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        17
+      ],
+      "expected": [
+        1,
+        85
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        18
+      ],
+      "expected": [
+        1,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        19
+      ],
+      "expected": [
+        1,
+        95
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        20
+      ],
+      "expected": [
+        5,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        21
+      ],
+      "expected": [
+        1,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        22
+      ],
+      "expected": [
+        1,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        23
+      ],
+      "expected": [
+        1,
+        115
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        24
+      ],
+      "expected": [
+        1,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        25
+      ],
+      "expected": [
+        5,
+        25
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        26
+      ],
+      "expected": [
+        1,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        27
+      ],
+      "expected": [
+        1,
+        135
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        28
+      ],
+      "expected": [
+        1,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        29
+      ],
+      "expected": [
+        1,
+        145
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        5,
+        30
+      ],
+      "expected": [
+        5,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        1
+      ],
+      "expected": [
+        1,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        2
+      ],
+      "expected": [
+        2,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        3
+      ],
+      "expected": [
+        3,
+        6
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        4
+      ],
+      "expected": [
+        2,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        5
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        7
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        8
+      ],
+      "expected": [
+        2,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        9
+      ],
+      "expected": [
+        3,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        10
+      ],
+      "expected": [
+        2,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        11
+      ],
+      "expected": [
+        1,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        12
+      ],
+      "expected": [
+        6,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        13
+      ],
+      "expected": [
+        1,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        14
+      ],
+      "expected": [
+        2,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        15
+      ],
+      "expected": [
+        3,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        16
+      ],
+      "expected": [
+        2,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        17
+      ],
+      "expected": [
+        1,
+        102
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        18
+      ],
+      "expected": [
+        6,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        19
+      ],
+      "expected": [
+        1,
+        114
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        20
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        21
+      ],
+      "expected": [
+        3,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        22
+      ],
+      "expected": [
+        2,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        23
+      ],
+      "expected": [
+        1,
+        138
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        24
+      ],
+      "expected": [
+        6,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        25
+      ],
+      "expected": [
+        1,
+        150
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        26
+      ],
+      "expected": [
+        2,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        27
+      ],
+      "expected": [
+        3,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        28
+      ],
+      "expected": [
+        2,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        29
+      ],
+      "expected": [
+        1,
+        174
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        6,
+        30
+      ],
+      "expected": [
+        6,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        1
+      ],
+      "expected": [
+        1,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        2
+      ],
+      "expected": [
+        1,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        3
+      ],
+      "expected": [
+        1,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        4
+      ],
+      "expected": [
+        1,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        5
+      ],
+      "expected": [
+        1,
+        35
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        6
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        7
+      ],
+      "expected": [
+        7,
+        7
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        8
+      ],
+      "expected": [
+        1,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        9
+      ],
+      "expected": [
+        1,
+        63
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        10
+      ],
+      "expected": [
+        1,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        11
+      ],
+      "expected": [
+        1,
+        77
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        12
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        13
+      ],
+      "expected": [
+        1,
+        91
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        14
+      ],
+      "expected": [
+        7,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        15
+      ],
+      "expected": [
+        1,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        16
+      ],
+      "expected": [
+        1,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        17
+      ],
+      "expected": [
+        1,
+        119
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        18
+      ],
+      "expected": [
+        1,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        19
+      ],
+      "expected": [
+        1,
+        133
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        20
+      ],
+      "expected": [
+        1,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        21
+      ],
+      "expected": [
+        7,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        22
+      ],
+      "expected": [
+        1,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        23
+      ],
+      "expected": [
+        1,
+        161
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        24
+      ],
+      "expected": [
+        1,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        25
+      ],
+      "expected": [
+        1,
+        175
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        26
+      ],
+      "expected": [
+        1,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        27
+      ],
+      "expected": [
+        1,
+        189
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        28
+      ],
+      "expected": [
+        7,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        29
+      ],
+      "expected": [
+        1,
+        203
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        7,
+        30
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        1
+      ],
+      "expected": [
+        1,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        2
+      ],
+      "expected": [
+        2,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        3
+      ],
+      "expected": [
+        1,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        4
+      ],
+      "expected": [
+        4,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        5
+      ],
+      "expected": [
+        1,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        6
+      ],
+      "expected": [
+        2,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        7
+      ],
+      "expected": [
+        1,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        8
+      ],
+      "expected": [
+        8,
+        8
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        9
+      ],
+      "expected": [
+        1,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        10
+      ],
+      "expected": [
+        2,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        11
+      ],
+      "expected": [
+        1,
+        88
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        12
+      ],
+      "expected": [
+        4,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        13
+      ],
+      "expected": [
+        1,
+        104
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        14
+      ],
+      "expected": [
+        2,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        15
+      ],
+      "expected": [
+        1,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        16
+      ],
+      "expected": [
+        8,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        17
+      ],
+      "expected": [
+        1,
+        136
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        18
+      ],
+      "expected": [
+        2,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        19
+      ],
+      "expected": [
+        1,
+        152
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        20
+      ],
+      "expected": [
+        4,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        21
+      ],
+      "expected": [
+        1,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        22
+      ],
+      "expected": [
+        2,
+        88
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        23
+      ],
+      "expected": [
+        1,
+        184
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        24
+      ],
+      "expected": [
+        8,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        25
+      ],
+      "expected": [
+        1,
+        200
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        26
+      ],
+      "expected": [
+        2,
+        104
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        27
+      ],
+      "expected": [
+        1,
+        216
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        28
+      ],
+      "expected": [
+        4,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        29
+      ],
+      "expected": [
+        1,
+        232
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        8,
+        30
+      ],
+      "expected": [
+        2,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        1
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        2
+      ],
+      "expected": [
+        1,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        3
+      ],
+      "expected": [
+        3,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        4
+      ],
+      "expected": [
+        1,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        5
+      ],
+      "expected": [
+        1,
+        45
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        6
+      ],
+      "expected": [
+        3,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        7
+      ],
+      "expected": [
+        1,
+        63
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        8
+      ],
+      "expected": [
+        1,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        9
+      ],
+      "expected": [
+        9,
+        9
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        10
+      ],
+      "expected": [
+        1,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        11
+      ],
+      "expected": [
+        1,
+        99
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        12
+      ],
+      "expected": [
+        3,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        13
+      ],
+      "expected": [
+        1,
+        117
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        14
+      ],
+      "expected": [
+        1,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        15
+      ],
+      "expected": [
+        3,
+        45
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        16
+      ],
+      "expected": [
+        1,
+        144
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        17
+      ],
+      "expected": [
+        1,
+        153
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        18
+      ],
+      "expected": [
+        9,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        19
+      ],
+      "expected": [
+        1,
+        171
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        20
+      ],
+      "expected": [
+        1,
+        180
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        21
+      ],
+      "expected": [
+        3,
+        63
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        22
+      ],
+      "expected": [
+        1,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        23
+      ],
+      "expected": [
+        1,
+        207
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        24
+      ],
+      "expected": [
+        3,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        25
+      ],
+      "expected": [
+        1,
+        225
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        26
+      ],
+      "expected": [
+        1,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        27
+      ],
+      "expected": [
+        9,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        28
+      ],
+      "expected": [
+        1,
+        252
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        29
+      ],
+      "expected": [
+        1,
+        261
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        9,
+        30
+      ],
+      "expected": [
+        3,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        1
+      ],
+      "expected": [
+        1,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        2
+      ],
+      "expected": [
+        2,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        3
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        4
+      ],
+      "expected": [
+        2,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        5
+      ],
+      "expected": [
+        5,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        6
+      ],
+      "expected": [
+        2,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        7
+      ],
+      "expected": [
+        1,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        8
+      ],
+      "expected": [
+        2,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        9
+      ],
+      "expected": [
+        1,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        10
+      ],
+      "expected": [
+        10,
+        10
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        11
+      ],
+      "expected": [
+        1,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        12
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        13
+      ],
+      "expected": [
+        1,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        14
+      ],
+      "expected": [
+        2,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        15
+      ],
+      "expected": [
+        5,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        16
+      ],
+      "expected": [
+        2,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        17
+      ],
+      "expected": [
+        1,
+        170
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        18
+      ],
+      "expected": [
+        2,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        19
+      ],
+      "expected": [
+        1,
+        190
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        20
+      ],
+      "expected": [
+        10,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        21
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        22
+      ],
+      "expected": [
+        2,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        23
+      ],
+      "expected": [
+        1,
+        230
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        24
+      ],
+      "expected": [
+        2,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        25
+      ],
+      "expected": [
+        5,
+        50
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        26
+      ],
+      "expected": [
+        2,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        27
+      ],
+      "expected": [
+        1,
+        270
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        28
+      ],
+      "expected": [
+        2,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        29
+      ],
+      "expected": [
+        1,
+        290
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        10,
+        30
+      ],
+      "expected": [
+        10,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        1
+      ],
+      "expected": [
+        1,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        2
+      ],
+      "expected": [
+        1,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        3
+      ],
+      "expected": [
+        1,
+        33
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        4
+      ],
+      "expected": [
+        1,
+        44
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        5
+      ],
+      "expected": [
+        1,
+        55
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        6
+      ],
+      "expected": [
+        1,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        7
+      ],
+      "expected": [
+        1,
+        77
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        8
+      ],
+      "expected": [
+        1,
+        88
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        9
+      ],
+      "expected": [
+        1,
+        99
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        10
+      ],
+      "expected": [
+        1,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        11
+      ],
+      "expected": [
+        11,
+        11
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        12
+      ],
+      "expected": [
+        1,
+        132
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        13
+      ],
+      "expected": [
+        1,
+        143
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        14
+      ],
+      "expected": [
+        1,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        15
+      ],
+      "expected": [
+        1,
+        165
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        16
+      ],
+      "expected": [
+        1,
+        176
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        17
+      ],
+      "expected": [
+        1,
+        187
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        18
+      ],
+      "expected": [
+        1,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        19
+      ],
+      "expected": [
+        1,
+        209
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        20
+      ],
+      "expected": [
+        1,
+        220
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        21
+      ],
+      "expected": [
+        1,
+        231
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        22
+      ],
+      "expected": [
+        11,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        23
+      ],
+      "expected": [
+        1,
+        253
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        24
+      ],
+      "expected": [
+        1,
+        264
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        25
+      ],
+      "expected": [
+        1,
+        275
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        26
+      ],
+      "expected": [
+        1,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        27
+      ],
+      "expected": [
+        1,
+        297
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        28
+      ],
+      "expected": [
+        1,
+        308
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        29
+      ],
+      "expected": [
+        1,
+        319
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        11,
+        30
+      ],
+      "expected": [
+        1,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        1
+      ],
+      "expected": [
+        1,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        2
+      ],
+      "expected": [
+        2,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        3
+      ],
+      "expected": [
+        3,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        4
+      ],
+      "expected": [
+        4,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        5
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        6
+      ],
+      "expected": [
+        6,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        7
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        8
+      ],
+      "expected": [
+        4,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        9
+      ],
+      "expected": [
+        3,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        10
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        11
+      ],
+      "expected": [
+        1,
+        132
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        12
+      ],
+      "expected": [
+        12,
+        12
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        13
+      ],
+      "expected": [
+        1,
+        156
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        14
+      ],
+      "expected": [
+        2,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        15
+      ],
+      "expected": [
+        3,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        16
+      ],
+      "expected": [
+        4,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        17
+      ],
+      "expected": [
+        1,
+        204
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        19
+      ],
+      "expected": [
+        1,
+        228
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        20
+      ],
+      "expected": [
+        4,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        21
+      ],
+      "expected": [
+        3,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        22
+      ],
+      "expected": [
+        2,
+        132
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        23
+      ],
+      "expected": [
+        1,
+        276
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        24
+      ],
+      "expected": [
+        12,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        25
+      ],
+      "expected": [
+        1,
+        300
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        26
+      ],
+      "expected": [
+        2,
+        156
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        27
+      ],
+      "expected": [
+        3,
+        108
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        28
+      ],
+      "expected": [
+        4,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        29
+      ],
+      "expected": [
+        1,
+        348
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        12,
+        30
+      ],
+      "expected": [
+        6,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        1
+      ],
+      "expected": [
+        1,
+        13
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        2
+      ],
+      "expected": [
+        1,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        3
+      ],
+      "expected": [
+        1,
+        39
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        4
+      ],
+      "expected": [
+        1,
+        52
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        5
+      ],
+      "expected": [
+        1,
+        65
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        6
+      ],
+      "expected": [
+        1,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        7
+      ],
+      "expected": [
+        1,
+        91
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        8
+      ],
+      "expected": [
+        1,
+        104
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        9
+      ],
+      "expected": [
+        1,
+        117
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        10
+      ],
+      "expected": [
+        1,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        11
+      ],
+      "expected": [
+        1,
+        143
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        12
+      ],
+      "expected": [
+        1,
+        156
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        13
+      ],
+      "expected": [
+        13,
+        13
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        14
+      ],
+      "expected": [
+        1,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        15
+      ],
+      "expected": [
+        1,
+        195
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        16
+      ],
+      "expected": [
+        1,
+        208
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        17
+      ],
+      "expected": [
+        1,
+        221
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        18
+      ],
+      "expected": [
+        1,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        19
+      ],
+      "expected": [
+        1,
+        247
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        20
+      ],
+      "expected": [
+        1,
+        260
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        21
+      ],
+      "expected": [
+        1,
+        273
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        22
+      ],
+      "expected": [
+        1,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        23
+      ],
+      "expected": [
+        1,
+        299
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        24
+      ],
+      "expected": [
+        1,
+        312
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        25
+      ],
+      "expected": [
+        1,
+        325
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        26
+      ],
+      "expected": [
+        13,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        27
+      ],
+      "expected": [
+        1,
+        351
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        28
+      ],
+      "expected": [
+        1,
+        364
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        29
+      ],
+      "expected": [
+        1,
+        377
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        13,
+        30
+      ],
+      "expected": [
+        1,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        1
+      ],
+      "expected": [
+        1,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        2
+      ],
+      "expected": [
+        2,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        3
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        4
+      ],
+      "expected": [
+        2,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        5
+      ],
+      "expected": [
+        1,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        6
+      ],
+      "expected": [
+        2,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        7
+      ],
+      "expected": [
+        7,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        8
+      ],
+      "expected": [
+        2,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        9
+      ],
+      "expected": [
+        1,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        10
+      ],
+      "expected": [
+        2,
+        70
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        11
+      ],
+      "expected": [
+        1,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        12
+      ],
+      "expected": [
+        2,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        13
+      ],
+      "expected": [
+        1,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        14
+      ],
+      "expected": [
+        14,
+        14
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        15
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        16
+      ],
+      "expected": [
+        2,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        17
+      ],
+      "expected": [
+        1,
+        238
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        18
+      ],
+      "expected": [
+        2,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        19
+      ],
+      "expected": [
+        1,
+        266
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        20
+      ],
+      "expected": [
+        2,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        22
+      ],
+      "expected": [
+        2,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        23
+      ],
+      "expected": [
+        1,
+        322
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        24
+      ],
+      "expected": [
+        2,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        25
+      ],
+      "expected": [
+        1,
+        350
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        26
+      ],
+      "expected": [
+        2,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        27
+      ],
+      "expected": [
+        1,
+        378
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        28
+      ],
+      "expected": [
+        14,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        29
+      ],
+      "expected": [
+        1,
+        406
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        14,
+        30
+      ],
+      "expected": [
+        2,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        1
+      ],
+      "expected": [
+        1,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        2
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        3
+      ],
+      "expected": [
+        3,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        4
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        5
+      ],
+      "expected": [
+        5,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        6
+      ],
+      "expected": [
+        3,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        7
+      ],
+      "expected": [
+        1,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        8
+      ],
+      "expected": [
+        1,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        9
+      ],
+      "expected": [
+        3,
+        45
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        10
+      ],
+      "expected": [
+        5,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        11
+      ],
+      "expected": [
+        1,
+        165
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        12
+      ],
+      "expected": [
+        3,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        13
+      ],
+      "expected": [
+        1,
+        195
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        14
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        15
+      ],
+      "expected": [
+        15,
+        15
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        16
+      ],
+      "expected": [
+        1,
+        240
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        17
+      ],
+      "expected": [
+        1,
+        255
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        18
+      ],
+      "expected": [
+        3,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        19
+      ],
+      "expected": [
+        1,
+        285
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        20
+      ],
+      "expected": [
+        5,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        21
+      ],
+      "expected": [
+        3,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        22
+      ],
+      "expected": [
+        1,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        23
+      ],
+      "expected": [
+        1,
+        345
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        24
+      ],
+      "expected": [
+        3,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        25
+      ],
+      "expected": [
+        5,
+        75
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        26
+      ],
+      "expected": [
+        1,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        27
+      ],
+      "expected": [
+        3,
+        135
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        28
+      ],
+      "expected": [
+        1,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        29
+      ],
+      "expected": [
+        1,
+        435
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        15,
+        30
+      ],
+      "expected": [
+        15,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        1
+      ],
+      "expected": [
+        1,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        2
+      ],
+      "expected": [
+        2,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        3
+      ],
+      "expected": [
+        1,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        4
+      ],
+      "expected": [
+        4,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        5
+      ],
+      "expected": [
+        1,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        6
+      ],
+      "expected": [
+        2,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        7
+      ],
+      "expected": [
+        1,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        8
+      ],
+      "expected": [
+        8,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        9
+      ],
+      "expected": [
+        1,
+        144
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        10
+      ],
+      "expected": [
+        2,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        11
+      ],
+      "expected": [
+        1,
+        176
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        12
+      ],
+      "expected": [
+        4,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        13
+      ],
+      "expected": [
+        1,
+        208
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        14
+      ],
+      "expected": [
+        2,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        15
+      ],
+      "expected": [
+        1,
+        240
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        16
+      ],
+      "expected": [
+        16,
+        16
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        17
+      ],
+      "expected": [
+        1,
+        272
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        18
+      ],
+      "expected": [
+        2,
+        144
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        19
+      ],
+      "expected": [
+        1,
+        304
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        20
+      ],
+      "expected": [
+        4,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        21
+      ],
+      "expected": [
+        1,
+        336
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        22
+      ],
+      "expected": [
+        2,
+        176
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        23
+      ],
+      "expected": [
+        1,
+        368
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        24
+      ],
+      "expected": [
+        8,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        25
+      ],
+      "expected": [
+        1,
+        400
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        26
+      ],
+      "expected": [
+        2,
+        208
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        27
+      ],
+      "expected": [
+        1,
+        432
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        28
+      ],
+      "expected": [
+        4,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        29
+      ],
+      "expected": [
+        1,
+        464
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        16,
+        30
+      ],
+      "expected": [
+        2,
+        240
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        1
+      ],
+      "expected": [
+        1,
+        17
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        2
+      ],
+      "expected": [
+        1,
+        34
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        3
+      ],
+      "expected": [
+        1,
+        51
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        4
+      ],
+      "expected": [
+        1,
+        68
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        5
+      ],
+      "expected": [
+        1,
+        85
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        6
+      ],
+      "expected": [
+        1,
+        102
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        7
+      ],
+      "expected": [
+        1,
+        119
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        8
+      ],
+      "expected": [
+        1,
+        136
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        9
+      ],
+      "expected": [
+        1,
+        153
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        10
+      ],
+      "expected": [
+        1,
+        170
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        11
+      ],
+      "expected": [
+        1,
+        187
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        12
+      ],
+      "expected": [
+        1,
+        204
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        14
+      ],
+      "expected": [
+        1,
+        238
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        15
+      ],
+      "expected": [
+        1,
+        255
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        16
+      ],
+      "expected": [
+        1,
+        272
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        17
+      ],
+      "expected": [
+        17,
+        17
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        18
+      ],
+      "expected": [
+        1,
+        306
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        19
+      ],
+      "expected": [
+        1,
+        323
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        20
+      ],
+      "expected": [
+        1,
+        340
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        21
+      ],
+      "expected": [
+        1,
+        357
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        22
+      ],
+      "expected": [
+        1,
+        374
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        23
+      ],
+      "expected": [
+        1,
+        391
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        24
+      ],
+      "expected": [
+        1,
+        408
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        25
+      ],
+      "expected": [
+        1,
+        425
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        26
+      ],
+      "expected": [
+        1,
+        442
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        27
+      ],
+      "expected": [
+        1,
+        459
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        28
+      ],
+      "expected": [
+        1,
+        476
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        29
+      ],
+      "expected": [
+        1,
+        493
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        17,
+        30
+      ],
+      "expected": [
+        1,
+        510
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        1
+      ],
+      "expected": [
+        1,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        2
+      ],
+      "expected": [
+        2,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        3
+      ],
+      "expected": [
+        3,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        4
+      ],
+      "expected": [
+        2,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        5
+      ],
+      "expected": [
+        1,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        6
+      ],
+      "expected": [
+        6,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        7
+      ],
+      "expected": [
+        1,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        8
+      ],
+      "expected": [
+        2,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        9
+      ],
+      "expected": [
+        9,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        10
+      ],
+      "expected": [
+        2,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        11
+      ],
+      "expected": [
+        1,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        12
+      ],
+      "expected": [
+        6,
+        36
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        13
+      ],
+      "expected": [
+        1,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        14
+      ],
+      "expected": [
+        2,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        15
+      ],
+      "expected": [
+        3,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        16
+      ],
+      "expected": [
+        2,
+        144
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        17
+      ],
+      "expected": [
+        1,
+        306
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        18
+      ],
+      "expected": [
+        18,
+        18
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        19
+      ],
+      "expected": [
+        1,
+        342
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        20
+      ],
+      "expected": [
+        2,
+        180
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        21
+      ],
+      "expected": [
+        3,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        22
+      ],
+      "expected": [
+        2,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        23
+      ],
+      "expected": [
+        1,
+        414
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        24
+      ],
+      "expected": [
+        6,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        25
+      ],
+      "expected": [
+        1,
+        450
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        26
+      ],
+      "expected": [
+        2,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        27
+      ],
+      "expected": [
+        9,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        28
+      ],
+      "expected": [
+        2,
+        252
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        29
+      ],
+      "expected": [
+        1,
+        522
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        18,
+        30
+      ],
+      "expected": [
+        6,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        1
+      ],
+      "expected": [
+        1,
+        19
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        2
+      ],
+      "expected": [
+        1,
+        38
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        3
+      ],
+      "expected": [
+        1,
+        57
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        4
+      ],
+      "expected": [
+        1,
+        76
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        5
+      ],
+      "expected": [
+        1,
+        95
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        6
+      ],
+      "expected": [
+        1,
+        114
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        7
+      ],
+      "expected": [
+        1,
+        133
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        8
+      ],
+      "expected": [
+        1,
+        152
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        9
+      ],
+      "expected": [
+        1,
+        171
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        10
+      ],
+      "expected": [
+        1,
+        190
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        11
+      ],
+      "expected": [
+        1,
+        209
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        12
+      ],
+      "expected": [
+        1,
+        228
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        13
+      ],
+      "expected": [
+        1,
+        247
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        14
+      ],
+      "expected": [
+        1,
+        266
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        15
+      ],
+      "expected": [
+        1,
+        285
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        16
+      ],
+      "expected": [
+        1,
+        304
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        17
+      ],
+      "expected": [
+        1,
+        323
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        18
+      ],
+      "expected": [
+        1,
+        342
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        19
+      ],
+      "expected": [
+        19,
+        19
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        20
+      ],
+      "expected": [
+        1,
+        380
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        21
+      ],
+      "expected": [
+        1,
+        399
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        22
+      ],
+      "expected": [
+        1,
+        418
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        23
+      ],
+      "expected": [
+        1,
+        437
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        24
+      ],
+      "expected": [
+        1,
+        456
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        25
+      ],
+      "expected": [
+        1,
+        475
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        26
+      ],
+      "expected": [
+        1,
+        494
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        27
+      ],
+      "expected": [
+        1,
+        513
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        28
+      ],
+      "expected": [
+        1,
+        532
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        29
+      ],
+      "expected": [
+        1,
+        551
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        19,
+        30
+      ],
+      "expected": [
+        1,
+        570
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        1
+      ],
+      "expected": [
+        1,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        2
+      ],
+      "expected": [
+        2,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        3
+      ],
+      "expected": [
+        1,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        4
+      ],
+      "expected": [
+        4,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        5
+      ],
+      "expected": [
+        5,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        6
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        7
+      ],
+      "expected": [
+        1,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        8
+      ],
+      "expected": [
+        4,
+        40
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        9
+      ],
+      "expected": [
+        1,
+        180
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        10
+      ],
+      "expected": [
+        10,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        11
+      ],
+      "expected": [
+        1,
+        220
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        12
+      ],
+      "expected": [
+        4,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        13
+      ],
+      "expected": [
+        1,
+        260
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        14
+      ],
+      "expected": [
+        2,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        15
+      ],
+      "expected": [
+        5,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        16
+      ],
+      "expected": [
+        4,
+        80
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        17
+      ],
+      "expected": [
+        1,
+        340
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        18
+      ],
+      "expected": [
+        2,
+        180
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        19
+      ],
+      "expected": [
+        1,
+        380
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        20
+      ],
+      "expected": [
+        20,
+        20
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        21
+      ],
+      "expected": [
+        1,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        22
+      ],
+      "expected": [
+        2,
+        220
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        23
+      ],
+      "expected": [
+        1,
+        460
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        24
+      ],
+      "expected": [
+        4,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        25
+      ],
+      "expected": [
+        5,
+        100
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        26
+      ],
+      "expected": [
+        2,
+        260
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        27
+      ],
+      "expected": [
+        1,
+        540
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        28
+      ],
+      "expected": [
+        4,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        29
+      ],
+      "expected": [
+        1,
+        580
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        20,
+        30
+      ],
+      "expected": [
+        10,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        1
+      ],
+      "expected": [
+        1,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        2
+      ],
+      "expected": [
+        1,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        3
+      ],
+      "expected": [
+        3,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        4
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        5
+      ],
+      "expected": [
+        1,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        6
+      ],
+      "expected": [
+        3,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        7
+      ],
+      "expected": [
+        7,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        8
+      ],
+      "expected": [
+        1,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        9
+      ],
+      "expected": [
+        3,
+        63
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        10
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        11
+      ],
+      "expected": [
+        1,
+        231
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        12
+      ],
+      "expected": [
+        3,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        13
+      ],
+      "expected": [
+        1,
+        273
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        14
+      ],
+      "expected": [
+        7,
+        42
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        15
+      ],
+      "expected": [
+        3,
+        105
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        16
+      ],
+      "expected": [
+        1,
+        336
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        17
+      ],
+      "expected": [
+        1,
+        357
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        18
+      ],
+      "expected": [
+        3,
+        126
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        19
+      ],
+      "expected": [
+        1,
+        399
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        20
+      ],
+      "expected": [
+        1,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        21
+      ],
+      "expected": [
+        21,
+        21
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        22
+      ],
+      "expected": [
+        1,
+        462
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        23
+      ],
+      "expected": [
+        1,
+        483
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        24
+      ],
+      "expected": [
+        3,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        25
+      ],
+      "expected": [
+        1,
+        525
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        26
+      ],
+      "expected": [
+        1,
+        546
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        27
+      ],
+      "expected": [
+        3,
+        189
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        28
+      ],
+      "expected": [
+        7,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        29
+      ],
+      "expected": [
+        1,
+        609
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        21,
+        30
+      ],
+      "expected": [
+        3,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        1
+      ],
+      "expected": [
+        1,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        2
+      ],
+      "expected": [
+        2,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        3
+      ],
+      "expected": [
+        1,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        4
+      ],
+      "expected": [
+        2,
+        44
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        5
+      ],
+      "expected": [
+        1,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        6
+      ],
+      "expected": [
+        2,
+        66
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        7
+      ],
+      "expected": [
+        1,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        8
+      ],
+      "expected": [
+        2,
+        88
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        9
+      ],
+      "expected": [
+        1,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        10
+      ],
+      "expected": [
+        2,
+        110
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        11
+      ],
+      "expected": [
+        11,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        12
+      ],
+      "expected": [
+        2,
+        132
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        13
+      ],
+      "expected": [
+        1,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        14
+      ],
+      "expected": [
+        2,
+        154
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        15
+      ],
+      "expected": [
+        1,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        16
+      ],
+      "expected": [
+        2,
+        176
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        17
+      ],
+      "expected": [
+        1,
+        374
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        18
+      ],
+      "expected": [
+        2,
+        198
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        19
+      ],
+      "expected": [
+        1,
+        418
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        20
+      ],
+      "expected": [
+        2,
+        220
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        21
+      ],
+      "expected": [
+        1,
+        462
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        22
+      ],
+      "expected": [
+        22,
+        22
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        23
+      ],
+      "expected": [
+        1,
+        506
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        24
+      ],
+      "expected": [
+        2,
+        264
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        25
+      ],
+      "expected": [
+        1,
+        550
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        26
+      ],
+      "expected": [
+        2,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        27
+      ],
+      "expected": [
+        1,
+        594
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        28
+      ],
+      "expected": [
+        2,
+        308
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        29
+      ],
+      "expected": [
+        1,
+        638
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        22,
+        30
+      ],
+      "expected": [
+        2,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        1
+      ],
+      "expected": [
+        1,
+        23
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        2
+      ],
+      "expected": [
+        1,
+        46
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        3
+      ],
+      "expected": [
+        1,
+        69
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        4
+      ],
+      "expected": [
+        1,
+        92
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        5
+      ],
+      "expected": [
+        1,
+        115
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        6
+      ],
+      "expected": [
+        1,
+        138
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        7
+      ],
+      "expected": [
+        1,
+        161
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        8
+      ],
+      "expected": [
+        1,
+        184
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        9
+      ],
+      "expected": [
+        1,
+        207
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        10
+      ],
+      "expected": [
+        1,
+        230
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        11
+      ],
+      "expected": [
+        1,
+        253
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        12
+      ],
+      "expected": [
+        1,
+        276
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        13
+      ],
+      "expected": [
+        1,
+        299
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        14
+      ],
+      "expected": [
+        1,
+        322
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        15
+      ],
+      "expected": [
+        1,
+        345
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        16
+      ],
+      "expected": [
+        1,
+        368
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        17
+      ],
+      "expected": [
+        1,
+        391
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        18
+      ],
+      "expected": [
+        1,
+        414
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        19
+      ],
+      "expected": [
+        1,
+        437
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        20
+      ],
+      "expected": [
+        1,
+        460
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        21
+      ],
+      "expected": [
+        1,
+        483
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        22
+      ],
+      "expected": [
+        1,
+        506
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        23
+      ],
+      "expected": [
+        23,
+        23
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        24
+      ],
+      "expected": [
+        1,
+        552
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        25
+      ],
+      "expected": [
+        1,
+        575
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        26
+      ],
+      "expected": [
+        1,
+        598
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        27
+      ],
+      "expected": [
+        1,
+        621
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        28
+      ],
+      "expected": [
+        1,
+        644
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        29
+      ],
+      "expected": [
+        1,
+        667
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        23,
+        30
+      ],
+      "expected": [
+        1,
+        690
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        1
+      ],
+      "expected": [
+        1,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        2
+      ],
+      "expected": [
+        2,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        3
+      ],
+      "expected": [
+        3,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        4
+      ],
+      "expected": [
+        4,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        5
+      ],
+      "expected": [
+        1,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        6
+      ],
+      "expected": [
+        6,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        7
+      ],
+      "expected": [
+        1,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        8
+      ],
+      "expected": [
+        8,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        9
+      ],
+      "expected": [
+        3,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        10
+      ],
+      "expected": [
+        2,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        11
+      ],
+      "expected": [
+        1,
+        264
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        12
+      ],
+      "expected": [
+        12,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        13
+      ],
+      "expected": [
+        1,
+        312
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        14
+      ],
+      "expected": [
+        2,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        15
+      ],
+      "expected": [
+        3,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        16
+      ],
+      "expected": [
+        8,
+        48
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        17
+      ],
+      "expected": [
+        1,
+        408
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        18
+      ],
+      "expected": [
+        6,
+        72
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        19
+      ],
+      "expected": [
+        1,
+        456
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        20
+      ],
+      "expected": [
+        4,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        21
+      ],
+      "expected": [
+        3,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        22
+      ],
+      "expected": [
+        2,
+        264
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        23
+      ],
+      "expected": [
+        1,
+        552
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        24
+      ],
+      "expected": [
+        24,
+        24
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        25
+      ],
+      "expected": [
+        1,
+        600
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        26
+      ],
+      "expected": [
+        2,
+        312
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        27
+      ],
+      "expected": [
+        3,
+        216
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        28
+      ],
+      "expected": [
+        4,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        29
+      ],
+      "expected": [
+        1,
+        696
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        24,
+        30
+      ],
+      "expected": [
+        6,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        1
+      ],
+      "expected": [
+        1,
+        25
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        2
+      ],
+      "expected": [
+        1,
+        50
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        3
+      ],
+      "expected": [
+        1,
+        75
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        4
+      ],
+      "expected": [
+        1,
+        100
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        5
+      ],
+      "expected": [
+        5,
+        25
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        6
+      ],
+      "expected": [
+        1,
+        150
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        7
+      ],
+      "expected": [
+        1,
+        175
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        8
+      ],
+      "expected": [
+        1,
+        200
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        9
+      ],
+      "expected": [
+        1,
+        225
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        10
+      ],
+      "expected": [
+        5,
+        50
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        11
+      ],
+      "expected": [
+        1,
+        275
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        12
+      ],
+      "expected": [
+        1,
+        300
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        13
+      ],
+      "expected": [
+        1,
+        325
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        14
+      ],
+      "expected": [
+        1,
+        350
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        15
+      ],
+      "expected": [
+        5,
+        75
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        16
+      ],
+      "expected": [
+        1,
+        400
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        17
+      ],
+      "expected": [
+        1,
+        425
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        18
+      ],
+      "expected": [
+        1,
+        450
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        19
+      ],
+      "expected": [
+        1,
+        475
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        20
+      ],
+      "expected": [
+        5,
+        100
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        21
+      ],
+      "expected": [
+        1,
+        525
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        22
+      ],
+      "expected": [
+        1,
+        550
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        23
+      ],
+      "expected": [
+        1,
+        575
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        24
+      ],
+      "expected": [
+        1,
+        600
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        25
+      ],
+      "expected": [
+        25,
+        25
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        26
+      ],
+      "expected": [
+        1,
+        650
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        27
+      ],
+      "expected": [
+        1,
+        675
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        28
+      ],
+      "expected": [
+        1,
+        700
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        29
+      ],
+      "expected": [
+        1,
+        725
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        25,
+        30
+      ],
+      "expected": [
+        5,
+        150
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        1
+      ],
+      "expected": [
+        1,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        2
+      ],
+      "expected": [
+        2,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        3
+      ],
+      "expected": [
+        1,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        4
+      ],
+      "expected": [
+        2,
+        52
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        5
+      ],
+      "expected": [
+        1,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        6
+      ],
+      "expected": [
+        2,
+        78
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        7
+      ],
+      "expected": [
+        1,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        8
+      ],
+      "expected": [
+        2,
+        104
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        9
+      ],
+      "expected": [
+        1,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        10
+      ],
+      "expected": [
+        2,
+        130
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        11
+      ],
+      "expected": [
+        1,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        12
+      ],
+      "expected": [
+        2,
+        156
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        13
+      ],
+      "expected": [
+        13,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        14
+      ],
+      "expected": [
+        2,
+        182
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        15
+      ],
+      "expected": [
+        1,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        16
+      ],
+      "expected": [
+        2,
+        208
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        17
+      ],
+      "expected": [
+        1,
+        442
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        18
+      ],
+      "expected": [
+        2,
+        234
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        19
+      ],
+      "expected": [
+        1,
+        494
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        20
+      ],
+      "expected": [
+        2,
+        260
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        21
+      ],
+      "expected": [
+        1,
+        546
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        22
+      ],
+      "expected": [
+        2,
+        286
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        23
+      ],
+      "expected": [
+        1,
+        598
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        24
+      ],
+      "expected": [
+        2,
+        312
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        25
+      ],
+      "expected": [
+        1,
+        650
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        26
+      ],
+      "expected": [
+        26,
+        26
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        27
+      ],
+      "expected": [
+        1,
+        702
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        28
+      ],
+      "expected": [
+        2,
+        364
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        29
+      ],
+      "expected": [
+        1,
+        754
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        26,
+        30
+      ],
+      "expected": [
+        2,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        1
+      ],
+      "expected": [
+        1,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        2
+      ],
+      "expected": [
+        1,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        3
+      ],
+      "expected": [
+        3,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        4
+      ],
+      "expected": [
+        1,
+        108
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        5
+      ],
+      "expected": [
+        1,
+        135
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        6
+      ],
+      "expected": [
+        3,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        7
+      ],
+      "expected": [
+        1,
+        189
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        8
+      ],
+      "expected": [
+        1,
+        216
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        9
+      ],
+      "expected": [
+        9,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        10
+      ],
+      "expected": [
+        1,
+        270
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        11
+      ],
+      "expected": [
+        1,
+        297
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        12
+      ],
+      "expected": [
+        3,
+        108
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        13
+      ],
+      "expected": [
+        1,
+        351
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        14
+      ],
+      "expected": [
+        1,
+        378
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        15
+      ],
+      "expected": [
+        3,
+        135
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        16
+      ],
+      "expected": [
+        1,
+        432
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        17
+      ],
+      "expected": [
+        1,
+        459
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        18
+      ],
+      "expected": [
+        9,
+        54
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        19
+      ],
+      "expected": [
+        1,
+        513
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        20
+      ],
+      "expected": [
+        1,
+        540
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        21
+      ],
+      "expected": [
+        3,
+        189
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        22
+      ],
+      "expected": [
+        1,
+        594
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        23
+      ],
+      "expected": [
+        1,
+        621
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        24
+      ],
+      "expected": [
+        3,
+        216
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        25
+      ],
+      "expected": [
+        1,
+        675
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        26
+      ],
+      "expected": [
+        1,
+        702
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        27
+      ],
+      "expected": [
+        27,
+        27
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        28
+      ],
+      "expected": [
+        1,
+        756
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        29
+      ],
+      "expected": [
+        1,
+        783
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        27,
+        30
+      ],
+      "expected": [
+        3,
+        270
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        1
+      ],
+      "expected": [
+        1,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        2
+      ],
+      "expected": [
+        2,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        3
+      ],
+      "expected": [
+        1,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        4
+      ],
+      "expected": [
+        4,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        5
+      ],
+      "expected": [
+        1,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        6
+      ],
+      "expected": [
+        2,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        7
+      ],
+      "expected": [
+        7,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        8
+      ],
+      "expected": [
+        4,
+        56
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        9
+      ],
+      "expected": [
+        1,
+        252
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        10
+      ],
+      "expected": [
+        2,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        11
+      ],
+      "expected": [
+        1,
+        308
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        12
+      ],
+      "expected": [
+        4,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        13
+      ],
+      "expected": [
+        1,
+        364
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        14
+      ],
+      "expected": [
+        14,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        15
+      ],
+      "expected": [
+        1,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        16
+      ],
+      "expected": [
+        4,
+        112
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        17
+      ],
+      "expected": [
+        1,
+        476
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        18
+      ],
+      "expected": [
+        2,
+        252
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        19
+      ],
+      "expected": [
+        1,
+        532
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        20
+      ],
+      "expected": [
+        4,
+        140
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        21
+      ],
+      "expected": [
+        7,
+        84
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        22
+      ],
+      "expected": [
+        2,
+        308
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        23
+      ],
+      "expected": [
+        1,
+        644
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        24
+      ],
+      "expected": [
+        4,
+        168
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        25
+      ],
+      "expected": [
+        1,
+        700
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        26
+      ],
+      "expected": [
+        2,
+        364
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        27
+      ],
+      "expected": [
+        1,
+        756
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        28
+      ],
+      "expected": [
+        28,
+        28
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        29
+      ],
+      "expected": [
+        1,
+        812
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        28,
+        30
+      ],
+      "expected": [
+        2,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        1
+      ],
+      "expected": [
+        1,
+        29
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        2
+      ],
+      "expected": [
+        1,
+        58
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        3
+      ],
+      "expected": [
+        1,
+        87
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        4
+      ],
+      "expected": [
+        1,
+        116
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        5
+      ],
+      "expected": [
+        1,
+        145
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        6
+      ],
+      "expected": [
+        1,
+        174
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        7
+      ],
+      "expected": [
+        1,
+        203
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        8
+      ],
+      "expected": [
+        1,
+        232
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        9
+      ],
+      "expected": [
+        1,
+        261
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        10
+      ],
+      "expected": [
+        1,
+        290
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        11
+      ],
+      "expected": [
+        1,
+        319
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        12
+      ],
+      "expected": [
+        1,
+        348
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        13
+      ],
+      "expected": [
+        1,
+        377
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        14
+      ],
+      "expected": [
+        1,
+        406
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        15
+      ],
+      "expected": [
+        1,
+        435
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        16
+      ],
+      "expected": [
+        1,
+        464
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        17
+      ],
+      "expected": [
+        1,
+        493
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        18
+      ],
+      "expected": [
+        1,
+        522
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        19
+      ],
+      "expected": [
+        1,
+        551
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        20
+      ],
+      "expected": [
+        1,
+        580
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        21
+      ],
+      "expected": [
+        1,
+        609
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        22
+      ],
+      "expected": [
+        1,
+        638
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        23
+      ],
+      "expected": [
+        1,
+        667
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        24
+      ],
+      "expected": [
+        1,
+        696
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        25
+      ],
+      "expected": [
+        1,
+        725
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        26
+      ],
+      "expected": [
+        1,
+        754
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        27
+      ],
+      "expected": [
+        1,
+        783
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        28
+      ],
+      "expected": [
+        1,
+        812
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        29
+      ],
+      "expected": [
+        29,
+        29
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        29,
+        30
+      ],
+      "expected": [
+        1,
+        870
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        1
+      ],
+      "expected": [
+        1,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        2
+      ],
+      "expected": [
+        2,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        3
+      ],
+      "expected": [
+        3,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        4
+      ],
+      "expected": [
+        2,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        5
+      ],
+      "expected": [
+        5,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        6
+      ],
+      "expected": [
+        6,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        7
+      ],
+      "expected": [
+        1,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        8
+      ],
+      "expected": [
+        2,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        9
+      ],
+      "expected": [
+        3,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        10
+      ],
+      "expected": [
+        10,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        11
+      ],
+      "expected": [
+        1,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        12
+      ],
+      "expected": [
+        6,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        13
+      ],
+      "expected": [
+        1,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        14
+      ],
+      "expected": [
+        2,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        15
+      ],
+      "expected": [
+        15,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        16
+      ],
+      "expected": [
+        2,
+        240
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        17
+      ],
+      "expected": [
+        1,
+        510
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        18
+      ],
+      "expected": [
+        6,
+        90
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        19
+      ],
+      "expected": [
+        1,
+        570
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        20
+      ],
+      "expected": [
+        10,
+        60
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        21
+      ],
+      "expected": [
+        3,
+        210
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        22
+      ],
+      "expected": [
+        2,
+        330
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        23
+      ],
+      "expected": [
+        1,
+        690
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        24
+      ],
+      "expected": [
+        6,
+        120
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        25
+      ],
+      "expected": [
+        5,
+        150
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        26
+      ],
+      "expected": [
+        2,
+        390
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        27
+      ],
+      "expected": [
+        3,
+        270
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        28
+      ],
+      "expected": [
+        2,
+        420
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        29
+      ],
+      "expected": [
+        1,
+        870
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        30,
+        30
+      ],
+      "expected": [
+        30,
+        30
+      ],
+      "category": "exhaustive",
+      "note": "all pairs 1..30 x 1..30"
+    },
+    {
+      "input": [
+        1000000000,
+        1000000000
+      ],
+      "expected": [
+        1000000000,
+        1000000000
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        1000000000,
+        1
+      ],
+      "expected": [
+        1,
+        1000000000
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        94632799,
+        94632791
+      ],
+      "expected": [
+        1,
+        8955365889512009
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        99999989,
+        89999999
+      ],
+      "expected": [
+        1,
+        8999998910000011
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        720720,
+        831600
+      ],
+      "expected": [
+        55440,
+        10810800
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        500000000,
+        250000000
+      ],
+      "expected": [
+        250000000,
+        500000000
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        999999999,
+        333333333
+      ],
+      "expected": [
+        333333333,
+        999999999
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    },
+    {
+      "input": [
+        95000003,
+        94000009
+      ],
+      "expected": [
+        1,
+        8930001137000027
+      ],
+      "category": "stress",
+      "note": "large values exercise Euclidean algorithm efficiency"
+    }
+  ]
+}

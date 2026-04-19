@@ -1,0 +1,8815 @@
+{
+  "problem_id": "implement-queue-using-stacks",
+  "function": "MyQueue",
+  "pattern": "design",
+  "comparison": "exact",
+  "time_limit_s": 1.0,
+  "cases": [
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        false
+      ],
+      "category": "basic",
+      "note": "classic queue operations sample"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "peek",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        2,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "pop",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        true,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "peek",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "peek",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        false,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "pop",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "peek",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        1,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "push",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        null,
+        false,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "pop",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "peek",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "peek",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "peek",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        1,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "push",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        null,
+        false,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "pop"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "peek"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "push",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        null,
+        false
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "push"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
+      ],
+      "op_inputs": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "category": "exhaustive",
+      "note": "all valid queue operation sequences of length 5 over three push values"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "peek",
+        "empty",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "empty"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        false,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        true
+      ],
+      "category": "stress",
+      "note": "batched queue pushes then drains punish front-shift implementations"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop",
+        "push",
+        "peek",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        [
+          8
+        ],
+        [],
+        [],
+        [
+          9
+        ],
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        [
+          8
+        ],
+        [],
+        [],
+        [
+          9
+        ],
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        [],
+        [
+          7
+        ],
+        [],
+        [],
+        [
+          8
+        ],
+        [],
+        [],
+        [
+          9
+        ],
+        [],
+        [],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          2
+        ],
+        [],
+        [],
+        [
+          3
+        ],
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        [
+          6
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        3,
+        3,
+        null,
+        4,
+        4,
+        null,
+        5,
+        5,
+        null,
+        6,
+        6,
+        null,
+        7,
+        7,
+        null,
+        8,
+        8,
+        null,
+        9,
+        9,
+        null,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        3,
+        3,
+        null,
+        4,
+        4,
+        null,
+        5,
+        5,
+        null,
+        6,
+        6,
+        null,
+        7,
+        7,
+        null,
+        8,
+        8,
+        null,
+        9,
+        9,
+        null,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        3,
+        3,
+        null,
+        4,
+        4,
+        null,
+        5,
+        5,
+        null,
+        6,
+        6,
+        null,
+        7,
+        7,
+        null,
+        8,
+        8,
+        null,
+        9,
+        9,
+        null,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        3,
+        3,
+        null,
+        4,
+        4,
+        null,
+        5,
+        5,
+        null,
+        6,
+        6
+      ],
+      "category": "stress",
+      "note": "repeated short queue cycles punish full-stack transfers on every operation"
+    },
+    {
+      "input": [],
+      "operations": [
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "push",
+        "peek",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop"
+      ],
+      "op_inputs": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        7,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "category": "stress",
+      "note": "mixed queue phases punish repeated whole-stack reversals"
+    }
+  ]
+}

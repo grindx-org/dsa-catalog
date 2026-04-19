@@ -1,0 +1,1649 @@
+{
+  "problem_id": "sqrtx",
+  "function": "mySqrt",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 2.0,
+  "cases": [
+    {
+      "input": [
+        4
+      ],
+      "expected": 2,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": 2,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": 0,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        1
+      ],
+      "expected": 1,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        16
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        2147395599
+      ],
+      "expected": 46339,
+      "category": "basic",
+      "note": "curated sqrt sample"
+    },
+    {
+      "input": [
+        2
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        3
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        6
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        9
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        11
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        12
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        13
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        14
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        17
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        18
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        19
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        20
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        21
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        22
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        23
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        24
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        25
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        26
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        27
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        28
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        29
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        30
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        31
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        32
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        33
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        34
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        35
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        36
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        37
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        38
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        39
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        40
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        41
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        43
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        44
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        45
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        46
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        47
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        48
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        49
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        50
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        51
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        52
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        53
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        54
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        55
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        56
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        57
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        58
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        59
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        60
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        61
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        62
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        63
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        64
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        65
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        66
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        67
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        68
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        69
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        70
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        71
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        72
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        73
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        74
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        75
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        76
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        77
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        78
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        79
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        80
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        81
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        82
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        83
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        84
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        85
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        86
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        87
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        88
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        89
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        90
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        91
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        92
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        93
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        94
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        95
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        96
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        97
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        98
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        99
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        100
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        101
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        102
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        103
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        104
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        105
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        106
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        107
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        108
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        109
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        110
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        111
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        112
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        113
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        114
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        115
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        116
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        117
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        118
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        119
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        120
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        121
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        122
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        124
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        125
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        126
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        127
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        128
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        129
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        130
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        131
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        132
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        133
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        134
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        135
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        136
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        137
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        138
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        139
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        140
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        141
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        142
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        143
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        144
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        145
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        146
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        147
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        148
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        149
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        150
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        151
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        152
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        153
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        154
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        155
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        156
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        157
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        158
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        159
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        160
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        161
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        162
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        163
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        164
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        165
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        166
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        167
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        168
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        169
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        170
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        171
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        172
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        173
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        174
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        175
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        176
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        177
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        178
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        179
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        180
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        181
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        182
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        183
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        184
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        185
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        186
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        187
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        188
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        189
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        190
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        191
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        192
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        193
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        194
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        195
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        196
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        197
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        198
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        199
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all integers 0..199"
+    },
+    {
+      "input": [
+        1000000000
+      ],
+      "expected": 31622,
+      "category": "stress",
+      "note": "large integer sqrt"
+    },
+    {
+      "input": [
+        2147483647
+      ],
+      "expected": 46340,
+      "category": "stress",
+      "note": "large integer sqrt"
+    },
+    {
+      "input": [
+        2147483646
+      ],
+      "expected": 46340,
+      "category": "stress",
+      "note": "large integer sqrt"
+    },
+    {
+      "input": [
+        999999999
+      ],
+      "expected": 31622,
+      "category": "stress",
+      "note": "large integer sqrt"
+    }
+  ]
+}

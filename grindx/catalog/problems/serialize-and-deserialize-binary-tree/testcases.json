@@ -1,0 +1,2407 @@
+{
+  "problem_id": "serialize-and-deserialize-binary-tree",
+  "function": "Codec",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 5,
+  "cases": [
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        4,
+        5
+      ],
+      "category": "basic",
+      "note": "standard codec example"
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": [],
+      "category": "edge",
+      "note": "empty tree"
+    },
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          null,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        null,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          null,
+          3,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        null,
+        3,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          4,
+          null,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        4,
+        null,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          5,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        5,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          5,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        5,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          null,
+          3,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        null,
+        3,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          null,
+          3,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        null,
+        3,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          3,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        3,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          4,
+          3,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        3,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          5,
+          null,
+          3,
+          null,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        null,
+        3,
+        null,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          5,
+          null,
+          3,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        null,
+        3,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          5,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          5,
+          3,
+          null,
+          null,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        3,
+        null,
+        null,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          5,
+          3,
+          null,
+          null,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        5,
+        3,
+        null,
+        null,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          null,
+          3,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        null,
+        3,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          4,
+          null,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        4,
+        null,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          5,
+          null,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        5,
+        null,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          5,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        5,
+        4
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        4,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        4,
+        null,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null,
+          5
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        4,
+        null,
+        5
+      ],
+      "category": "exhaustive",
+      "note": "all unique-value binary trees up to 5 nodes"
+    },
+    {
+      "input": [
+        [
+          0
+        ]
+      ],
+      "expected": [
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          0,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        0,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          0,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        0,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          1,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        1,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          1,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          0,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        0,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          0,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        0,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          1,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        1,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          1,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        1,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        0,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        0,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        1,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          null,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        null,
+        1,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        0,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        0,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        1,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          null,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        null,
+        1,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          null,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        null,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          null,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        null,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          null,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        null,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          null,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        null,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          null,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        null,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          null,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        null,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          null,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        null,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          null,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        null,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          0,
+          1,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          0,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          null,
+          0
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        null,
+        0
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    },
+    {
+      "input": [
+        [
+          1,
+          1,
+          null,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        null,
+        1
+      ],
+      "category": "edge",
+      "note": "duplicate-valued trees preserve structure"
+    }
+  ]
+}

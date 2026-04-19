@@ -1,0 +1,4129 @@
+{
+  "problem_id": "count-palindromic-subseq",
+  "function": "countPalindromicSubsequences",
+  "pattern": "function",
+  "comparison": "exact",
+  "time_limit_s": 0.5,
+  "cases": [
+    {
+      "input": [
+        "bccb"
+      ],
+      "expected": 6,
+      "category": "basic",
+      "note": "curated distinct palindromic subsequence sample"
+    },
+    {
+      "input": [
+        "abcd"
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "curated distinct palindromic subsequence sample"
+    },
+    {
+      "input": [
+        "aaa"
+      ],
+      "expected": 3,
+      "category": "basic",
+      "note": "curated distinct palindromic subsequence sample"
+    },
+    {
+      "input": [
+        "aba"
+      ],
+      "expected": 4,
+      "category": "basic",
+      "note": "curated distinct palindromic subsequence sample"
+    },
+    {
+      "input": [
+        "abab"
+      ],
+      "expected": 6,
+      "category": "basic",
+      "note": "curated distinct palindromic subsequence sample"
+    },
+    {
+      "input": [
+        "a"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "b"
+      ],
+      "expected": 1,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aa"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ab"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ba"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bb"
+      ],
+      "expected": 2,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aab"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baa"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bab"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bba"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbb"
+      ],
+      "expected": 3,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaa"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaab"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaba"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabb"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaa"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abba"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbb"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaa"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baab"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baba"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babb"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaa"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbab"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbba"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbb"
+      ],
+      "expected": 4,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaa"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaab"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaba"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabb"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabab"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabba"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbb"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbb"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaa"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaa"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaab"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaba"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaa"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbab"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbba"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbb"
+      ],
+      "expected": 5,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaab"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaba"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbba"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaba"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaa"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbab"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbba"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbb"
+      ],
+      "expected": 6,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaab"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabba"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaba"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaa"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbba"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbb"
+      ],
+      "expected": 7,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaab"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaaba"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaaabb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaaabbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaababa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaababb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaaabbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaaba"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabaabb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaababbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbaba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbabb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aaabbbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaaabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabaa"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabba"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabaabbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababaab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabababa"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabababb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aababbbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbaabb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbabbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaab"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "aabbbbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaaa"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaaba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaaabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaaabbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabaab"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaababa"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaababb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbba"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abaabbbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaaba"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababaabb"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababaa"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababab"
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababba"
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abababbb"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaaa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaab"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbaba"
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbabb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "ababbbbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaaabb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabab"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabba"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbaabbb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabaab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbababa"
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbababb"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbaa"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbab"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbabbbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaaba"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbaabb"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabaa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbabbb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbaba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbabb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abbbbbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaaba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaaabb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaaabbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabaab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaababa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaababb"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbaa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbab"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baaabbbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaaba"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabaabb"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababaa"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababab"
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baababbb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaaa"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaab"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbaba"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbabb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "baabbbbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaaba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaaabb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabab"
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabba"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babaabbb"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaaa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababaab"
+      ],
+      "expected": 21,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babababa"
+      ],
+      "expected": 22,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babababb"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbaa"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbab"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bababbbb"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaaa"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaab"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaaba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbaabb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabaa"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabab"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabba"
+      ],
+      "expected": 19,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbabbb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbaba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbabb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "babbbbbb"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaaba"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaaabb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabba"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaaabbb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabaab"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaababa"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaababb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbba"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbaabbbb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabaabb"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababaa"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababab"
+      ],
+      "expected": 20,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababba"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbababbb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaab"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbaba"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbabb"
+      ],
+      "expected": 18,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbaa"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbab"
+      ],
+      "expected": 17,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbabbbbb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaab"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaaba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaaabb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabab"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbaabbb"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabaab"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbababa"
+      ],
+      "expected": 15,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbababb"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbaa"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbab"
+      ],
+      "expected": 16,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbba"
+      ],
+      "expected": 14,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbabbbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaab"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaaba"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbaabb"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabaa"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabab"
+      ],
+      "expected": 13,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabba"
+      ],
+      "expected": 12,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbabbb"
+      ],
+      "expected": 11,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaab"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbaba"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbabb"
+      ],
+      "expected": 10,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbaa"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbab"
+      ],
+      "expected": 9,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbba"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "bbbbbbbb"
+      ],
+      "expected": 8,
+      "category": "exhaustive",
+      "note": "all binary strings up to length 8"
+    },
+    {
+      "input": [
+        "abcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabcaabca"
+      ],
+      "expected": 715931333,
+      "category": "stress",
+      "note": "200-length repeated-boundary string stresses distinct subsequence DP"
+    },
+    {
+      "input": [
+        "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
+      ],
+      "expected": 460879305,
+      "category": "stress",
+      "note": "200-length repeated-boundary string stresses distinct subsequence DP"
+    },
+    {
+      "input": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccdddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ],
+      "expected": 200,
+      "category": "stress",
+      "note": "200-length repeated-boundary string stresses distinct subsequence DP"
+    }
+  ]
+}
