@@ -4,22 +4,9 @@ on:
   push:
     tags:
       - "testcases-v*"
-  workflow_dispatch:
-    inputs:
-      release_tag:
-        description: Release tag to create or update, e.g. testcases-v0.1.0
-        required: true
-        type: string
-      min_app_version:
-        description: Minimum compatible grindx app version
-        required: true
-        type: string
 
 permissions:
   contents: write
-
-env:
-  DEFAULT_MIN_APP_VERSION: "0.2.4"
 
 jobs:
   release-testcases:
@@ -34,47 +21,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Resolve release inputs
-        id: vars
-        run: |
-          release_tag="${GITHUB_REF_NAME}"
-          min_app_version="${DEFAULT_MIN_APP_VERSION}"
-
-          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
-            release_tag="${{ inputs.release_tag }}"
-            min_app_version="${{ inputs.min_app_version }}"
-          fi
-
-          echo "release_tag=${release_tag}" >> "$GITHUB_OUTPUT"
-          echo "min_app_version=${min_app_version}" >> "$GITHUB_OUTPUT"
-
       - name: Build testcase bundle
         run: |
           chmod +x scripts/build-testcases.sh
           scripts/build-testcases.sh \
             --output-dir dist/testcases-release \
-            --release-tag "${{ steps.vars.outputs.release_tag }}" \
-            --min-app-version "${{ steps.vars.outputs.min_app_version }}"
+            --release-tag "${GITHUB_REF_NAME}" \
+            --min-app-version "0.2.4"
 
       - name: Publish testcase release assets
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if gh release view "${{ steps.vars.outputs.release_tag }}" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh release upload "${{ steps.vars.outputs.release_tag }}" \
-              dist/testcases-release/manifest.json \
-              dist/testcases-release/testcases.tar.gz \
-              --clobber \
-              --repo "$GITHUB_REPOSITORY"
-          else
-            gh release create "${{ steps.vars.outputs.release_tag }}" \
-              dist/testcases-release/manifest.json \
-              dist/testcases-release/testcases.tar.gz \
-              --title "${{ steps.vars.outputs.release_tag }}" \
-              --notes "Testcase bundle for grindx.
-
-- bundle_kind: testcases-only
-- min_app_version: ${{ steps.vars.outputs.min_app_version }}" \
-              --target "$GITHUB_SHA" \
-              --repo "$GITHUB_REPOSITORY"
-          fi
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            dist/testcases-release/manifest.json
+            dist/testcases-release/testcases.tar.gz
